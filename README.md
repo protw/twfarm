@@ -2,7 +2,7 @@
 
 *TW5 Farm* is a method of centralized multi-wiki support on the Internet.
 
-Conceptually, tenology comprises the following phases:
+Conceptually, technology comprises the following phases:
 
 * Preparing a separate wiki by means of [Tiddlywiki](https://tiddlywiki.com/) by a group of authors on their own local computers.
 * When creating the content, the authors synchronize the wiki folder through the [Google Drive](https://drive.google.com/) cloud.
@@ -21,7 +21,7 @@ For a full-fledged work, the author must be able to write texts in *Tiddlywiki* 
 * a local server for multiple wikis on *Tiddlywiki* - [OokTech / TW5-BobEXE](https://github.com/OokTech/TW5-BobEXE);
 * Google application [Backup and sync] (https://www.google.com/drive/download/backup-and-sync/).
 
-The editor in order to run the `tw_builder.m` script, in addition to the above list, has to install on own computer [Octave sofware] (https://www.gnu.org/software/octave/) and the function library [fangq/jsonlab](https://github.com/fangq/jsonlab) to ptocess *JSON* data.
+The editor in order to run the `tw_builder.m` script, in addition to the above list, has to install on own computer [Octave sofware] (https://www.gnu.org/software/octave/) and the function library [fangq/jsonlab](https://github.com/fangq/jsonlab) to process *JSON* data.
 
 ## *Project Hub* на базі технології *TW5 Farm*
 
