@@ -19,9 +19,9 @@ The script code, additional resources, and description of the technology are ava
 For a full-fledged work, the author must be able to write texts in *Tiddlywiki* and also install on own computer:
 
 * a local server for multiple wikis on *Tiddlywiki* - [OokTech / TW5-BobEXE](https://github.com/OokTech/TW5-BobEXE);
-* Google application [Backup and sync] (https://www.google.com/drive/download/backup-and-sync/).
+* Google application [Backup and sync](https://www.google.com/drive/download/backup-and-sync/).
 
-The editor in order to run the `tw_builder.m` script, in addition to the above list, has to install on own computer [Octave sofware] (https://www.gnu.org/software/octave/) and the function library [fangq/jsonlab](https://github.com/fangq/jsonlab) to process *JSON* data.
+The editor in order to run the `tw_builder.m` script, in addition to the above list, has to install on own computer [Octave sofware](https://www.gnu.org/software/octave/) and the function library [fangq/jsonlab](https://github.com/fangq/jsonlab) to process *JSON* data.
 
 ## *Project Hub* на базі технології *TW5 Farm*
 
