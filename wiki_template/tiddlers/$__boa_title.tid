@@ -1,0 +1,9 @@
+created: 20181205073534349
+modified: 20190816191213724
+tags: 
+title: $:/boa/title
+type: text/vnd.tiddlywiki
+
+<a href={{$:/boa/logo!!wiki-address}} title={{$:/boa/logo!!wiki-caption}}>[img width=205px [$:/boa/logo]]</a><br/>
+<div style="width:205px;font-size:24pt;line-height:24pt;margin-bottom:10px;padding-left:5px;">{{$:/boa/logo!!wiki-name}}</div>
+<!--<div style="width:205px;font-size:12pt;line-height:14pt;margin-bottom:10px;padding-left:5px;">{{$:/boa/logo!!wiki-caption}}</div>-->

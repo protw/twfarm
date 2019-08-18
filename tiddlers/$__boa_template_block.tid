@@ -1,0 +1,34 @@
+created: 20171117182854066
+modified: 20190713211948296
+tags: 
+title: $:/boa/template/block
+type: text/vnd.tiddlywiki
+
+<style>
+      .wrapper {
+        width: 160px;
+        height: 160px;
+      }
+      .exmp3 img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
+      }
+      .exmp3 img:hover {
+       box-shadow: 0 14px 14px rgba(0,0,0,0.25), 0 10px 8px rgba(0,0,0,0.22);
+      top: -4px;
+      left: -4px;
+      }
+      a.showcaseblock { text-decoration: none; font-weight: normal;}
+      a.showcaseblock:hover {text-decoration:none; font-weight: bold;}
+</style>
+
+<div style="display:inline-block;width:160px;margin:10pt;"> 
+<div style="height:160px;" class="wrapper exmp3">
+<a class="showcaseblock" href={{!!web}} target="_blank"><$image source={{!!title}} tooltip={{!!caption}}/></a>
+</div>
+<div style="height:40px;overflow:hidden;text-overflow:ellipsis;font-size:small;font-family:Arial;">
+<a class="showcaseblock" href={{!!web}}>{{!!name}}</a>
+</div>
+</div>

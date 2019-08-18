@@ -1,0 +1,26 @@
+created: 20170104195303693
+modified: 20190818095909977
+tags: 
+title: $:/boa/subtitle
+type: text/vnd.tiddlywiki
+
+\define res_link(link, tooltip, image)
+<a href="$link$" title="$tooltip$" target="_blank"><div style="margin:4px 4px; text-align:center;float:left;">[img height=28px [$image$]]</div></a>
+\end
+
+\define feedback-link(wiki-github, wiki-name, feedback-icon)
+<a href="$wiki-github$/issues/new" title="Feedback on the '$wiki-name$' project via Github" target="_blank"><div style="margin:4px 4px; text-align:center;float:left;">[img height=28px [$feedback-icon$]]</div></a>
+\end
+
+<div style="clear:both;"/>
+<<res_link 
+    "https://protw.github.io" 
+    "ProTW Publishing central site" 
+    "$:/boa/img/protw-logo.svg"
+>>
+<$macrocall $name="feedback-link" 
+    wiki-github={{$:/boa/logo!!wiki-github}} 
+    wiki-name={{$:/boa/logo!!wiki-name}}
+    feedback-icon="$:/boa/img/github-logo.svg"
+/>
+<div style="clear:both;"/>

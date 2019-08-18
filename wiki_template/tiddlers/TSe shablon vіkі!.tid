@@ -1,0 +1,8 @@
+created: 20190716173244579
+modified: 20190717131156403
+tags: 
+title: Це шаблон вікі!
+
+| {{$:/core/images/warning}} |Це шаблон вікі! |
+| {{$:/core/images/info-button}} |Базове налаштування вікі з шаблону описано у $:/boa/template-wiki-settings . |
+| {{$:/core/images/delete-button}} |Після встановлення вікі із шаблону, цей тідлер `Це шаблон вікі!`, а також посилання на нього у списку $:/DefaultTiddlers - видалити. |

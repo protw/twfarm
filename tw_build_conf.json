@@ -1,0 +1,79 @@
+{
+	"main_wiki": {
+		"wiki_name": "protw.github.io",
+		"local_dir": "D:\\boa_protw\\wiki_main",
+		"github": "https://github.com/protw/protw.github.io.git",
+		"logo_dir": "\\wiki_logo_list"
+	},
+	"wiki_farm": [
+		{
+			"wiki_name": "twfarm",
+			"local_dir": "D:\\boa_protw\\twfarm",
+			"github": "https://github.com/protw/twfarm.git"
+		},
+		{
+			"wiki_name": "airzoom",
+			"local_dir": "D:\\boa_protw\\wiki_bag\\airzoom",
+			"github": "https://github.com/protw/airzoom.git"
+		},
+		{
+			"wiki_name": "prosteer",
+			"local_dir": "D:\\boa_protw\\wiki_bag\\prosteer",
+			"github": "https://github.com/protw/prosteer.git"
+		},
+		{
+			"wiki_name": "treemap",
+			"local_dir": "D:\\boa_protw\\wiki_bag\\treemap",
+			"github": "https://github.com/protw/treemap.git"
+		},
+		{
+			"wiki_name": "autonum",
+			"local_dir": "D:\\boa_protw\\wiki_bag\\autonum",
+			"github": "https://github.com/protw/autonum.git"
+		},
+		{
+			"wiki_name": "eco",
+			"local_dir": "D:\\boa_protw\\wiki_bag\\eco",
+			"github": "https://github.com/protw/eco.git"
+		},
+		{
+			"wiki_name": "oleghbond",
+			"local_dir": "D:\\boa_protw\\wiki_bag\\oleghbond",
+			"github": "https://github.com/protw/oleghbond.git"
+		},
+		{
+			"wiki_name": "rder",
+			"local_dir": "D:\\boa_protw\\wiki_bag\\rder",
+			"github": "https://github.com/protw/rder.git"
+		},
+		{
+			"wiki_name": "rdpdet",
+			"local_dir": "D:\\boa_protw\\wiki_bag\\rdpdet",
+			"github": "https://github.com/protw/rdpdet.git"
+		},
+		{
+			"wiki_name": "tw5",
+			"local_dir": "D:\\boa_protw\\wiki_bag\\tw5",
+			"github": "https://github.com/protw/tw5.git"
+		},
+		{
+			"wiki_name": "tw5ghs",
+			"local_dir": "D:\\boa_protw\\wiki_bag\\tw5ghs",
+			"github": "https://github.com/protw/tw5ghs.git"
+		},
+		{
+			"wiki_name": "ukr",
+			"local_dir": "D:\\boa_protw\\wiki_bag\\ukr",
+			"github": "https://github.com/protw/ukr.git"
+		}
+	],
+	"tid_dir":     "\\tiddlers",
+	"tw_info":     "tiddlywiki.info",
+	"html_file":   "index.html",
+	"img_dir":     "\\images",
+	"build_dir":   "\\docs",
+	"logo_js":     "$:/boa/logo",
+	"sep_git_dir": "D:\\boa_protw\\git",
+	"wiki_domain": "https://protw.github.io/",
+	"github_main": "https://github.com/protw/"
+}

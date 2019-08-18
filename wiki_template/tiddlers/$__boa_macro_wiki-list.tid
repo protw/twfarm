@@ -1,0 +1,15 @@
+created: 20190702063749506
+modified: 20190715114946265
+tags: $:/tags/Macro
+title: $:/boa/macro/wiki-list
+type: text/vnd.tiddlywiki
+
+\define wiki-list()
+!! Список вікі проекту ''{{$:/boa/logo!!name}}''
+
+<$list filter="[is[image]!has[draft.of]!is[system]has[wiki_order]]">
+{{!!title||$:/boa/template/block}}
+</$list>
+\end
+
+<<wiki-list>>
