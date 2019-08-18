@@ -236,14 +236,14 @@ function tw_html_builder(jd, wiki_name)
   git_sync = strrep(git_sync,"%1",tw_dir);
   git_sync = strrep(git_sync,"%2",strftime("%Y-%m-%e %X",localtime(time())));
   git_sync = strrep(git_sync,"%3",github_repo);
-  printf("Github repo of %s is syncronized\n",upper(wiki_name))
+  printf("Github repo of %s is syncronizing...\n",upper(wiki_name))
   ###### THE LAST COMMAND IS EXECUTED WITH CARE SO FAR
-  selected={'airzoom' 'twfarm' 'prosteer' 'treemap'};
+  #selected={'airzoom' 'twfarm' 'prosteer' 'treemap'};
   for i = 1:length(git_sync)
     printf("%s\n",git_sync{i})
-    if i < 3 || i == 3 && any(strcmp(selected,wiki_name))
+    #if i < 3 || i == 3 && any(strcmp(selected,wiki_name))
       system(git_sync{i});
-    endif
+    #endif
   endfor
 endfunction
 
