@@ -8,7 +8,7 @@ Conceptually, tenology comprises the following phases:
 * When creating the content, the authors synchronize the wiki folder through the [Google Drive](https://drive.google.com/) cloud.
 * For each wiki, the editor pre-creates a wiki repository on [Github](https://github.com/), from which then the wiki is published on the Internet using [Github Pages](https://pages.github.com/).
 
-An excellent feature of the *TW5 Farm* technology is the function of automated collection of information on all wikis included in the collection and presentation in a separate central wiki.
+An excellent feature of the *TW5 Farm* technology is the function of automated collection of information on all wikis included in the collection and presentation in a separate central wiki. The central wiki for this collection called *Project Hub* is located at https://protw.github.io/.
 
 To provide this feature, each wiki contains a standardized `$:/boa/logo` tiddler (as a separate article is referred *Tiddlywiki*), which contains the information needed to represent the wiki outside.
 
@@ -33,7 +33,7 @@ The editor in order to run the `tw_builder.m` script, in addition to the above l
 * Під час створення змісту автори синхронізують фолдер вікі через хмарний [Гугл Диск](https://drive.google.com/).
 * Для кожної вікі редактор попередньо створює репозитарій вікі на сервісі [Github](https://github.com/), з якого потім відбувається опублікування в інтернеті з допомогою сервісу [Github Pages](https://pages.github.com/).
 
-Чудовою властивістю технології *TW5 Farm* є функція автоматизованого збирання інформації про всі вікі, що включені до колекції, та представлення в окремій центральній вікі.
+Чудовою властивістю технології *TW5 Farm* є функція автоматизованого збирання інформації про всі вікі, що включені до колекції, та представлення в окремій центральній вікі. Центральна вікі для цієї колекції під назвою *Project Hub* доступна за адресою https://protw.github.io/.
 
 Для забезпечення цієї функції кожна вікі містить стандартизований тідлер `$:/boa/logo` (так в *Tiddlywiki* називають окремі статті), в якому міститься інформація, необхідна для представлення вікі назовні.
 
