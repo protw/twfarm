@@ -105,7 +105,6 @@ function conf_complete = conf_wiki_environment(jd,i)
   sep_git_dir = [jd.sep_git_dir "\\" wiki_name];
   if !isfolder(sep_git_dir)
     system(['mkdir ' sep_git_dir]);
-    #system(['attrib +h /d ' sep_git_dir]);
   endif
   sep_git_file = [local_dir '\\.git'];
   if !isfile(sep_git_file)
@@ -207,7 +206,7 @@ function tw_html_builder(jd, wiki_name)
   
   html_index_file = [html_dir '\' jd.html_file];
   html_images_dir = [html_dir jd.img_dir];
-  tmp_dir = ["__tmp__\\"];
+  tmp_dir = tempname();
   if isfolder(tmp_dir), system(['rmdir /s/q ' tmp_dir]); endif
   if isfolder(html_images_dir), system(['rmdir /s/q ' html_images_dir]); endif
   if isfile(html_index_file), system(['del /f/q ' html_index_file]); endif
@@ -215,7 +214,7 @@ function tw_html_builder(jd, wiki_name)
     " /exclude:tw_exclude.list > nul"]);
   img_filter = ["[is[image]] -[title[" jd.logo_js "]] -[[$:/favicon.ico]]"];
   html_tw_build_cmd = [
-    'tiddlywiki ./__tmp__ ' ...
+    'tiddlywiki ' tmp_dir ' ' ...
     '--savetiddlers "' img_filter '" ' html_images_dir ' '...
     '--setfield "' img_filter '" _canonical_uri ' ...
     '$:/core/templates/canonical-uri-external-image text/plain ' ...
