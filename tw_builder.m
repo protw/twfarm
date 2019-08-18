@@ -238,9 +238,13 @@ function tw_html_builder(jd, wiki_name)
   git_sync = strrep(git_sync,"%2",strftime("%Y-%m-%e %X",localtime(time())));
   git_sync = strrep(git_sync,"%3",github_repo);
   printf("Github repo of %s is syncronized\n",upper(wiki_name))
-  for i = 1:length(git_sync)-1  ###### THE LAST COMMAND IS NOT EXECUTED SO FAR
+  ###### THE LAST COMMAND IS EXECUTED WITH CARE SO FAR
+  selected={'airzoom' 'twfarm' 'prosteer' 'treemap'};
+  for i = 1:length(git_sync)
     printf("%s\n",git_sync{i})
-    system(git_sync{i});
+    if i < 3 || i == 3 && any(strcmp(selected,wiki_name))
+      system(git_sync{i});
+    endif
   endfor
 endfunction
 
