@@ -1,5 +1,5 @@
 created: 20190804131503752
-modified: 20190807074604739
+modified: 20190819104434888
 order: 040
 parent: TW farm
 tags: 
@@ -15,4 +15,4 @@ title: Що далі (TODO List)
 * Імплементувати фільтрацію проектів під час їхнього огляду за прикладом фільтру svg-тідлерів у проекті [[Font Awesome 5 Free SVGs for TiddlyWiki|http://fa5-free-svg.tiddlyspot.com/]]. Також додати фільтрація та/або групування за категоріями.
 
 <<image-left $:/boa/img/github-logo.svg 24pt>>
-У разі, якщо маєте ідеї, пропозиції, побажання - дайте знати на [[лінію зворотного зв'язку|https://github.com/protw/projhub/issues]].
+У разі, якщо маєте ідеї, пропозиції, побажання - дайте знати на [[лінію зворотного зв'язку|https://github.com/protw/twfarm/issues/new]].
