@@ -21,7 +21,7 @@ For a full-fledged work, the author must be able to write texts in *Tiddlywiki* 
 * a local server for multiple wikis on *Tiddlywiki* - [OokTech / TW5-BobEXE](https://github.com/OokTech/TW5-BobEXE);
 * Google application [Backup and sync](https://www.google.com/drive/download/backup-and-sync/).
 
-The editor in order to run the `tw_builder.m` script, in addition to the above list, has to install on own computer [Octave sofware](https://www.gnu.org/software/octave/) and the function library [fangq/jsonlab](https://github.com/fangq/jsonlab) to process *JSON* data.
+The editor in order to run the `tw_builder.m` script, in addition to the above list, has to install on own computer [Octave sofware](https://www.gnu.org/software/octave/) and the function library [fangq/jsonlab](https://github.com/fangq/jsonlab) to process *JSON* data as well as version control software - [git](https://git-scm.com/).
 
 ## *Project Hub* на базі технології *TW5 Farm*
 
@@ -46,4 +46,4 @@ The editor in order to run the `tw_builder.m` script, in addition to the above l
 * локальний сервер *Tiddlywiki* [OokTech/TW5-BobEXE](https://github.com/OokTech/TW5-BobEXE);
 * Застосунок Гугл [Резервне копіювання і синхронізація](https://www.google.com/intl/uk_ALL/drive/).
 
-Редактору для запуску скрипта `tw_builder.m` додатково до вищезазначеного списку треба встановити на своєму комп'ютері [Octave](https://www.gnu.org/software/octave/), а також бібліотеку функцій [fangq/jsonlab](https://github.com/fangq/jsonlab) для роботи з даними формату *JSON*.
+Редактору для запуску скрипта `tw_builder.m` додатково до вищезазначеного списку треба встановити на своєму комп'ютері [Octave](https://www.gnu.org/software/octave/), а також бібліотеку функцій [fangq/jsonlab](https://github.com/fangq/jsonlab) для роботи з даними формату *JSON*, а також програмне забезпечення з контролю версій - [git](https://git-scm.com/).
