@@ -1,7 +1,9 @@
+caption: Поля логотипу
 created: 20190716071226253
-modified: 20190818101211303
+modified: 20190825214040316
+order: 010
 tags: 
-title: $:/boa/logo-edit
+title: $:/boa/custom/logo-edit
 
 \define edit-logo-field(tid,lbl,fld,descr)
 <div class="boa-edit-width">
@@ -26,7 +28,7 @@ title: $:/boa/logo-edit
   .boa-table-comment { color: lightgrey; font-size: 95%; line-height: 100%; padding: 5px 5px 10px; width: 350px; }
 </style>
 
-!! Загальні параметри вікі
+!! ''Загальні параметри вікі''
 
 <<edit-logo-field
   tid:"$:/boa/logo" 
@@ -56,7 +58,7 @@ title: $:/boa/logo-edit
   descr:"За цим параметром сортується список вікі"
 >>
 
-!! Розташування вікі
+!! ''Розташування вікі''
 
 <<edit-logo-field
   tid:"$:/boa/logo" 

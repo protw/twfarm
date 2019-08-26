@@ -1,0 +1,10 @@
+caption: TODO List
+created: 20190825150104131
+modified: 20190826063432999
+order: 200
+tags: 
+title: $:/boa/custom/todo-list
+
+Завдання на майбутній розвиток.
+
+<<tabs "[prefix[$:/boa/custom-todo/]!has[draft.of]sort[order]]">>

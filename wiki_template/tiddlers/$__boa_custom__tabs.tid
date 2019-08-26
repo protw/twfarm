@@ -1,13 +1,13 @@
 caption: Custom
 created: 20190823101314067
 list-after: $:/core/ui/SideBar/More
-modified: 20190823103543410
+modified: 20190826062859618
 tags: $:/tags/SideBar
 title: $:/boa/custom/_tabs
 
-Перелік і короткий опис інструментів, налаштувань тощо, встановлених індивідуально для цієї вікі.
+Короткий опис інструментів, встановлених для цієї вікі.
 
-<<tabs "[prefix[$:/boa/custom/]!has[draft.of]] -[[$:/boa/custom/_tabs]]">>
+<<tabs "[prefix[$:/boa/custom/]!has[draft.of]sort[order]] -[[$:/boa/custom/_tabs]]">>
 
 <style>
   div.tc-tab-content>div.tc-reveal>p { padding-right:50px; }

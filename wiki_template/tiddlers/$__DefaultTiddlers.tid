@@ -1,7 +1,10 @@
 created: 20190702145748887
-modified: 20190716173648958
+modified: 20190825220742886
 tags: 
 title: $:/DefaultTiddlers
 type: text/vnd.tiddlywiki
 
 [[Це шаблон вікі!]]
+$:/boa/custom/_tabs
+$:/boa/custom/other
+$:/boa/custom/todo-list
