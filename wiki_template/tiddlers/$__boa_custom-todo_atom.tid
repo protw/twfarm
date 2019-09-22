@@ -17,7 +17,8 @@ title: $:/boa/custom-todo/atom
 
 Через це застосування потребує дороблення коду основного скрипта `tw_builder.m`.
 
-Розміщення:
-
-* https://sycom.github.io/TiddlyWiki-Plugins/#%24%3A%2Fplugins%2Fsycom%2Fatom-feed - простіший, за твердженням розробника
-* https://github.com/dullroar/TW5-atomfeed/
+; Розміщення:
+* локальне -- $:/plugins/sycom/atom-feed
+* в інтернеті -- 
+** https://sycom.github.io/TiddlyWiki-Plugins/#%24%3A%2Fplugins%2Fsycom%2Fatom-feed - простіший, за твердженням розробника
+** https://github.com/dullroar/TW5-atomfeed/

@@ -9,8 +9,7 @@ title: $:/boa/custom/TabLinks
 
 //~TabLinks// - створює посилання для швидкого доступу, коли ви використовуєте макрос вкладок `<<tab>>` і хочете швидо доступитися до тідлера, вміст якого відображено під вкладкою.
 
-Розташування плагіну //~TabLinks//:
-
-* локальне - $:/plugins/TWaddle/TabLinks
-* в інтернеті - http://tablinks.tiddlyspot.com/.
+; Розміщення:
+* локальне -- $:/plugins/TWaddle/TabLinks
+* в інтернеті -- http://tablinks.tiddlyspot.com/.
 

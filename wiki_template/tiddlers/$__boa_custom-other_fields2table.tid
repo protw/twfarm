@@ -12,7 +12,6 @@ title: $:/boa/custom-other/fields2table
 Колонки визначаються в полі `list` поточного тідлера (в якому будється таблиця).
 У рядках відображаються значення полів відфільтрованих тідлерів. Фільтр заданий у якості першого параметру макросу `<<fields2table>>`.
 
-Розміщення
-
-* локально (після встановлення) - $:/_TWaddle/fields2table, $:/_TWaddle/fields2table/Stylesheet
-* в інтернеті - http://fields2table.tiddlyspot.com/
+; Розміщення:
+* локальне -- $:/_TWaddle/fields2table, $:/_TWaddle/fields2table/Stylesheet
+* в інтернеті -- http://fields2table.tiddlyspot.com/

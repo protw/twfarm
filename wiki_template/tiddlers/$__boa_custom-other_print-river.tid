@@ -9,7 +9,6 @@ title: $:/boa/custom-other/print-river
 
 //~PrintRiver// розміщає тідлери перед друком у новому вікні, де їх можна попередньо налаштувати.
 
-Розміщення:
-
-* локально (після встановлення) - $:/plugins/BurningTreeC/PrintRiver
-* в інтернеті - http://printriver.tiddlyspot.com/
+; Розміщення:
+* локальне -- $:/plugins/BurningTreeC/PrintRiver
+* в інтернеті -- http://printriver.tiddlyspot.com/

@@ -9,8 +9,7 @@ title: $:/boa/custom-other/gentags
 
 Цей плагін дозволяє використовувати декілька полів так само, як і поле тегів. Це дозволяє зручно створювати багатовимірну систему категоризації, фільтрування і групування тідлерів за категоріями.
 
-Розміщення:
-
-* локальне (після встановлення) - $:/plugins/OokTech/GenTags/
+; Розміщення:
+* локальне - $:/plugins/OokTech/GenTags/
 * в інтернеті - https://github.com/OokTech/TW5-GenTags
 * детальний опис з прикладами - https://ooktech.com/jed/ExampleWikis/GenericTagFields/

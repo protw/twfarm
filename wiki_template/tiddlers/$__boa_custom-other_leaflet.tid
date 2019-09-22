@@ -13,7 +13,6 @@ title: $:/boa/custom-other/leaflet
 
 Крім плагіну //Leaflet// ви отримуєте віджет //geoLocationWidget//, з допомогою якого ви можете збирати інформацію про свої поточні координати.
 
-Розміщення плагіну //Leaflet//:
-
-* локальне (після встановлення) - $:/plugins/sycom/leaflet
-* в інтернеті - https://sycom.github.io/TiddlyWiki-Plugins/#Leaflet%20maps%20plugin
+; Розміщення:
+* локальне -- $:/plugins/sycom/leaflet
+* в інтернеті -- https://sycom.github.io/TiddlyWiki-Plugins/#Leaflet%20maps%20plugin
