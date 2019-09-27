@@ -12,6 +12,11 @@
 			"github": "https://github.com/protw/twfarm.git"
 		},
 		{
+			"wiki_name": "templ",
+			"local_dir": "D:\\boa_protw\\twfarm\\wiki_template",
+			"github": "https://github.com/protw/templ.git"
+		},
+		{
 			"wiki_name": "airzoom",
 			"local_dir": "D:\\boa_nau\\PROJECTS\\180216 AirZOOM\\_PROTW\\airzoom",
 			"github": "https://github.com/protw/airzoom.git"

@@ -1,0 +1,34 @@
+caption: Tasks
+created: 20180615032251583
+creator: Mohammad
+modified: 20190927073116559
+modifier: Mohammad
+order: 071
+title: $:/boa/custom-todo/shiraz-to-do-list
+type: text/vnd.tiddlywiki
+
+!! Простий, але класний перелік завдань
+
+* Запозичено тут [[https://kookma.github.io/Shiraz/#shiraz%2Fto-do-list]]. 
+* Використовує шаблон [[$:/boa/template/task-management-draggable]].
+
+<<alert-danger "Застосунок з цього тідлера працює нестабільно під //~BobEXE// -- після декількох маніпуляцій із завданнями //~BobEXE// вимикається. Треба звернутись до автора //Mohammed//!">>
+
+!! ''Поточні завдання''
+
+<$button class="btn btn-primary">
+<$action-sendmessage $message="tm-new-tiddler" title=<<now format:"DD-MM-YYYY">> tags="Task" text=""/>
+''Нове завдання''
+</$button>
+
+<<alert-info "Завдання можна перетаскувати для зміни їхнього порядку">>
+
+<<list-tagged-draggable tag:"Task" subFilter:"!has[draft.of]!tag[Done]" itemTemplate:"$:/boa/template/task-management-draggable" emptyMessage:"Немає жодного активного завдання">>
+
+!! ''Виконані завдання''
+
+<<alert-info "Перелік завдань наведений у зворотньому хронологічному порядку по даті  утворення">>
+
+<$list filter="[!has[draft.of]tag[Task]tag[Done]!sort[created]]">
+<$checkbox tag="Done"><$link><$view field="title"/></$link></$checkbox><br/>
+</$list>

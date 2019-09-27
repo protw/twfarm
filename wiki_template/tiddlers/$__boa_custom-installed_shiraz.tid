@@ -1,0 +1,16 @@
+caption: Стиль вмісту
+created: 20190922075139688
+modified: 20190927070119557
+order: 018
+tags: 
+title: $:/boa/custom-installed/shiraz
+
+!! ''Плагін //Shiraz//''
+
+//Shiraz// - це набір таблиць стилів (//CSS//) та макросів для створення стильного вмісту в //Tiddlywiki//. //Shiraz// налаштовує такі елементи, як сповіщення, картки, панелі, зображення, таблиці, значки, тексти, ...
+
+;Розміщення:
+* локальне -- $:/plugins/kookma/shiraz
+* в інтернеті -- https://kookma.github.io/Shiraz/
+
+{{$:/boa/macro/info-blocks}}

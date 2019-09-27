@@ -1,0 +1,9 @@
+created: 20180307153530187
+creator: Mohammad
+modified: 20190925191146237
+modifier: Mohammad
+tags: 
+title: $:/boa/template/task-management-draggable
+type: text/vnd.tiddlywiki
+
+<$checkbox tag="Done"><$link to={{!!title}}><$view field="title"/></$link></$checkbox>

@@ -1,0 +1,17 @@
+caption: Link-to-Tabs
+created: 20190925094843584
+modified: 20190927065607366
+order: 016
+tags: 
+title: $:/boa/custom-installed/link-to-tabs
+
+!! Плагін //Link-to-Tabs//
+
+//Link-to-Tabs// - створює посилання для швидкого доступу для кожної вкладки, що створена макросом `<<tab>>`.
+
+Є альтернативний плагін [[TabLinks|$:/boa/custom-recommended/TabLinks]]. Але //Link-to-Tabs// здається кращим.
+
+; Розміщення:
+* локальне -- $:/plugins/wikilabs/link-to-tabs
+* в інтернеті -- https://wikilabs.github.io/editions/link-to-tabs/
+

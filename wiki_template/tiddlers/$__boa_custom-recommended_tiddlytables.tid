@@ -1,0 +1,16 @@
+caption: Просунута таблиця
+created: 20190922175636833
+modified: 20190927065644865
+order: 060
+tags: 
+title: $:/boa/custom-recommended/tiddlytables
+
+!! ''Просунута таблиця''
+
+Просунуту таблицю зі спроможністю сортування і пагінацією, а також розвиненим меню налаштувань надає плагін [[TiddlyTable|http://tiddlytables.tiddlyspot.com/]].
+
+Плагін повністю готовий до роботи, але з ним треба розібратись.
+
+; Розміщення:
+* локальне -- $:/plugins/aaldrich/tables
+* в інтернеті -- http://tiddlytables.tiddlyspot.com/

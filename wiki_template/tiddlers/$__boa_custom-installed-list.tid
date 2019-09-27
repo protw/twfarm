@@ -1,0 +1,15 @@
+caption: Встановлені
+created: 20190823101314067
+list-after: $:/core/ui/SideBar/More
+modified: 20190927075034933
+title: $:/boa/custom-installed-list
+
+<<alert-primary "Короткий опис інструментів, встановлених для цієї вікі.">>
+
+В процесі маніпуляцій додатковими інструментами у вікі користуйтесь рекомендаціями зі статті [[Управління додатковими інструментами]].
+
+<<tabs "[prefix[$:/boa/custom-installed/]!has[draft.of]sort[order]]" "$:/boa/custom-installed/logo-edit">>
+
+<style>
+  div.tc-tab-content>div.tc-reveal>p { padding-right:50px; }
+</style>

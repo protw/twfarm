@@ -100,15 +100,15 @@ function conf_complete = conf_wiki_environment(jd,i)
     return;
   endif
   if !isfolder(spec_dir)
-    system(['mkdir ' spec_dir]);
+    system(['mkdir "' spec_dir '"']);
   endif
   sep_git_dir = [jd.sep_git_dir "\\" wiki_name];
   if !isfolder(sep_git_dir)
-    system(['mkdir ' sep_git_dir]);
+    system(['mkdir "' sep_git_dir '"']);
   endif
   sep_git_file = [local_dir '\\.git'];
   if !isfile(sep_git_file)
-    system(['git -C ' local_dir ' init --separate-git-dir ' sep_git_dir]);
+    system(['git -C "' local_dir '" init --separate-git-dir "' sep_git_dir '"']);
   endif
   git_ignore_file = [local_dir '\\.gitignore'];
   if !isfile(git_ignore_file)
@@ -153,7 +153,7 @@ function update_flag = transfer_logo_to_main_wiki(jd, i)
   endif
 
   # delete logo files of a specific wiki in main_wiki
-  system(["del " mw_logo_file_mask ">nul"]);
+  system(['del "' mw_logo_file_mask '">nul']);
 
   # Copying and renaming logo files into 'logo_dir' folder
   for j = 1:length(logo_files)
@@ -173,7 +173,7 @@ function update_flag = transfer_logo_to_main_wiki(jd, i)
       meta_file = [logo_dir "\\" f_name_new ".meta"];
       str2file(new_s_tid,meta_file)
     else
-      system(["copy /y " logo_file " " logo_dir wiki_name f_ext ">nul"]);
+      system(['copy /y "' logo_file '" "' logo_dir wiki_name f_ext '">nul']);
     endif
   endfor
   update_flag = true;
@@ -207,23 +207,23 @@ function tw_html_builder(jd, wiki_name)
   html_index_file = [html_dir '\' jd.html_file];
   html_images_dir = [html_dir jd.img_dir];
   tmp_dir = tempname();
-  if isfolder(tmp_dir), system(['rmdir /s/q ' tmp_dir]); endif
-  if isfolder(html_images_dir), system(['rmdir /s/q ' html_images_dir]); endif
-  if isfile(html_index_file), system(['del /f/q ' html_index_file]); endif
-  system(["xcopy /s/i/q " tw_dir "\\*.* " tmp_dir ...
-    " /exclude:tw_exclude.list > nul"]);
+  if isfolder(tmp_dir), system(['rmdir /s/q "' tmp_dir '"']); endif
+  if isfolder(html_images_dir), system(['rmdir /s/q "' html_images_dir '"']); endif
+  if isfile(html_index_file), system(['del /f/q "' html_index_file '"']); endif
+  system(['xcopy /s/i/q "' tw_dir '\*.*" "' tmp_dir ...
+    '" /exclude:tw_exclude.list > nul']);
   img_filter = ["[is[image]] -[title[" jd.logo_js "]] -[[$:/favicon.ico]]"];
   html_tw_build_cmd = [
-    'tiddlywiki ' tmp_dir ' ' ...
-    '--savetiddlers "' img_filter '" ' html_images_dir ' '...
+    'tiddlywiki "' tmp_dir '" ' ...
+    '--savetiddlers "' img_filter '" "' html_images_dir '" '...
     '--setfield "' img_filter '" _canonical_uri ' ...
     '$:/core/templates/canonical-uri-external-image text/plain ' ...
     '--setfield "' img_filter '" text "" text/plain '...
-    '--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline '...
-    html_index_file ' text/plain > nul'
+    '--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline "'...
+    html_index_file '" text/plain > nul'
   ];
   system(html_tw_build_cmd);
-  system(['rmdir /s/q ' tmp_dir]);
+  system(['rmdir /s/q "' tmp_dir '"']);
   
   # %1 = tw_dir
   # %2 = strftime("%Y-%m-%e %X",localtime(time()))

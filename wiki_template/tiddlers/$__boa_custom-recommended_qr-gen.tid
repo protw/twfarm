@@ -1,0 +1,13 @@
+caption: QR генератор
+created: 20190825153328690
+modified: 20190927065357452
+order: 044
+tags: 
+title: $:/boa/custom-recommended/qr-gen
+
+!! ''Плагіни генерування //QR//-коду''
+
+Для генерування //QR//-коду з тексту виявлено 2 плагіни.
+
+* Генератор QR коду зі стандартної бібліотеки плагінів (локально після встановлення) - $:/plugins/tiddlywiki/qrcode
+* node-yaqrcode - https://github.com/Jermolene/TiddlyWiki5/tree/master/plugins/tiddlywiki/qrcode/files

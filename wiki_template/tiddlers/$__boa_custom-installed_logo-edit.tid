@@ -1,0 +1,89 @@
+caption: Поля логотипу
+created: 20190716071226253
+modified: 20190927070103879
+order: 010
+tags: 
+title: $:/boa/custom-installed/logo-edit
+
+\define edit-logo-field(tid,lbl,fld,descr)
+<div class="boa-edit-width">
+<div class="boa-label">$lbl$</div>
+<div class="boa-edit-field"><$edit tiddler="$:/boa/logo" field="$fld$"/></div>
+<div class="boa-table-comment">$descr$</div>
+</div>
+\end
+
+\define show-logo-field(tid,lbl,fld,descr)
+<div class="boa-edit-width">
+<div class="boa-label">$lbl$</div>
+<div class="boa-edit-field"><$view tiddler="$:/boa/logo" field="$fld$"/></div>
+<div class="boa-table-comment">$descr$</div>
+</div>
+\end
+
+<style>
+  .boa-edit-width { width:480px; }
+  .boa-edit-field { width:62%; display:inline; }
+  .boa-label { width:37%; display:inline-block; padding:3px 5px; background-color:#e8e8e8; font-weight:bold; }
+  .boa-table-comment { color: lightgrey; font-size: 95%; line-height: 100%; padding: 5px 5px 10px; width: 350px; }
+</style>
+
+!! ''Загальні параметри вікі''
+
+<<edit-logo-field
+  tid:"$:/boa/logo" 
+  lbl:"Назва вікі" 
+  fld:"wiki-name" 
+  descr:"Коротка назва вікі, одне-три слова"
+>>
+
+<<edit-logo-field
+  tid:"$:/boa/logo" 
+  lbl:"Опис вікі" 
+  fld:"wiki-caption" 
+  descr:"Стислий опис вікі, в межах 100 знаків"
+>>
+
+<<edit-logo-field
+  tid:"$:/boa/logo" 
+  lbl:"Теги вікі" 
+  fld:"tags" 
+  descr:"Теги використовуються для групування і фільтрації вікі у списку. Теги, що містять пробіли, поміща&shy;ються у подвійні квадратні дужки - `[[Мій тег]]`"
+>>
+
+<<edit-logo-field
+  tid:"$:/boa/logo" 
+  lbl:"Порядок вікі у списку" 
+  fld:"wiki-order" 
+  descr:"За цим параметром сортується список вікі"
+>>
+
+!! ''Розташування вікі''
+
+<<edit-logo-field
+  tid:"$:/boa/logo" 
+  lbl:"Веб-адреса вікі" 
+  fld:"wiki-address" 
+  descr:"Повна веб-адреса опублікованої вікі визначена у параметрах `wiki_domain` і `wiki_name` з конфігураційного файлу `tw_build_conf.json`"
+>>
+
+<<edit-logo-field
+  tid:"$:/boa/logo" 
+  lbl:"//Github// репо вікі" 
+  fld:"wiki-github" 
+  descr:"Повна веб-адреса Github репозитарію (багатофайловий вихідний текст вікі у форматі Node.js) складається з двох частин `github_main` і `wiki_name` з конфігураційного файлу `tw_build_conf.json`"
+>>
+
+<<edit-logo-field
+  tid:"$:/boa/logo" 
+  lbl:"Дата створення вікі" 
+  fld:"wiki-created" 
+  descr:"Формат дати: `yyyymmddHHMMSSFFF`, де `yyyy` - рік, `mm` - місяць, `dd` - день місяця, `HH` - годин, `MM` - хвилин, `SS` - секунд, `FFF` - мікросекунд"
+>>
+
+<<edit-logo-field
+  tid:"$:/boa/logo" 
+  lbl:"Дата модифікації вікі" 
+  fld:"wiki-modified" 
+  descr:"Формат аналогічний до //Дата створення вікі//"
+>>

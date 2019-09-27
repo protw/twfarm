@@ -1,0 +1,18 @@
+caption: Програвач звуку
+created: 20190922153742351
+modified: 20190927065433481
+order: 056
+tags: 
+title: $:/boa/custom-recommended/soundpad
+
+!! ''Плагін //~SoundPad//''
+
+//~SoundPad// - це проста, але досить стильна панель програвача звуку, що має Старт/Стоп Програвання, Гучність Є/Немає, Вивантажити файл.
+
+Також на сайті розробника у тідлері [[Available Sounds|https://mklauber.github.io/tw5-plugins/#Available%20Sounds]] представлений простий, але дієвий фільтр наявних звуків.
+
+> ''TODO!'' Для зберігання вбудованих у вікі аудіо-файлів у окремому фолдері `sounds\` під час генерування статичного HTML-файлу потрібне доопрацювання скрипта `tw_builder.m`.
+
+; Розміщення:
+* локальне -- $:/plugins/mklauber/SoundPad
+* в інтернеті -- https://mklauber.github.io/tw5-plugins/#SoundPad

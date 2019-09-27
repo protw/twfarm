@@ -1,0 +1,17 @@
+caption: TabLinks
+created: 20190823100810799
+modified: 20190927065522964
+order: 062
+tags: 
+title: $:/boa/custom-recommended/TabLinks
+
+!! Плагін //~TabLinks//
+
+//~TabLinks// - створює посилання для швидкого доступу, коли ви використовуєте макрос вкладок `<<tab>>` і хочете швидо доступитися до тідлера, вміст якого відображено під вкладкою.
+
+Є альтернативний плагін [[Link-to-Tabs|$:/boa/custom-installed/link-to-tabs]], якому надається перевага.
+
+; Розміщення:
+* локальне -- $:/plugins/TWaddle/TabLinks
+* в інтернеті -- http://tablinks.tiddlyspot.com/.
+

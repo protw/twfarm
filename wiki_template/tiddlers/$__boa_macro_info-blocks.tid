@@ -1,0 +1,49 @@
+created: 20190925174625266
+modified: 20190927070257288
+tags: $:/tags/Macro
+title: $:/boa/macro/info-blocks
+
+\define alert-primary(text)
+<<alert primary text:"<div style='float:left;width:7%;'>[img [$:/boa/img/fa5/list-alt]]</div><div style='float:left;width:90%;'>$text$</div><div style='clear:both;'/>" class:"leftbar border-primary">>
+\end
+\define alert-danger(text)
+<<alert danger text:"<div style='float:left;width:7%;'>[img [$:/boa/img/fa5/hand-paper]]</div><div style='float:left;width:90%;'>$text$</div><div style='clear:both;'/>" class:"leftbar border-danger">>
+\end
+\define alert-warning(text)
+<<alert warning text:"<div style='float:left;width:7%;'>[img [$:/boa/img/fa5/exclamation-triangle]]</div><div style='float:left;width:90%;'>$text$</div><div style='clear:both;'/>" class:"leftbar border-warning">>
+\end
+\define alert-info(text)
+<<alert info text:"<div style='float:left;width:7%;'>[img [$:/boa/img/fa5/info-circle]]</div><div style='float:left;width:90%;'>$text$</div><div style='clear:both;'/>" class:"leftbar border-info">>
+\end
+\define alert-success(text)
+<<alert success text:"<div style='float:left;width:7%;'>[img [$:/boa/img/fa5/thumb-up]]</div><div style='float:left;width:90%;'>$text$</div><div style='clear:both;'/>" class:"leftbar border-success">>
+\end
+
+!! ''Інфоблоки з іконками''
+
+На базі плагіна [[Shiraz|$:/boa/custom-installed/shiraz]] побудовані більш наочні інфоблоки з іконками і простішим макро-викликом. Інфоблоки розташовані у [[$:/boa/macro/info-blocks]].
+
+Виклик макросів інфоблоків максимально спрощений і виглядає таким чином:
+
+```
+<<alert-primary "вікі-текст">>
+<<alert-danger "вікі-текст">>
+<<alert-warning "вікі-текст">>
+<<alert-info "вікі-текст">>
+<<alert-success "вікі-текст">>
+```
+
+; PRIMARY
+: <<alert-primary "''Lorem Ipsum'' - це текст-'риба', що використовується в друкарстві та дизайні. //Lorem Ipsum// є, фактично, стандартною 'рибою' аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.">>
+
+; DANGER
+: <<alert-danger "'Риба' не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною.">>
+
+; WARNING
+: <<alert-warning "Вона популяризувалась в 60-их роках минулого сторіччя завдяки виданню зразків шрифтів `Letraset`, які містили уривки з Lorem Ipsum, і вдруге - нещодавно завдяки програмам комп'ютерного верстування на кшталт">>
+
+; INFO
+: <<alert-info "На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер. Він походить з уривку класичної латинської літератури 45 року до н.е., тобто має більш як 2000-річну історію.">>
+
+; SUCCESS
+: <<alert-success "Річард Макклінток, професор латини з коледжу Хемпдін-Сидні, що у Вірджінії, вивчав одне з найменш зрозумілих латинських слів - consectetur - з уривку Lorem Ipsum, і у пошуку цього слова в класичній літературі знайшов безсумнівне джерело.">>

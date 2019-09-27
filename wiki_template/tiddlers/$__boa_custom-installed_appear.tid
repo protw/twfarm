@@ -1,0 +1,14 @@
+caption: appear
+created: 20190822104139029
+modified: 20190927070048631
+order: 020
+tags: 
+title: $:/boa/custom-installed/appear
+
+!! ''Плагін //appear//''
+
+Плагін показує кнопку (або текст з посиланням), що внаслідок натискування розкриває прихований текст.
+
+; Розміщення:
+* локальне -- $:/plugins/tobibeer/appear
+* в інтернеті -- http://tobibeer.github.io/tw5-plugins/#appear
