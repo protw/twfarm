@@ -433,7 +433,7 @@ Error message and password prompt
 &gt;&gt;
 </pre>
 </div>
-<div caption="Стиль вмісту" created="20190922075139688" modified="20190927070119557" order="018" tags="" title="$:/boa/custom-installed/shiraz" revision="0" bag="default">
+<div caption="Стиль вмісту" created="20190922075139688" modified="20190929081122592" order="018" tags="" title="$:/boa/custom-installed/shiraz" revision="0" bag="default">
 <pre>!! ''Плагін //Shiraz//''
 
 //Shiraz// - це набір таблиць стилів (//CSS//) та макросів для створення стильного вмісту в //Tiddlywiki//. //Shiraz// налаштовує такі елементи, як сповіщення, картки, панелі, зображення, таблиці, значки, тексти, ...
@@ -441,18 +441,22 @@ Error message and password prompt
 ;Розміщення:
 * локальне -- $:/plugins/kookma/shiraz
 * в інтернеті -- https://kookma.github.io/Shiraz/
+* документація -- https://kookma.github.io/Shiraz/#Shiraz%20Tutorial
 
 {{$:/boa/macro/info-blocks}}</pre>
 </div>
-<div caption="tocP" created="20190823100034124" modified="20190927070618081" order="014" tags="" title="$:/boa/custom-installed/tocP" revision="0" bag="default">
+<div caption="tocP" created="20190823100034124" modified="20190928121631001" order="014" tags="" title="$:/boa/custom-installed/tocP" revision="0" bag="default">
 <pre>!! ''Плагін //tocP//''
 
 За параметрами виклику використання цього макросу аналогічно до `&lt;&lt;toc&gt;&gt;`. Основна відмінність полягає в тому, що назву батьківського тідлера треба прописувати у спеціально відведеному полі. За замовчанням це поле `parent`. Але за потреби можна зазначити будь-яке інше поле зазначивши його через параметр виклику макросу `field`: 
 
 * `&lt;&lt;tocP &quot;Root tiddler&quot; field:&quot;other_field&quot;&gt;&gt;`
 
-&gt; ''УВАГА!'' Важливо мати на увазі те, що назва коренового тідлера `Root tiddler` прописується в ньому ж у тому ж полі `field`!
-&gt; ''УВАГА!'' Під час введення назви батьківського тідлера до поля `parent` (або аналогічного) у дочірньому тідлері ''не поміщати (!)'' цю назву в подвійні квадратні дужки `[[ ]]`, навіть якщо ця назва містить пробіли.
+&lt;&lt;alert-warning &quot;
+
+* Важливо мати на увазі те, що назва коренового тідлера `Root tiddler` прописується в ньому ж у тому ж полі `field`!
+* Під час введення назви батьківського тідлера до поля `parent` (або аналогічного) у дочірньому тідлері ''не поміщати (!)'' цю назву в подвійні квадратні дужки `[[ ]]`, навіть якщо ця назва містить пробіли.
+&quot;&gt;&gt;
 
 ; Розміщення:
 * локальне -- $:/plugins/wikilabs/tocP
@@ -601,14 +605,14 @@ Error message and password prompt
 * локальне -- $:/plugins/flibbles/relink
 * в інтернеті -- https://flibbles.github.io/tw5-relink/</pre>
 </div>
-<div caption="Програвач звуку" created="20190922153742351" modified="20190927065433481" order="056" tags="" title="$:/boa/custom-recommended/soundpad" revision="0" bag="default">
+<div caption="Програвач звуку" created="20190922153742351" modified="20190928131735621" order="056" tags="" title="$:/boa/custom-recommended/soundpad" revision="0" bag="default">
 <pre>!! ''Плагін //~SoundPad//''
 
 //~SoundPad// - це проста, але досить стильна панель програвача звуку, що має Старт/Стоп Програвання, Гучність Є/Немає, Вивантажити файл.
 
 Також на сайті розробника у тідлері [[Available Sounds|https://mklauber.github.io/tw5-plugins/#Available%20Sounds]] представлений простий, але дієвий фільтр наявних звуків.
 
-&gt; ''TODO!'' Для зберігання вбудованих у вікі аудіо-файлів у окремому фолдері `sounds\` під час генерування статичного HTML-файлу потрібне доопрацювання скрипта `tw_builder.m`.
+&lt;&lt;alert-primary &quot;''TODO!'' Для зберігання вбудованих у вікі аудіо-файлів у окремому фолдері `sounds\` під час генерування статичного HTML-файлу для [[вікі-ферми|https://protw.github.io/twfarm]] потрібне доопрацювання скрипта `tw_builder.m`.&quot;&gt;&gt;
 
 ; Розміщення:
 * локальне -- $:/plugins/mklauber/SoundPad
@@ -694,12 +698,12 @@ Error message and password prompt
 
 </pre>
 </div>
-<div caption="Вставити картинку" created="20190823100612660" modified="20190927065148107" order="066" tags="" title="$:/boa/custom-recommended/Вставити картинку" revision="0" bag="default">
+<div caption="Вставити картинку" created="20190823100612660" modified="20190928131949144" order="066" tags="" title="$:/boa/custom-recommended/Вставити картинку" revision="0" bag="default">
 <pre>!! ''Макрос //Вставити картинку//''
 
 Макрос [[$:/boa/macro/Вставити картинку]] призначений для швидкого способу вставляння зображень до тексту з визначенням типу вирівнювання та розміру.
 
-&gt; ''УВАГА!'' Цей набір макросів пропонується замістити більш потужним і гнучким макросом з набору інструментів [[Shiraz|$:/boa/custom/shiraz]].
+&lt;&lt;alert-info &quot;''УВАГА!'' Цей набір макросів пропонується замістити більш потужним і гнучким макросом з набору інструментів [[Shiraz|$:/boa/custom-installed/shiraz]].&quot;&gt;&gt;
 
 ; Розміщення:
 * локальне -- [[$:/boa/macro/Вставити картинку]]
@@ -739,10 +743,12 @@ Error message and password prompt
 * Додати також гранульований фільтр за категоріями або за набором категорій з тегів або обраних полів. Треба ще знайти гарний приклад. Можна скористатися [[ChecklistWidget|http://checklist.tiddlyspot.com/#ChecklistWidget]] (див. //List Mode//)
 * Окремою задачею виділити пагінатор для перегляду списків.</pre>
 </div>
-<div caption="Власна бібліотека" created="20190922171138607" modified="20190922172110773" order="076" tags="" title="$:/boa/custom-todo/pluginlib" revision="0" bag="default">
+<div caption="Власна бібліотека" created="20190922171138607" modified="20190928132247558" order="076" tags="" title="$:/boa/custom-todo/pluginlib" revision="0" bag="default">
 <pre>!! ''Власна бібліотека''
 
-Всі обрані плагіни зібрати у власну бібліотеку так, щоб вона була доступна через //Панель Управління//. Створити власну біліотеку плагінів допоможе інструкція на [[сайті автора Jed Carty|http://inmysocks.tiddlyspot.com/#Making%20a%20Plugin%20Library]]
+Всі обрані (встановлені і рекомендовані) плагіни зібрати у власну бібліотеку і підключити до цього шаблону вікі так чином, щоб вона була доступна через //Панель Управління//. 
+
+Створити власну біліотеку плагінів допоможе інструкція на [[сайті автора Jed Carty|http://inmysocks.tiddlyspot.com/#Making%20a%20Plugin%20Library]]
 </pre>
 </div>
 <div caption="Tasks" created="20180615032251583" creator="Mohammad" modified="20190927073116559" modifier="Mohammad" order="071" title="$:/boa/custom-todo/shiraz-to-do-list" type="text/vnd.tiddlywiki" revision="0" bag="default">
@@ -834,7 +840,7 @@ Error message and password prompt
 &lt;/g&gt;
 &lt;/svg&gt;</pre>
 </div>
-<div created="20190925174625266" modified="20190927100759260" tags="$:/tags/Macro" title="$:/boa/macro/info-blocks" revision="0" bag="default">
+<div created="20190925174625266" modified="20190928130608950" tags="$:/tags/Macro" title="$:/boa/macro/info-blocks" revision="0" bag="default">
 <pre>\define alert-primary(text)
 &lt;&lt;alert primary text:&quot;&lt;div style='float:left;width:7%;'&gt;[img [$:/boa/img/fa5/list-alt.svg]]&lt;/div&gt;&lt;div style='float:left;width:90%;'&gt;$text$&lt;/div&gt;&lt;div style='clear:both;'/&gt;&quot; class:&quot;leftbar border-primary&quot;&gt;&gt;
 \end
@@ -865,20 +871,20 @@ Error message and password prompt
 &lt;&lt;alert-success &quot;вікі-текст&quot;&gt;&gt;
 ```
 
-; PRIMARY
-: &lt;&lt;alert-primary &quot;''Lorem Ipsum'' - це текст-'риба', що використовується в друкарстві та дизайні. //Lorem Ipsum// є, фактично, стандартною 'рибою' аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.&quot;&gt;&gt;
+!!! PRIMARY
+&lt;&lt;alert-primary &quot;''Lorem Ipsum'' - це текст-'риба', що використовується в друкарстві та дизайні. //Lorem Ipsum// є, фактично, стандартною 'рибою' аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.&quot;&gt;&gt;
 
-; DANGER
-: &lt;&lt;alert-danger &quot;'Риба' не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною.&quot;&gt;&gt;
+!!! DANGER
+&lt;&lt;alert-danger &quot;'Риба' не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною.&quot;&gt;&gt;
 
-; WARNING
-: &lt;&lt;alert-warning &quot;Вона популяризувалась в 60-их роках минулого сторіччя завдяки виданню зразків шрифтів `Letraset`, які містили уривки з Lorem Ipsum, і вдруге - нещодавно завдяки програмам комп'ютерного верстування на кшталт&quot;&gt;&gt;
+!!! WARNING
+&lt;&lt;alert-warning &quot;Вона популяризувалась в 60-их роках минулого сторіччя завдяки виданню зразків шрифтів `Letraset`, які містили уривки з Lorem Ipsum, і вдруге - нещодавно завдяки програмам комп'ютерного верстування на кшталт&quot;&gt;&gt;
 
-; INFO
-: &lt;&lt;alert-info &quot;На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер. Він походить з уривку класичної латинської літератури 45 року до н.е., тобто має більш як 2000-річну історію.&quot;&gt;&gt;
+!!! INFO
+&lt;&lt;alert-info &quot;На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер. Він походить з уривку класичної латинської літератури 45 року до н.е., тобто має більш як 2000-річну історію.&quot;&gt;&gt;
 
-; SUCCESS
-: &lt;&lt;alert-success &quot;Річард Макклінток, професор латини з коледжу Хемпдін-Сидні, що у Вірджінії, вивчав одне з найменш зрозумілих латинських слів - consectetur - з уривку Lorem Ipsum, і у пошуку цього слова в класичній літературі знайшов безсумнівне джерело.&quot;&gt;&gt;</pre>
+!!! SUCCESS
+&lt;&lt;alert-success &quot;Річард Макклінток, професор латини з коледжу Хемпдін-Сидні, що у Вірджінії, вивчав одне з найменш зрозумілих латинських слів - consectetur - з уривку Lorem Ipsum, і у пошуку цього слова в класичній літературі знайшов безсумнівне джерело.&quot;&gt;&gt;</pre>
 </div>
 <div created="20190702063749506" modified="20190715114946265" tags="$:/tags/Macro" title="$:/boa/macro/wiki-list" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>\define wiki-list()
@@ -973,7 +979,7 @@ Error message and password prompt
 /&gt;
 &lt;div style=&quot;clear:both;&quot;/&gt;</pre>
 </div>
-<div created="20171117182854066" modified="20190713211948296" tags="" title="$:/boa/template/block" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div created="20171117182854066" modified="20190928125334402" tags="" title="$:/boa/template/block" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>&lt;style&gt;
       .wrapper {
         width: 160px;
@@ -983,23 +989,24 @@ Error message and password prompt
         object-fit: contain;
         width: 100%;
         height: 100%;
+        padding: 8px;
         /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
       }
       .exmp3 img:hover {
-       box-shadow: 0 14px 14px rgba(0,0,0,0.25), 0 10px 8px rgba(0,0,0,0.22);
-      top: -4px;
-      left: -4px;
+        box-shadow: 0 14px 14px rgba(0,0,0,0.25), 0 10px 8px rgba(0,0,0,0.22);
+        top: -4px;
+        left: -4px;
       }
-      a.showcaseblock { text-decoration: none; font-weight: normal;}
-      a.showcaseblock:hover {text-decoration:none; font-weight: bold;}
+      a.showcaseblock { text-decoration: none; font-weight: normal; }
+      a.showcaseblock:hover { text-decoration: none; font-weight: bold;}
 &lt;/style&gt;
 
-&lt;div style=&quot;display:inline-block;width:160px;margin:10pt;&quot;&gt; 
+&lt;div style=&quot;display:inline-block; width:160px; margin:10pt;&quot;&gt; 
 &lt;div style=&quot;height:160px;&quot; class=&quot;wrapper exmp3&quot;&gt;
-&lt;a class=&quot;showcaseblock&quot; href={{!!web}} target=&quot;_blank&quot;&gt;&lt;$image source={{!!title}} tooltip={{!!caption}}/&gt;&lt;/a&gt;
+&lt;a class=&quot;showcaseblock&quot; href={{!!wiki-address}} target=&quot;_blank&quot;&gt;&lt;$image source={{!!title}} tooltip={{!!wiki-caption}}/&gt;&lt;/a&gt;
 &lt;/div&gt;
-&lt;div style=&quot;height:40px;overflow:hidden;text-overflow:ellipsis;font-size:small;font-family:Arial;&quot;&gt;
-&lt;a class=&quot;showcaseblock&quot; href={{!!web}}&gt;{{!!name}}&lt;/a&gt;
+&lt;div style=&quot;height:40px; overflow:hidden; text-overflow:ellipsis; font-size:small; font-family:Arial; padding: 2px 0px 2px 15px;&quot;&gt;
+&lt;a class=&quot;showcaseblock&quot; href={{!!wiki-address}}&gt;{{!!wiki-name}}&lt;/a&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -10675,7 +10682,7 @@ Error message and password prompt
 <div created="20190925185555487" modified="20190927051853023" tags="Done Task" title="task/Завдання № 02" revision="0" bag="default">
 <pre>Це робить текст схожим на оповідний. Багато програм верстування та веб-дизайну використовують Lorem Ipsum як зразок і пошук за терміном &quot;lorem ipsum&quot; відкриє багато веб-сайтів, які знаходяться ще в зародковому стані. Різні версії Lorem Ipsum з'явились за минулі роки, деякі випадково, деякі було створено зумисно (зокрема, жартівливі).</pre>
 </div>
-<div caption="My tools" created="20190922160821388" modified="20190927094650803" tags="$:/tags/SideBar" title="Додаткові інструменти" revision="0" bag="default">
+<div caption="My tools" created="20190922160821388" modified="20190928130629371" tags="$:/tags/SideBar" title="Додаткові інструменти" revision="0" bag="default">
 <pre>&lt;&lt;tabs &quot;$:/boa/custom-installed-list $:/boa/custom-recommended-list  $:/boa/custom-todo-list&quot; &quot;$:/boa/custom-installed-list&quot;&gt;&gt;
 
 </pre>

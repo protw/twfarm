@@ -13,14 +13,18 @@ function tw_builder
 
   printf("Eventually %d wiki folders are to process:\n",wiki_farm_len)
   # Main cycle for building htmls
+  update_flag = false;
   for i=1:wiki_farm_len
     wiki_name = jd.wiki_farm(i).wiki_name;
     printf("%d) Wiki %s",i,upper(wiki_name))
 
-    update_logo_to_main_wiki(jd, i);
+    update_flag |= transfer_logo_to_main_wiki(jd, i);
 
     tw_dir = jd.wiki_farm(i).local_dir;
-    if is_git_commit_needed(tw_dir)
+    html_index = [tw_dir jd.build_dir "\\" jd.html_file];
+    # Build html_index if (1) html wiki folder is absent or 
+    # (2) index.html is outdated
+    if is_html_index_outdated(html_index, tw_dir, jd)
       printf(" - html wiki to rebuild\n")
       tw_html_builder(jd, wiki_name); # building a particular wiki from farm
       update_flag = true;
@@ -32,7 +36,8 @@ function tw_builder
   wiki_name = jd.main_wiki.wiki_name;
   printf("Main wiki %s",upper(wiki_name))
   tw_dir = jd.main_wiki.local_dir;
-  if is_git_commit_needed(tw_dir)
+  html_index = [tw_dir "\\" jd.html_file];
+  if is_html_index_outdated(html_index, tw_dir, jd) || update_flag
     printf(" - html wiki to rebuild\n")
     tw_html_builder(jd); # building main wiki
   else
@@ -113,7 +118,7 @@ function conf_complete = conf_wiki_environment(jd,i)
   endif
 endfunction
 
-function update_logo_to_main_wiki(jd, i)
+function update_flag = transfer_logo_to_main_wiki(jd, i)
   logo_dir = [jd.main_wiki.local_dir jd.tid_dir jd.main_wiki.logo_dir "\\"];
   tw_dir = jd.wiki_farm(i).local_dir;
   wiki_name = jd.wiki_farm(i).wiki_name;
@@ -144,6 +149,7 @@ function update_logo_to_main_wiki(jd, i)
   # than no actions are needed and transf_complete = true;
   if latest_date_of_mw_logo_files > latest_date_of_logo_files || ...
      latest_date_of_mw_logo_files > jd.datenum; 
+    update_flag = false;
     return
   endif
 
@@ -171,10 +177,19 @@ function update_logo_to_main_wiki(jd, i)
       system(['copy /y "' logo_file '" "' logo_dir wiki_name f_ext '">nul']);
     endif
   endfor
+  update_flag = true;
 endfunction
 
-function diff_code = is_git_commit_needed(tw_dir)
-  diff_code = system(['git -C "' tw_dir '" diff --exit-code > nul']);
+function res = is_html_index_outdated(html_index, tw_dir, jd)
+  info = dir(html_index);
+  if isempty(info) || jd.datenum > info.datenum
+    res = true; 
+    return
+  endif
+  files = dir([tw_dir jd.tid_dir]);
+  files = files([files.isdir]!=1); # selecting files only
+  latest_tid_date = max([files.datenum]);
+  res = latest_tid_date > info.datenum;
 endfunction
 
 function tw_html_builder(jd, wiki_name)
