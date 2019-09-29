@@ -76,7 +76,7 @@ function jd = get_tw_build_conf(jconfile)
   endfor
   jd.wiki_farm=wiki_farm;
   jd.datenum = jconfile_attrib.datenum;
-  system('git config core.autocrlf true');
+  system('git config --global core.autocrlf true');
 endfunction
 
 function conf_complete = conf_wiki_environment(jd,i)
