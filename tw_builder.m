@@ -75,7 +75,6 @@ function jd = get_tw_build_conf(jconfile)
     wiki_farm(i) = jd.wiki_farm{i};
   endfor
   jd.wiki_farm=wiki_farm;
-  jd.datenum = jconfile_attrib.datenum;
   # For Windows users
   system('git config --global core.autocrlf false'); 
 endfunction
@@ -144,8 +143,7 @@ function update_logo_to_main_wiki(jd, i)
   latest_date_of_mw_logo_files = max([mw_logo_files.datenum]);
   # check if the logo in the main wiki is up to date (ie later than from wiki)
   # than no actions are needed and transf_complete = true;
-  if latest_date_of_mw_logo_files > latest_date_of_logo_files || ...
-     latest_date_of_mw_logo_files > jd.datenum; 
+  if latest_date_of_mw_logo_files > latest_date_of_logo_files
     return
   endif
 
