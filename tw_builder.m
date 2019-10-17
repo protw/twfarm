@@ -175,7 +175,6 @@ endfunction
 
 function diff_code = is_git_commit_needed(tw_dir)
   diff_code = system(['git -C "' tw_dir '" diff --exit-code > nul']);
-  diff_code = 1;
 endfunction
 
 function tw_html_builder(jd, wiki_name)
