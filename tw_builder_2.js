@@ -1,8 +1,14 @@
+// TW Farm Builder v. 2.0, 20.10.2019
+// Author (c) Olegh Bondarenko, https://bit.ly/oleghbond
+
 'use strict';
 var fs = require('fs');
 var child_process = require('child_process');
 const jconfile = 'tw_build_conf_2.json';
 let jd, wiki_name;
+
+console.log('TW Farm Builder v. 2.0, 20.10.2019');
+console.log('Author (c) Olegh Bondarenko, https://bit.ly/oleghbond');
 
 if (!wiki_farm_conf()) Error('Configuration incomplete!');
 
@@ -11,7 +17,6 @@ let i = 1;
 for (wiki_name in jd.wiki_farm) {
 	if (wiki_name == 'main_wiki') continue;
 	process.stdout.write(`== ${i++}) Wiki ${wiki_name.toUpperCase()}`);
-
 	update_logo_to_main_wiki(wiki_name);
 	tw_html_builder(wiki_name); // building a particular wiki from the farm
 }
@@ -23,7 +28,6 @@ tw_html_builder(wiki_name);
 console.log('DONE!\n');
 child_process.execSync('timeout /t 10', {stdio: 'inherit'});
 console.log('This is the end of the script');
-
 
 function tw_html_builder(w_name) {
 	let wiki_name, html_dir;
