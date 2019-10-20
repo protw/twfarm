@@ -10,13 +10,14 @@ console.log('Eventually %d wiki folders have been counted:\n',Object.keys(jd.wik
 let i = 1;
 for (wiki_name in jd.wiki_farm) {
 	if (wiki_name == 'main_wiki') continue;
-	console.log(`${i++} Wiki ${wiki_name.toUpperCase()}`);
+	process.stdout.write(`== ${i++}) Wiki ${wiki_name.toUpperCase()}`);
 
 	update_logo_to_main_wiki(wiki_name);
 	tw_html_builder(wiki_name); // building a particular wiki from the farm
 }
 // building main wiki
 wiki_name = 'main_wiki';
+process.stdout.write('==== MAIN WIKI');
 tw_html_builder(wiki_name);
 
 console.log('DONE!\n');
