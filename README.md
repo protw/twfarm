@@ -19,12 +19,14 @@ The script code, additional resources, and description of the technology are ava
 For a full-fledged work, the author must be able to write texts in *Tiddlywiki* and also install on own computer:
 
 * a local server for multiple wikis on *Tiddlywiki* - [OokTech / TW5-BobEXE](https://github.com/OokTech/TW5-BobEXE);
-* the environment for running Javascript code - [node.js](https://nodejs.org);
 * Google application [Backup and sync](https://www.google.com/drive/download/backup-and-sync/).
 
-The editor in order to run the `tw_builder.m` script, in addition to the above list, has to install on own computer [Octave sofware](https://www.gnu.org/software/octave/) and the function library [fangq/jsonlab](https://github.com/fangq/jsonlab) to process *JSON* data. For running the second version of the script *Octave* software is no loger needed.
+The editor in order to run the `tw_builder.m` script, in addition to the above list, has to install on own computer [Octave sofware](https://www.gnu.org/software/octave/) and the function library [fangq/jsonlab](https://github.com/fangq/jsonlab) to process *JSON* data. Though for running the second version of the script *Octave* software is no loger needed.
 
-At any case the editor has to install at own local computer a version control software - [git](https://git-scm.com/) and the environment for running Javascript code - [node.js](https://nodejs.org).
+At any case the editor has to install at own local computer 
+
+* version control software - [git](https://git-scm.com/) and 
+* the environment for running Javascript code - [node.js](https://nodejs.org).
 
 ## *Вікі-ферма* на базі технології *TW5 Farm*
 
@@ -49,7 +51,9 @@ At any case the editor has to install at own local computer a version control so
 * локальний сервер *Tiddlywiki* [OokTech/TW5-BobEXE](https://github.com/OokTech/TW5-BobEXE);
 * застосунок Гугл [Резервне копіювання і синхронізація](https://www.google.com/intl/uk_ALL/drive/).
 
-Редактору для запуску першої версії скрипта `tw_builder.m` додатково до вищезазначеного списку треба встановити на своєму комп'ютері [Octave](https://www.gnu.org/software/octave/), а також бібліотеку функцій [fangq/jsonlab](https://github.com/fangq/jsonlab) для роботи з даними формату *JSON*. Для запуску другої версії скрипта програмне забезпечення *Octave* не потрібно.
+Редактору для запуску першої версії скрипта `tw_builder.m` додатково до вищезазначеного списку треба встановити на своєму комп'ютері [Octave](https://www.gnu.org/software/octave/), а також бібліотеку функцій [fangq/jsonlab](https://github.com/fangq/jsonlab) для роботи з даними формату *JSON*. Хоча для запуску другої версії скрипта програмне забезпечення *Octave* не потрібно.
 
-У будь-якому випадку редактору необхідно встановити програмне забезпечення з контролю версій - [git](https://git-scm.com/) і середовище для запуску коду Javascript - [node.js](https://nodejs.org).
-.
+У будь-якому випадку редактору необхідно встановити 
+
+* програмне забезпечення з контролю версій - [git](https://git-scm.com/) і 
+* середовище для запуску коду Javascript - [node.js](https://nodejs.org).
