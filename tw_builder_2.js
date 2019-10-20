@@ -20,7 +20,7 @@ wiki_name = 'main_wiki';
 tw_html_builder(wiki_name);
 
 console.log('DONE!\n');
-run_cmd('timeout /t 10');
+child_process.execSync('timeout /t 10', {stdio: 'inherit'});
 console.log('This is the end of the script');
 
 
@@ -49,7 +49,7 @@ function tw_html_builder(w_name) {
 		fs.rmdirSync(html_images_dir,{'recursive':true});
 	if (fs.existsSync(html_index_file) && fs.statSync(html_index_file).isFile()) 
 		fs.unlinkSync(html_index_file);
-	child_process.execSync(`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`);
+	child_process.execSync(`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`, {stdio: 'inherit'});
 	let img_filter = `"[is[image]] -[title[${jd.logo_js}]] -[[$:/favicon.ico]]"`;
 	let html_tw_build_cmd = 
 		`tiddlywiki "${tmp_dir}" ` +
@@ -59,7 +59,7 @@ function tw_html_builder(w_name) {
 		`--setfield ${img_filter} text "" text/plain ` +
 		`--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline ` +
 		`"${html_index_file}" text/plain`;
-	run_cmd(html_tw_build_cmd); // child_process.execSync
+	child_process.execSync(html_tw_build_cmd, {stdio: 'inherit'});
 	fs.rmdirSync(tmp_dir + jd.conf.tid_dir, {'recursive':true});
 	fs.rmdirSync(tmp_dir, {'recursive':true});
 
@@ -72,7 +72,7 @@ function tw_html_builder(w_name) {
 	////// THE LAST COMMAND IS EXECUTED WITH CARE SO FAR
 	console.log('Github repo of %s is syncronizing...\n', wiki_name.toUpperCase())
 	for (var s_git of git_sync)
-		run_cmd(s_git);
+		child_process.execSync(s_git, {stdio: 'inherit'});
 }
 function update_logo_to_main_wiki(wiki_name) {
 	if(wiki_name == 'main_wiki') return;
@@ -177,7 +177,7 @@ function tidstruct2tidstr(tidstruct) {
 	return s;
 }
 function is_git_commit_needed(tw_dir) {
-  let exit_code = run_cmd(`git -C ${tw_dir} diff --exit-code`);
+  let exit_code = child_process.spawnSync('git',['-C',tw_dir,'diff','--exit-code']).status;
   return exit_code;
 }
 function wiki_farm_conf () {
@@ -195,7 +195,7 @@ function wiki_farm_conf () {
 	if (!fs.existsSync(sep_git_dir) || !fs.statSync(sep_git_dir).isDirectory()) {
 		fs.mkdirSync(sep_git_dir);
 	}
-	var exit_code = run_cmd('git config --global core.autocrlf false');
+	child_process.execSync('git config --global core.autocrlf false', {stdio: 'inherit'});
 	let conf_complete = true;
 	let local_dir, wiki_name, spec_dir;
 	for (let w_name in jd.wiki_farm) {
@@ -223,7 +223,7 @@ function wiki_farm_conf () {
 		}
 		let sep_git_file = local_dir + '\\.git';
 		if (!fs.existsSync(sep_git_file) || !fs.statSync(sep_git_file).isFile()) {
-			exit_code = run_cmd(`git -C ${local_dir} init --separate-git-dir ${sep_git_dir}`);
+			child_process.execSync(`git -C ${local_dir} init --separate-git-dir ${sep_git_dir}`, {stdio: 'inherit'});
 		}
 		let git_ignore_file = local_dir + '\\.gitignore';
 		if (!fs.existsSync(git_ignore_file) || !fs.statSync(git_ignore_file).isFile()) {
