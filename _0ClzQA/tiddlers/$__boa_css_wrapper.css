@@ -1,0 +1,10 @@
+/* Block alignment style for Shiraz macro 'image-overlay' when it is applied for catalog grid.
+ * Class 'cat-grid-wrapper' to be put into the class list of widget <$image/> inside 
+ * [[$:/plugins/kookma/shiraz/macros/image-overlay]].
+ */
+
+.cat-grid-wrapper {
+    width: 160px;
+    height: 200px;
+    object-fit: contain;
+}

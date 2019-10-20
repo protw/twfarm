@@ -1,0 +1,12 @@
+author: Mohammad Rahmani
+core-version: >=5.1.18
+created: 20190901192926346
+description: Shiraz 2.0.0
+list: readme history license
+modified: 20190920174749493
+plugin-type: plugin
+source: https://github.com/kookma/Shiraz
+tags: 
+title: $:/plugins/kookma/shiraz
+type: application/json
+version: 2.0.0 beta 2

@@ -1,0 +1,42 @@
+created: 20190929081407130
+modified: 20190929200438824
+tags: org Інформація
+title: Потенційні партнери у стилі citizen-science
+type: text/vnd.tiddlywiki
+
+!! ''Ukraine''
+
+<$list filter="[is[image]has[name]!has[draft.of]!is[system]country[Ukraine]sort[title]]">
+  <a href={{!!web}} target="_blank">
+    <$macrocall $name="image-overlay" 
+        img={{!!title}} 
+        caption={{!!name}} 
+        title={{!!name}} 
+        text="{{!!caption}}, {{!!country}}" 
+        align="left" 
+        width="178px" 
+        fadein="top"
+    />
+  </a>
+</$list>
+
+<div style="clear:both;"/>
+
+!! ''World''
+
+<$list filter="[is[image]has[name]!has[draft.of]!is[system]!country[Ukraine]sort[title]]">
+  <a href={{!!web}} target="_blank">
+    <$macrocall $name="image-overlay" 
+        img={{!!title}} 
+        caption={{!!name}} 
+        title={{!!name}} 
+        text="{{!!caption}}, {{!!country}}" 
+        align="left" 
+        width="178px" 
+        fadein="top"
+    />
+  </a>
+</$list>
+
+<div style="clear:both;"/>
+

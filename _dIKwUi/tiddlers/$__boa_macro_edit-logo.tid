@@ -1,0 +1,6 @@
+created: 20190716163007871
+modified: 20190716163948580
+tags: $:/tags/Macro
+title: $:/boa/macro/edit-logo
+
+\define edit-logo() {{$:/boa/template/edit-logo}}

@@ -1,0 +1,8 @@
+created: 20190927144012844
+modified: 20190929081550758
+tags: Каталог
+title: Інформація
+
+!! ''Корисна і довідкова інформація''
+
+<<list-links filter:"[!has[draft.of]tag[Інформація]sort[title]]">>

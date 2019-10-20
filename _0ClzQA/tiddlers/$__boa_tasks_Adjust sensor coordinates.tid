@@ -1,0 +1,15 @@
+caption: Sensor coordinates
+created: 20190921064016387
+done: not
+modified: 20190921082137379
+tags: 
+title: $:/boa/tasks/Adjust sensor coordinates
+
+During initialization of the first sensor its coordinates were assigned at the territory of NAU, Kyiv as `{50.43992, 30.42885}`. After several days of testing of the sensor was finally installed  close to the first location under coordinates `{50.440213, 30.430131}`. 
+
+Photos of the installed sensor can be found here:
+
+* https://www.facebook.com/groups/nauprof/permalink/746431039137413/
+
+; Request:
+: to the Airly maintenance service to amend the coordinates on the map and inform the //AirZOOM// team

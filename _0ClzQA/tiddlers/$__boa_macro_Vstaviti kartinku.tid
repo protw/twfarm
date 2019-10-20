@@ -1,0 +1,66 @@
+created: 20161228105057800
+headingorder: 040
+modified: 20190730172516902
+revision: 0
+tags: $:/tags/Macro
+title: $:/boa/macro/Вставити картинку
+type: text/vnd.tiddlywiki
+
+\define image-center-caption(image, width)
+<div style="text-align:center;">[img width="$width$" [$image$]]</div>
+
+Рисунок. {{$image$!!caption}}
+\end
+
+\define image-center(image, width)
+<div style="text-align:center;">[img width="$width$" [$image$]]</div>
+\end
+
+\define image-left-caption(image, width)
+@@float:left;width:$width$;margin-right:10pt;margin-bottom:5pt; 
+[img[$image$]]
+
+Рисунок. {{$image$!!caption}}
+@@
+\end
+
+\define image-left(image, width)
+@@float:left;width:$width$;margin-right:10pt;margin-bottom:5pt; 
+[img[$image$]]
+@@
+\end
+
+\define image-right-caption(image, width)
+@@float:right;width:$width$;margin-left:10pt;margin-bottom:5pt;  
+[img[$image$]]
+
+Рисунок. {{$image$!!caption}}
+@@
+\end
+
+\define image-right(image, width)
+@@float:right;width:$width$;margin-left:10pt;margin-bottom:5pt;  
+[img[$image$]]
+@@
+\end
+
+Для зручного та уніфікованого розміщення зображень у цьому тексті створено шість макросів. Їхню нотацію легко запам'ятати і використовувати:
+
+| Назва макросу | Дія макросу |h
+|`image-center-caption(image, width)` |Центрований, з підписом, <br/>без обтікання текстом |
+|`image-center(image, width)` |Центрований, без підпису, <br/>без обтікання текстом |
+|`image-left-caption(image, width)` |Ліворуч, з підписом, <br/>обтікання текстом праворуч |
+|`image-left(image, width)` |Ліворуч, без підпису, <br/>обтікання текстом праворуч |
+|`image-right-caption(image, width)` |Праворуч, з підписом, <br/>обтікання текстом зліва |
+|`image-right(image, width)` |Праворуч, без підпису, <br/>обтікання текстом зліва |
+
+Зображення має зберігатися як внутрішній тідлер. У випадку використання зовнішнього зображення його зберігають як внутрішній тідлер із застосуванням механізму [[_canonical_uri|http://tw5rudoc.tiddlyspot.com/#Внешние изображения]]. Підпис до зображення зберігається у його тідлері в полі `caption`.
+
+<<image-left $:/languages/en-GB/icon 10%>> Приклад використання: 
+
+`<<image-left $:/languages/en-GB/icon 10%>>`
+
+Для використання цих макросів в інших ТВ потрібно скопіювати цей тідлер туди: 
+
+* або шляхом перетягування посилання на цей тідлер (drag-and-drop), 
+* або через експорт/імпорт тідлера (краще через формати .TID або .JSON).

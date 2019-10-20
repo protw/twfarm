@@ -1,0 +1,6 @@
+created: 20190924191400914
+modified: 20190924203739125
+tags: 
+title: $:/boa/template/publication
+
+{{!!title}} / Автор: {{!!pub-author}}, Видавець: {{!!publisher}}, <$view field="pub-date" format="date" template="DD-MM-YYYY"/>, <a href={{!!pub-link}} title="Інтернет-адреса публікації">Розташування</a>

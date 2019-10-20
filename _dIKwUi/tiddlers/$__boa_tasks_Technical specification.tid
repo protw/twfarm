@@ -1,0 +1,20 @@
+caption: Tech spec
+created: 20190921063649149
+done: not
+modified: 20190921082647458
+tags: 
+title: $:/boa/tasks/Technical specification
+
+For purchase of the 10 sensors planned under the Kyiv Public Budget Project a detailed technical specification is needed.
+
+This specification among other things includes preliminary requirements of the Kyiv Municipal Enterprise "Informatyka":
+
+* Lorawan,
+* API to get read/write data access to the Municipal data-center,
+* 12 V power supply,
+* UPS functionality.
+
+Also it includes the exact model specification, drawings, technical description of modules and components, various metrological and safety certificates, min/max/recommended height of installation, etc.
+
+; Request:
+: As we agreed during the meeting help on 6.9.2019 in Krakow //AirZOOM// team expects ''from Pani Anna'' the materials described above.
