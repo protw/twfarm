@@ -2,52 +2,30 @@
 var fs = require('fs');
 var child_process = require('child_process');
 const jconfile = 'tw_build_conf_2.json';
-let jd, wiki_name, tw_dir;
+let jd, wiki_name;
 
-if (!wiki_farm_conf())
-	Error('Configuration incomplete!');
+if (!wiki_farm_conf()) Error('Configuration incomplete!');
 
 console.log('Eventually %d wiki folders have been counted:\n',Object.keys(jd.wiki_farm).length)
-let i = 1, html_file;
+let i = 1;
 for (wiki_name in jd.wiki_farm) {
 	if (wiki_name == 'main_wiki') continue;
-	console.log('%d) Wiki %s', i++, wiki_name.toUpperCase());
+	console.log(`${i++} Wiki ${wiki_name.toUpperCase()}`);
 
 	update_logo_to_main_wiki(wiki_name);
-
-	tw_dir = jd.wiki_farm[wiki_name].local_dir;
-	html_file = tw_dir + jd.conf.build_dir + '\\' + jd.conf.html_file;
-	if (is_git_commit_needed(tw_dir) || !fs.existsSync(html_file)) {
-		console.log(' - html wiki to rebuild\n');
-  		tw_html_builder(wiki_name); // building a particular wiki from the farm
-	}
-	else
-		console.log(' - html wiki is up to date\n');
+	tw_html_builder(wiki_name); // building a particular wiki from the farm
 }
-
 // building main wiki
-let w_name = 'main_wiki';
-wiki_name = jd.wiki_farm[w_name].wiki_name;
-console.log('Main wiki %s', wiki_name.toUpperCase());
-tw_dir = jd.wiki_farm[w_name].local_dir;
-html_file = tw_dir + jd.conf.html_file;
-if (is_git_commit_needed(tw_dir) || !fs.existsSync(html_file)) {
-	console.log(' - html wiki to rebuild\n');
-	tw_html_builder(w_name);
-}
-else {
-	console.log(' - html wiki is up to date\n');
-}
+wiki_name = 'main_wiki';
+tw_html_builder(wiki_name);
 
 console.log('DONE!\n');
-let exit_code = run_cmd('timeout /t 10');
-
-
+run_cmd('timeout /t 10');
 console.log('This is the end of the script');
 
 
 function tw_html_builder(w_name) {
-	let wiki_name, html_dir, exit_code;
+	let wiki_name, html_dir;
 	let github_repo = jd.wiki_farm[w_name].github;
 	let tw_dir = jd.wiki_farm[w_name].local_dir;
 	if (w_name == 'main_wiki') { // main wiki case
@@ -59,45 +37,49 @@ function tw_html_builder(w_name) {
 		html_dir = tw_dir + jd.conf.build_dir;
 	}
   
-	let html_index_file = `"${html_dir}\\${jd.conf.html_file}"`;
-	let html_images_dir = `"${html_dir}${jd.conf.img_dir}"`;
-	let tmp_dir = `"${__dirname}\\${fs.mkdtempSync('_')}"`;
+	let html_index_file = html_dir + '\\' + jd.conf.html_file;
+	let html_images_dir = html_dir + jd.conf.img_dir;
+	if (!is_git_commit_needed(tw_dir) && fs.existsSync(html_index_file)) {
+		console.log(' - html wiki is up to date\n');
+		return;
+	}
+	console.log(' - html wiki to rebuild\n');
+	let tmp_dir = fs.mkdtempSync(jd.conf.tmp_dir + '\\_');
 	if (fs.existsSync(html_images_dir) && fs.statSync(html_images_dir).isDirectory()) 
 		fs.rmdirSync(html_images_dir,{'recursive':true});
 	if (fs.existsSync(html_index_file) && fs.statSync(html_index_file).isFile()) 
-		fs.rmdirSync(html_index_file,{'recursive':true});
-	child_process.execSync(`xcopy /s/i/q "${tw_dir}\\*.*" ${tmp_dir} /exclude:tw_exclude.list`);
+		fs.unlinkSync(html_index_file);
+	child_process.execSync(`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`);
 	let img_filter = `"[is[image]] -[title[${jd.logo_js}]] -[[$:/favicon.ico]]"`;
 	let html_tw_build_cmd = 
-		`tiddlywiki ${tmp_dir} ` +
-    	`--savetiddlers ${img_filter} ${html_images_dir} ` + 
+		`tiddlywiki "${tmp_dir}" ` +
+    	`--savetiddlers ${img_filter} "${html_images_dir}" ` + 
 		`--setfield ${img_filter} _canonical_uri ` +
 		`$:/core/templates/canonical-uri-external-image text/plain ` +
 		`--setfield ${img_filter} text "" text/plain ` +
 		`--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline ` +
-		`${html_index_file} text/plain`;
+		`"${html_index_file}" text/plain`;
 	run_cmd(html_tw_build_cmd); // child_process.execSync
 	fs.rmdirSync(tmp_dir + jd.conf.tid_dir, {'recursive':true});
 	fs.rmdirSync(tmp_dir, {'recursive':true});
 
 	let today_label = Date();
 	let git_sync = [
-		`git -C ${tw_dir} add -A`,
-		`git -C ${tw_dir} commit -a -m "Update of ${today_label}"`,
-		`git -C ${tw_dir} push --progress ${github_repo} master --force`
+		`git -C "${tw_dir}" add -A`,
+		`git -C "${tw_dir}" commit -a -m "Update of ${today_label}"`,
+		`git -C "${tw_dir}" push --progress ${github_repo} master --force`
 	];
 	////// THE LAST COMMAND IS EXECUTED WITH CARE SO FAR
 	console.log('Github repo of %s is syncronizing...\n', wiki_name.toUpperCase())
 	for (var s_git of git_sync)
-		exit_code = run_cmd(s_git);
+		run_cmd(s_git);
 }
 function update_logo_to_main_wiki(wiki_name) {
 	if(wiki_name == 'main_wiki') return;
 
 	let mw_logo_dir = jd.wiki_farm.main_wiki.local_dir + jd.conf.tid_dir + jd.conf.logo_dir + '\\';
 	let tw_dir = jd.wiki_farm[wiki_name].local_dir;
-	var exit_code;
-  
+
 	// logo_js - logo tiddler name inside tiddler
 	// Find a standard logo tiddler '$__boa_logo.*' in the current 
 	// node wiki and copy it to folder logo_dir
@@ -205,6 +187,10 @@ function wiki_farm_conf () {
 		Error('The wiki farm list is too short!');
 	if (!tw_exist(jd.wiki_farm.main_wiki.local_dir))
 		Error(`Main wiki does not exist in ${jd.wiki_farm.main_wiki.local_dir}`);
+	let tmp_dir = jd.conf.tmp_dir;
+	if (!fs.existsSync(tmp_dir) || !fs.statSync(tmp_dir).isDirectory()) {
+		fs.mkdirSync(tmp_dir);
+	}
 	let sep_git_dir = jd.conf.sep_git_dir;
 	if (!fs.existsSync(sep_git_dir) || !fs.statSync(sep_git_dir).isDirectory()) {
 		fs.mkdirSync(sep_git_dir);
@@ -257,5 +243,5 @@ function run_cmd (cmd_line) {
 	let args=tokens.slice(1,tokens.length);
 
 	console.log(cmd_line);
-	return child_process.spawnSync(cmd,args).status;
+	return child_process.spawnSync(cmd,args,{stdio:'inherit'}).status;
 }
