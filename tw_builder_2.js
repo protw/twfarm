@@ -29,6 +29,67 @@ console.log('DONE!\n');
 child_process.execSync('timeout /t 10', {stdio: 'inherit'});
 console.log('This is the end of the script');
 
+function wiki_farm_conf () {
+	// Reading wiki farm config file
+	jd = JSON.parse(fs.readFileSync(jconfile, 'utf8'));
+	if (Object.keys(jd.wiki_farm).length <= 1)
+		Error('The wiki farm list is too short!');
+	if (!tw_exist(jd.wiki_farm.main_wiki.local_dir))
+		Error(`Main wiki does not exist in ${jd.wiki_farm.main_wiki.local_dir}`);
+	let tmp_dir = jd.conf.tmp_dir;
+	if (!fs.existsSync(tmp_dir) || !fs.statSync(tmp_dir).isDirectory()) {
+		fs.mkdirSync(tmp_dir);
+	}
+	let sep_git_dir = jd.conf.sep_git_dir;
+	if (!fs.existsSync(sep_git_dir) || !fs.statSync(sep_git_dir).isDirectory()) {
+		fs.mkdirSync(sep_git_dir);
+	}
+	child_process.execSync('git config --global core.autocrlf false', {stdio: 'inherit'});
+	let conf_complete = true;
+	let local_dir, wiki_name, spec_dir;
+	for (let w_name in jd.wiki_farm) {
+		local_dir = jd.wiki_farm[w_name].local_dir;
+		if (w_name == 'main_wiki') {
+			wiki_name = jd.wiki_farm[w_name].wiki_name;
+			spec_dir = local_dir + jd.conf.tid_dir + jd.conf.logo_dir + '\\';
+		}
+		else {
+			wiki_name = w_name;
+			spec_dir = local_dir + jd.conf.build_dir;
+		}
+		// Check the node TW existence
+		if (!tw_exist(local_dir)) {
+			console.log('Wiki %s does not exist\n',wiki_name.toUpperCase());
+			conf_complete = false;
+			break;
+		}
+		if (!fs.existsSync(spec_dir) || !fs.statSync(spec_dir).isDirectory()) {
+			fs.mkdirSync(spec_dir);
+		}
+		sep_git_dir = jd.conf.sep_git_dir + '\\' + wiki_name;
+		if (!fs.existsSync(sep_git_dir) || !fs.statSync(sep_git_dir).isDirectory()) {
+			fs.mkdirSync(sep_git_dir);
+		}
+		let sep_git_file = local_dir + '\\.git';
+		if (!fs.existsSync(sep_git_file) || !fs.statSync(sep_git_file).isFile()) {
+			child_process.execSync(`git -C ${local_dir} init --separate-git-dir ${sep_git_dir}`, {stdio: 'inherit'});
+		}
+		let git_ignore_file = local_dir + '\\.gitignore';
+		if (!fs.existsSync(git_ignore_file) || !fs.statSync(git_ignore_file).isFile()) {
+			const s = 'desktop.ini';
+			fs.writeFileSync(git_ignore_file, s);
+		}
+	}
+	return conf_complete;
+}
+function tw_exist (tw_dir) {
+	return fs.statSync(tw_dir + '\\' + jd.conf.tw_info).isFile() && 
+		fs.statSync(tw_dir + jd.conf.tid_dir).isDirectory();
+}
+function is_git_commit_needed(tw_dir) {
+  let exit_code = child_process.spawnSync('git',['-C',tw_dir,'diff','--exit-code']).status;
+  return exit_code;
+}
 function tw_html_builder(w_name) {
 	let wiki_name, html_dir;
 	let github_repo = jd.wiki_farm[w_name].github;
@@ -41,14 +102,13 @@ function tw_html_builder(w_name) {
 		wiki_name = w_name;
 		html_dir = tw_dir + jd.conf.build_dir;
 	}
-  
 	let html_index_file = html_dir + '\\' + jd.conf.html_file;
 	let html_images_dir = html_dir + jd.conf.img_dir;
 	if (!is_git_commit_needed(tw_dir) && fs.existsSync(html_index_file)) {
-		console.log(' - html wiki is up to date\n');
+		console.log(' - html wiki is up to date');
 		return;
 	}
-	console.log(' - html wiki to rebuild\n');
+	console.log(' - html wiki to rebuild');
 	let tmp_dir = fs.mkdtempSync(jd.conf.tmp_dir + '\\_');
 	if (fs.existsSync(html_images_dir) && fs.statSync(html_images_dir).isDirectory()) 
 		fs.rmdirSync(html_images_dir,{'recursive':true});
@@ -180,73 +240,4 @@ function tidstruct2tidstr(tidstruct) {
 	}
 	s += '\n' + tidstruct['text'];
 	return s;
-}
-function is_git_commit_needed(tw_dir) {
-  let exit_code = child_process.spawnSync('git',['-C',tw_dir,'diff','--exit-code']).status;
-  return exit_code;
-}
-function wiki_farm_conf () {
-	// Reading wiki farm config file
-	jd = JSON.parse(fs.readFileSync(jconfile, 'utf8'));
-	if (Object.keys(jd.wiki_farm).length <= 1)
-		Error('The wiki farm list is too short!');
-	if (!tw_exist(jd.wiki_farm.main_wiki.local_dir))
-		Error(`Main wiki does not exist in ${jd.wiki_farm.main_wiki.local_dir}`);
-	let tmp_dir = jd.conf.tmp_dir;
-	if (!fs.existsSync(tmp_dir) || !fs.statSync(tmp_dir).isDirectory()) {
-		fs.mkdirSync(tmp_dir);
-	}
-	let sep_git_dir = jd.conf.sep_git_dir;
-	if (!fs.existsSync(sep_git_dir) || !fs.statSync(sep_git_dir).isDirectory()) {
-		fs.mkdirSync(sep_git_dir);
-	}
-	child_process.execSync('git config --global core.autocrlf false', {stdio: 'inherit'});
-	let conf_complete = true;
-	let local_dir, wiki_name, spec_dir;
-	for (let w_name in jd.wiki_farm) {
-		local_dir = jd.wiki_farm[w_name].local_dir;
-		if (w_name == 'main_wiki') {
-			wiki_name = jd.wiki_farm[w_name].wiki_name;
-			spec_dir = local_dir + jd.conf.tid_dir + jd.conf.logo_dir + '\\';
-		}
-		else {
-			wiki_name = w_name;
-			spec_dir = local_dir + jd.conf.build_dir;
-		}
-		// Check the node TW existence
-		if (!tw_exist(local_dir)) {
-			console.log('Wiki %s does not exist\n',wiki_name.toUpperCase());
-			conf_complete = false;
-			break;
-		}
-		if (!fs.existsSync(spec_dir) || !fs.statSync(spec_dir).isDirectory()) {
-			fs.mkdirSync(spec_dir);
-		}
-		sep_git_dir = jd.conf.sep_git_dir + '\\' + wiki_name;
-		if (!fs.existsSync(sep_git_dir) || !fs.statSync(sep_git_dir).isDirectory()) {
-			fs.mkdirSync(sep_git_dir);
-		}
-		let sep_git_file = local_dir + '\\.git';
-		if (!fs.existsSync(sep_git_file) || !fs.statSync(sep_git_file).isFile()) {
-			child_process.execSync(`git -C ${local_dir} init --separate-git-dir ${sep_git_dir}`, {stdio: 'inherit'});
-		}
-		let git_ignore_file = local_dir + '\\.gitignore';
-		if (!fs.existsSync(git_ignore_file) || !fs.statSync(git_ignore_file).isFile()) {
-			const s = 'desktop.ini';
-			fs.writeFileSync(git_ignore_file, s);
-		}
-	}
-	return conf_complete;
-}
-function tw_exist (tw_dir) {
-	return fs.statSync(tw_dir + '\\' + jd.conf.tw_info).isFile() && 
-		fs.statSync(tw_dir + jd.conf.tid_dir).isDirectory();
-}
-function run_cmd (cmd_line) {
-	let tokens=cmd_line.split(' ');
-	let cmd=tokens[0];
-	let args=tokens.slice(1,tokens.length);
-
-	console.log(cmd_line);
-	return child_process.spawnSync(cmd,args,{stdio:'inherit'}).status;
 }
