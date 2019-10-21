@@ -135,7 +135,7 @@ function tw_html_builder(w_name) {
 		`git -C "${tw_dir}" push --progress ${github_repo} master --force`
 	];
 	////// THE LAST COMMAND IS EXECUTED WITH CARE SO FAR
-	console.log('Github repo of %s is syncronizing...\n', wiki_name.toUpperCase())
+	console.log('Github repo of %s is syncronizing...', wiki_name.toUpperCase())
 	for (var s_git of git_sync)
 		child_process.execSync(s_git, {stdio: 'inherit'});
 }
@@ -210,7 +210,7 @@ function latest_filtered_file(file_dir, file_mask) {
 	if (filtered_files.length == 0)
 		return {'files':filtered_files, 'latest_date':latest};
 	else if (filtered_files.length != 2) {
-    	console.log('Number of files "%s" in wiki is not equal 2.\n', file_mask);
+    	console.log('Number of files "%s" in wiki is not equal 2.', file_mask);
 		Error('Execution stops!')
 	}
 	for (var index in filtered_files) {

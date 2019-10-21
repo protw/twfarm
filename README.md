@@ -12,6 +12,8 @@ An excellent feature of the *TW5 Farm* technology is the function of automated c
 
 To provide this feature, each wiki contains a standardized `$:/boa/logo` tiddler (a separate article is referred in *Tiddlywiki* as a *tiddler*). This tiddler contains the information needed to represent the wiki in the catalog outside.
 
+> **IMPORTANT!** In order to facilitate creation of a new wiki in the *TW Farm* one can download a ready-to-use wiki template from https://github.com/protw/templ
+
 The core of the technology is the `tw_builder` script. The first version of the script was written by means of a high-level programming language -  *Octave*. Then the second version was re-written using *Javascript*. The editor runs this script on own computer. The script updates the wiki information in the *Github* repository, updates the wiki collection information, prepares and executes the process of publishing on the Internet.
 
 The script code, additional resources, and description of the technology are available at https://github.com/protw/twfarm. The technology description wiki is available at https://protw.github.io/twfarm (in Ukrainian).
@@ -41,6 +43,8 @@ At any case the editor has to install at own local computer
 Чудовою властивістю технології *TW5 Farm* є функція автоматизованого збирання інформації про всі вікі, що включені до колекції, та представлення в окремій центральній вікі. Приклад такого центрального каталогу для колекції вікі під назвою *TW Farm* (вікі-ферма) доступний за адресою https://protw.github.io/.
 
 Для забезпечення цієї функції кожна вікі містить стандартизований тідлер `$:/boa/logo` (так в *Tiddlywiki* називають окремі статті), в якому міститься інформація, необхідна для представлення вікі у каталогу назовні.
+
+> **ВАЖЛИВО!** Задля полегшення створення нової вікі на вікі-фермі *TW Farm*, можна завантажити готовий для використання шаблон вікі звідси https://github.com/protw/templ
 
 Ядром технології є скрипт `tw_builder`. Перша версія скрипта написана мовою програмування високого рівня *Octave*. Згодом друга версія скрипта була переписана на Javascript. Редактор запускає цей скрипт на своєму комп'ютері. Скрипт оновлює інформацію про вікі в репозитарії *Github*, оновлює інформацію про колекцію вікі, готує і проводить процес публікування в інтернеті.
 
