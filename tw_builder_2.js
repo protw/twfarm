@@ -37,13 +37,11 @@ function wiki_farm_conf () {
 	if (!tw_exist(jd.wiki_farm.main_wiki.local_dir))
 		Error(`Main wiki does not exist in ${jd.wiki_farm.main_wiki.local_dir}`);
 	let tmp_dir = jd.conf.tmp_dir;
-	if (!fs.existsSync(tmp_dir) || !fs.statSync(tmp_dir).isDirectory()) {
+	if (!fs.existsSync(tmp_dir) || !fs.statSync(tmp_dir).isDirectory())
 		fs.mkdirSync(tmp_dir);
-	}
 	let sep_git_dir = jd.conf.sep_git_dir;
-	if (!fs.existsSync(sep_git_dir) || !fs.statSync(sep_git_dir).isDirectory()) {
+	if (!fs.existsSync(sep_git_dir) || !fs.statSync(sep_git_dir).isDirectory())
 		fs.mkdirSync(sep_git_dir);
-	}
 	child_process.execSync('git config --global core.autocrlf false', {stdio: 'inherit'});
 	let conf_complete = true;
 	let local_dir, wiki_name, spec_dir;
@@ -63,17 +61,14 @@ function wiki_farm_conf () {
 			conf_complete = false;
 			break;
 		}
-		if (!fs.existsSync(spec_dir) || !fs.statSync(spec_dir).isDirectory()) {
+		if (!fs.existsSync(spec_dir) || !fs.statSync(spec_dir).isDirectory())
 			fs.mkdirSync(spec_dir);
-		}
 		sep_git_dir = jd.conf.sep_git_dir + '\\' + wiki_name;
-		if (!fs.existsSync(sep_git_dir) || !fs.statSync(sep_git_dir).isDirectory()) {
+		if (!fs.existsSync(sep_git_dir) || !fs.statSync(sep_git_dir).isDirectory())
 			fs.mkdirSync(sep_git_dir);
-		}
 		let sep_git_file = local_dir + '\\.git';
-		if (!fs.existsSync(sep_git_file) || !fs.statSync(sep_git_file).isFile()) {
+		if (!fs.existsSync(sep_git_file) || !fs.statSync(sep_git_file).isFile())
 			child_process.execSync(`git -C ${local_dir} init --separate-git-dir ${sep_git_dir}`, {stdio: 'inherit'});
-		}
 		let git_ignore_file = local_dir + '\\.gitignore';
 		if (!fs.existsSync(git_ignore_file) || !fs.statSync(git_ignore_file).isFile()) {
 			const s = 'desktop.ini';
