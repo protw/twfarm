@@ -113,12 +113,12 @@ function tw_html_builder(w_name) {
 	let img_filter = `"[is[image]] -[title[${jd.conf.logo_js}]] -[[$:/favicon.ico]]"`;
 	let html_tw_build_cmd = 
 		`tiddlywiki "${tmp_dir}" ` +
-    	`--savetiddlers ${img_filter} "${html_images_dir}" ` + 
+    	`--save ${img_filter} "${html_images_dir}" ` + // 'savetiddlers' is obsolete, substituted with 'save'
 		`--setfield ${img_filter} _canonical_uri ` +
 		`$:/core/templates/canonical-uri-external-image text/plain ` +
 		`--setfield ${img_filter} text "" text/plain ` +
-		`--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline ` +
-		`"${html_index_file}" text/plain`;
+		`--render $:/plugins/tiddlywiki/tiddlyweb/save/offline ` +
+		`"${html_index_file}" text/plain`;             // 'rendertiddler' is obsolete, substituted with 'render'
 	child_process.execSync(html_tw_build_cmd, {stdio: 'inherit'});
 	fs.rmdirSync(tmp_dir + jd.conf.tid_dir, {'recursive':true});
 	fs.rmdirSync(tmp_dir, {'recursive':true});
