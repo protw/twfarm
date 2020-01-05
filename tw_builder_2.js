@@ -110,7 +110,7 @@ function tw_html_builder(w_name) {
 	if (fs.existsSync(html_index_file) && fs.statSync(html_index_file).isFile()) 
 		fs.unlinkSync(html_index_file);
 	child_process.execSync(`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`, {stdio: 'inherit'});
-	let img_filter = `"[is[image]] -[title[${jd.conf.logo_js}]] -[[$:/favicon.ico]]"`;
+	let img_filter = `"[is[image]] -[prefix[$:/]]"`;
 	let html_tw_build_cmd1 = 
 		`tiddlywiki "${tmp_dir}" ` +
     	`--savetiddlers ${img_filter} "${html_images_dir}" ` +
