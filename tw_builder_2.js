@@ -131,8 +131,14 @@ function tw_html_builder(w_name) {
 	];
 	////// THE LAST COMMAND IS EXECUTED WITH CARE SO FAR
 	console.log('Github repo of %s is syncronizing...', wiki_name.toUpperCase())
-	for (var s_git of git_sync)
-		child_process.execSync(s_git, {stdio: 'inherit'});
+	for (var s_git of git_sync) {
+		try {
+			child_process.execSync(s_git, {stdio: 'inherit'});
+		}
+		 catch (e) {
+			 continue;
+		 } 
+	}
 }
 function update_logo_to_main_wiki(wiki_name) {
 	if(wiki_name == 'main_wiki') return;
