@@ -158,7 +158,7 @@ function update_logo_to_main_wiki(wiki_name) {
 		return;
 
 	// delete logo files of a specific wiki in main_wiki
-	for (let mw_logo_file of mw_logo_files)
+	for (let mw_logo_file of mw_logo_files.files)
 		fs.unlinkSync(mw_logo_dir + mw_logo_file);
 
 	// Copying and renaming logo files into 'logo_dir' folder
