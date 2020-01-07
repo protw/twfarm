@@ -113,11 +113,13 @@ function tw_html_builder(w_name) {
 	let img_filter = `"[is[image]] -[prefix[$:/]]"`;
 	let html_tw_build_cmd1 = 
 		`tiddlywiki "${tmp_dir}" ` +
-    	`--savetiddlers ${img_filter} "${html_images_dir}" ` +
+    	`--savetiddlers ${img_filter} "${html_images_dir}" `;
+	let html_tw_build_cmd2 = 
+		`tiddlywiki "${tmp_dir}" ` +
 		`--setfield ${img_filter} _canonical_uri ` +
 		`$:/core/templates/canonical-uri-external-image text/plain ` +
 		`--setfield ${img_filter} text "" text/plain `;
-	let html_tw_build_cmd2 = 
+	let html_tw_build_cmd3 = 
 		`tiddlywiki "${tmp_dir}" ` +
 		`--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline "${html_index_file}" text/plain`;
 		// 'savetiddlers' is obsolete, substituted with 'save'             
@@ -125,6 +127,7 @@ function tw_html_builder(w_name) {
 		// '$:/plugins/tiddlywiki/tiddlyweb/save/offline' substituted with '[all[]]'
 	child_process.execSync(html_tw_build_cmd1, {stdio: 'inherit',timeout: 5000});
 	child_process.execSync(html_tw_build_cmd2, {stdio: 'inherit',timeout: 5000});
+	child_process.execSync(html_tw_build_cmd3, {stdio: 'inherit',timeout: 5000});
 	fs.rmdirSync(tmp_dir + jd.conf.tid_dir, {'recursive':true});
 	fs.rmdirSync(tmp_dir, {'recursive':true});
 
