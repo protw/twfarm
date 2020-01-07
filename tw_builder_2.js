@@ -116,7 +116,7 @@ function tw_html_builder(w_name) {
 		`--setfield ${img_filter} _canonical_uri ` +
 		`$:/core/templates/canonical-uri-external-image text/plain `,
 		`--setfield ${img_filter} text "" text/plain `,
-		`--rendertiddler $:/core/save/all "${html_index_file}" text/plain` // $:/plugins/tiddlywiki/tiddlyweb/save/offline
+		`--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline "${html_index_file}" text/plain` // $:/core/save/all
 	];
 	for (var html_tw_build_cmd of html_tw_build_cmds)
 		child_process.execSync(`tiddlywiki "${tmp_dir}" ` + html_tw_build_cmd, {stdio: 'inherit',timeout: 5000});
