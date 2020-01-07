@@ -123,8 +123,8 @@ function tw_html_builder(w_name) {
 		// 'savetiddlers' is obsolete, substituted with 'save'             
 		// 'rendertiddler' is obsolete, substituted with 'render'
 		// '$:/plugins/tiddlywiki/tiddlyweb/save/offline' substituted with '[all[]]'
-	child_process.execSync(html_tw_build_cmd1, {stdio: 'inherit'});
-	child_process.execSync(html_tw_build_cmd2, {stdio: 'inherit'});
+	child_process.execSync(html_tw_build_cmd1, {stdio: 'inherit',timeout: 5000});
+	child_process.execSync(html_tw_build_cmd2, {stdio: 'inherit',timeout: 5000});
 	fs.rmdirSync(tmp_dir + jd.conf.tid_dir, {'recursive':true});
 	fs.rmdirSync(tmp_dir, {'recursive':true});
 
