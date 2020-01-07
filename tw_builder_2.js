@@ -111,23 +111,15 @@ function tw_html_builder(w_name) {
 		fs.unlinkSync(html_index_file);
 	child_process.execSync(`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`, {stdio: 'inherit'});
 	let img_filter = `"[is[image]] -[prefix[$:/]]"`;
-	let html_tw_build_cmd1 = 
-		`tiddlywiki "${tmp_dir}" ` +
-    	`--savetiddlers ${img_filter} "${html_images_dir}" `;
-	let html_tw_build_cmd2 = 
-		`tiddlywiki "${tmp_dir}" ` +
+	let html_tw_build_cmds = [
+    	`--savetiddlers ${img_filter} "${html_images_dir}" `,
 		`--setfield ${img_filter} _canonical_uri ` +
-		`$:/core/templates/canonical-uri-external-image text/plain ` +
-		`--setfield ${img_filter} text "" text/plain `;
-	let html_tw_build_cmd3 = 
-		`tiddlywiki "${tmp_dir}" ` +
-		`--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline "${html_index_file}" text/plain`;
-		// 'savetiddlers' is obsolete, substituted with 'save'             
-		// 'rendertiddler' is obsolete, substituted with 'render'
-		// '$:/plugins/tiddlywiki/tiddlyweb/save/offline' substituted with '[all[]]'
-	child_process.execSync(html_tw_build_cmd1, {stdio: 'inherit',timeout: 5000});
-	child_process.execSync(html_tw_build_cmd2, {stdio: 'inherit',timeout: 5000});
-	child_process.execSync(html_tw_build_cmd3, {stdio: 'inherit',timeout: 5000});
+		`$:/core/templates/canonical-uri-external-image text/plain `,
+		`--setfield ${img_filter} text "" text/plain `,
+		`--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline "${html_index_file}" text/plain`
+	];
+	for (var html_tw_build_cmd of html_tw_build_cmds)
+		child_process.execSync(`tiddlywiki "${tmp_dir}" ` + html_tw_build_cmd, {stdio: 'inherit',timeout: 5000});
 	fs.rmdirSync(tmp_dir + jd.conf.tid_dir, {'recursive':true});
 	fs.rmdirSync(tmp_dir, {'recursive':true});
 
@@ -139,14 +131,8 @@ function tw_html_builder(w_name) {
 	];
 	////// THE LAST COMMAND IS EXECUTED WITH CARE SO FAR
 	console.log('Github repo of %s is syncronizing...', wiki_name.toUpperCase())
-	for (var s_git of git_sync) {
-		try {
-			child_process.execSync(s_git, {stdio: 'inherit'});
-		}
-		 catch (e) {
-			 continue;
-		 } 
-	}
+	for (var s_git of git_sync)
+		child_process.execSync(s_git, {stdio: 'inherit',timeout: 5000});
 }
 function update_logo_to_main_wiki(wiki_name) {
 	if(wiki_name == 'main_wiki') return;
