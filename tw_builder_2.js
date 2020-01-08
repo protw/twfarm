@@ -112,10 +112,10 @@ function tw_html_builder(w_name) {
 	child_process.execSync(`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`, {stdio: 'inherit'});
 	let img_filter = `"[is[image]] -[[$:/boa/logo]] -[[$:/favicon.ico]]"`;
 	let html_tw_build_cmds = [
-    	`--savetiddlers ${img_filter} "${html_images_dir}" `,
+    	`--savetiddlers ${img_filter} "${html_images_dir}"`,
 		`--setfield ${img_filter} _canonical_uri ` +
-		`$:/core/templates/canonical-uri-external-image text/plain `,
-		`--setfield ${img_filter} text "" text/plain `,
+		`$:/core/templates/canonical-uri-external-image text/plain`,
+		`--setfield ${img_filter} text "" text/plain`,
 		`--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline "${html_index_file}" text/plain` // $:/core/save/all
 	];
 	for (var html_tw_build_cmd of html_tw_build_cmds)
