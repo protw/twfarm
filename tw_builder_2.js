@@ -110,7 +110,7 @@ function tw_html_builder(w_name) {
 	if (fs.existsSync(html_index_file) && fs.statSync(html_index_file).isFile()) 
 		fs.unlinkSync(html_index_file);
 	child_process.execSync(`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`, {stdio: 'inherit'});
-	let img_filter = `"[is[image]] -[[$:/boa/logo]] -[[$:/favicon.ico]]"`;
+	let img_filter = `"[is[image]] -[prefix[$:/]]"`;
 	let html_tw_build_cmds = [
     	`--savetiddlers ${img_filter} "${html_images_dir}"`,
 		`--setfield ${img_filter} _canonical_uri ` +
@@ -120,6 +120,7 @@ function tw_html_builder(w_name) {
 	];
 	for (var html_tw_build_cmd of html_tw_build_cmds)
 		child_process.execSync(`tiddlywiki "${tmp_dir}" ` + html_tw_build_cmd, {stdio: 'inherit',timeout: 5000});
+	remove_pre_content_patch(html_index_file);
 	fs.rmdirSync(tmp_dir + jd.conf.tid_dir, {'recursive':true});
 	fs.rmdirSync(tmp_dir, {'recursive':true});
 
@@ -133,6 +134,15 @@ function tw_html_builder(w_name) {
 	console.log('Github repo of %s is syncronizing...', wiki_name.toUpperCase())
 	for (var s_git of git_sync)
 		child_process.execSync(s_git, {stdio: 'inherit',timeout: 5000});
+}
+function remove_pre_content_patch(file) {
+	// This is a patch for removing the content between <pre> and </pre> 
+	// in a _canonical_uri tiddler locating in a HTML-single-file wiki.
+	let search_token = new RegExp("(<div[^>]+_canonical_uri[^>]+>[\\s\\r\\n]*<pre>)([^<>]+)(</pre>[\\s\\r\\n]*</div>)","gim");
+	let replace_token = "$1$3";
+	let s_html_code = fs.readFileSync(file,'utf8');
+	let s_html_code_patched = s_html_code.replace(search_token, replace_token);
+	fs.writeFileSync(file, s_html_code_patched);
 }
 function update_logo_to_main_wiki(wiki_name) {
 	if(wiki_name == 'main_wiki') return;
