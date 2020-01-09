@@ -177,7 +177,7 @@ function update_logo_to_main_wiki(wiki_name) {
 		let f_ext = '.' + f_name_parts[f_name_parts.length-1];
 		let logo_file = logo_file_dir + '\\' + file;
 		if (f_ext == '.meta') {
-			let img_ext = f_name_parts[1];
+			let img_ext = '.' + f_name_parts[1];
 			let s_tid = fs.readFileSync(logo_file,'utf8');
 			let tidstruct = tidstr2tidstruct(s_tid);
     		tidstruct.title = wiki_name + img_ext;
