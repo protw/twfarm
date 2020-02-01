@@ -1,8 +1,10 @@
 created: 20190731195725380
-modified: 20200201194624396
+modified: 20200201213016659
 order: 020
 parent: TW farm
 tags: [[TW farm]]
 title: Робота Авторів у TW farm
 
-<<tabs "[parent[Робота Авторів у TW farm]sort[order]]" "Вступ для Авторів">>
+<$list filter="[parent[Робота Авторів у TW farm]sort[order]]">
+<<details sum:"""<$macrocall $name="transform" case="uppercase" src={{!!title}}/>""" src:{{!!text}} status:open>>
+</$list>

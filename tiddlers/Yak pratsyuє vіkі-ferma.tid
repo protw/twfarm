@@ -1,8 +1,10 @@
 created: 20190731120246134
-modified: 20200201185739637
+modified: 20200201213201380
 order: 030
 parent: TW farm
 tags: [[TW farm]]
 title: Як працює вікі-ферма
 
-<<tabs "[parent[Як працює вікі-ферма]sort[order]]" "Локальна модель роботи з вікі-фермою">>
+<$list filter="[parent[Як працює вікі-ферма]sort[order]]">
+<<details sum:"""<$macrocall $name="transform" case="uppercase" src={{!!title}}/>""" src:{{!!text}} status:open>>
+</$list>
