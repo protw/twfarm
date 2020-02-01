@@ -1,7 +1,8 @@
+caption: Стартовий bat-файл
 created: 20190802183637831
-modified: 20190819182355781
+modified: 20200201174424540
 order: 055
-parent: Робота редактора у TW farm
+parent: Робота Видавця у TW farm
 tags: [[TW farm]]
 title: Винести bat-файл до меню Старт
 

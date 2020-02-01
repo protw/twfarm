@@ -4,7 +4,7 @@
 'use strict';
 var fs = require('fs');
 var child_process = require('child_process');
-const jconfile = 'tw_build_conf_2.json';
+const jconfile = 'tw_build_conf.json';
 let jd, wiki_name;
 
 console.log('TW Farm Builder v. 2.0, 20.10.2019');

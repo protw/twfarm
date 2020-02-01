@@ -1,0 +1,11 @@
+.tc-site-title: before {
+color: silver;
+content: "TW <<version>>";
+created: 20180906042308596
+font-size: 13px;
+margin-top: -1.9em;
+modified: 20200201194800571
+position: absolute;
+tags: kookma
+title: $:/plugins/kookma/utility/stylesheet/tw-version
+type: application/x-tiddler
