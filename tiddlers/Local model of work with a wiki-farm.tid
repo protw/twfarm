@@ -1,0 +1,21 @@
+caption: Local model
+created: 20200201184632085
+modified: 20200201184729740
+order: 005
+parent-e: How wiki-farm works
+swap: Локальна модель роботи з вікі-фермою
+title: Local model of work with a wiki-farm
+
+!! Local model of working with a wiki-farm
+
+The //TW farm// technique is designed to standardize and centralize the creation and maintenance of multiple wikis (hence the origin of the term //wiki farm//). As a result, the technique simplifies the procedure for creating, maintaining and publishing wikis on the Internet for average users.
+
+A wiki platform [[Tiddlywiki 5|https://tiddlywiki.com]] (//TW//) is taken as a basis for creating complex documents. //TW// supports two fundamentally different deployment models:
+
+# ''Single file'' when all content and //Javascript// (//JS//) wiki code are combined into one HTML file with an initial size of just a bit over 2 MB. The wiki needs nothing but a modern browser to run and get full control.
+
+# ''Multi-file'' in the [[Node.js|https://en.wikipedia.org/wiki/Node.js]] environment, when each wiki article (hereinafter called //tiddler//) is saved as a separate plain text file. This model allows you to run wikis from the server in multiuser mode, which is often required for team work on documents. Also, this management model provides many options while generating an HTML file for wiki publishing.
+
+Actually, the second (multi-file) wiki management model is put into a basement of the //TW farm// technique.
+
+The TW server //~BobEXE// is used for convenience, as well as for simultaneous managemtnt of multiple wikis on the local computer and multiple users on the local network. Using //~BobEXE// Authors get rid of installing //Node.js// and //Tiddlywiki// on their work computer!

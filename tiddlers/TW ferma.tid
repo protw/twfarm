@@ -1,0 +1,11 @@
+created: 20190730114350762
+icon: tw-farm-icon.svg
+list-before: Зміст
+modified: 20200202184509732
+parent: root
+revision: 0
+swap: TW farm
+tags: 
+title: TW ферма
+
+<<tabs "[parent[TW ферма]!has[draft.of]sort[order]]" "Що і як вирішує TW Farm" class:"tc-vertical">>

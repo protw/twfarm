@@ -1,0 +1,16 @@
+caption: Other files
+created: 20200201172208654
+modified: 20200201172348236
+order: 025
+parent-e: Placing a wiki-farm on a computer
+swap: Інші локальні файли
+title: Other local files
+
+Other folders that have a specific purpose can be found in the folder of each wiki:
+
+; `desktop.ini`
+: file created by the program //Google Backup and Sync// in each folder of the synchronized area;
+; `.git`
+: file containing links to the wiki version control history; this file is generated when a local repository is initiated using the console command from the main control script;
+; `.gitignore`
+: an exception file list for //git// containing a short textual content - `desktop.ini` due to the fact that these files are of no interest to the wiki version history.

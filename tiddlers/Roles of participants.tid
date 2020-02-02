@@ -1,0 +1,18 @@
+caption: Roles
+created: 20190730174258766
+modified: 20200201184504789
+order: 030
+parent-e: How wiki-farm works
+swap: Ролі учасників
+title: Roles of participants
+
+Work in the //TW farm// environment envisages three basic categories of users:
+
+; Visitors
+: With Visitors everything is clear - they view the content of the web pages using a browser. That's all.
+
+; Authors
+: Authors can edit articles (//tiddlers//), create new articles, create new wikis by themselves or with the help of the Publisher. The Authors work with synchronized copies of the materials. This means that all wiki files located in the Author's file space are automatically synchronized with the corresponding wiki file space of the entire command located at //Google Drive//.
+
+; Publishers
+: Publishers, in addition to what authors can do, can still view and accept (or not accept) changes made by authors using version control //Git// on a local machine, synchronize the local git repository with global git repository at //github.com//, as well as generate HTML versions of wikis and publish them using the //Github Pages// service on the //github.io// domain.

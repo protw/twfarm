@@ -1,0 +1,20 @@
+caption: Control script
+created: 20200201171530270
+modified: 20200202191352901
+order: 010
+parent-e: Placing a wiki-farm on a computer
+swap: Основний керуючий скрипт
+title: The main control script
+
+The code for the main control script `tw_builder.js` is located at https://github.com/protw/twfarm. Several auxilary files are located next to it:
+
+; `tw_builder.js`
+: The main control script for rebuilding and publishing the wiki-farm;
+; `tw_build_conf.json`
+: wiki-farm configuration file used by the main control script (see description below);
+; `tw_builder.bat`
+: operating system script (batch-file) to run the main control script `tw_builder.js` from the command line;
+; `tw_exclude.list`
+: exception list used by the main control script `tw_builder.js` when copying wiki files;
+; `tww_builder.bat - LABEL`
+: shortcut (label) of the operating system script `tw_builder.bat` to create a button in the //Start// menu (see [[Place the bat-file in the Start menu]]).

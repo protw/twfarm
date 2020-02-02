@@ -1,0 +1,18 @@
+caption: Template wiki
+created: 20190711184942275
+modified: 20200201183943611
+order: 045
+parent-e: How wiki-farm works
+swap: Шаблонна вікі
+title: Template wiki
+
+The template wiki has a short name of `templ` and at least contains the internal folder `$:/boa`, where, among other things, the following important tiddlers are located:
+
+; $:/boa/logo
+: contains the wiki logo (in `text` field), short title (in `wiki-name` field), short description (in `wiki-caption` field), web publishing URL (in `wiki-address` field) as well as the web address //github//-repository of the wiki (in `wiki-github` field). The main purpose of this tiddler is to build a wiki-farm directory. It is also used in $:/boa/title to construct a title logo and inscription. In addition, fields `tags` and `wiki-order` has to be filled in for filtering, grouping and sorting the wiki-farm directory. All of these fields of this tiddler can be edited either directly in the tiddler or with the form $:/boa/logo-edit.
+; $:/boa/title
+: it is used to construct a title logo and inscription at the top of the sidebar. To do this, go to the section  //ControlPanel / Info / Basics// where in the field //Title of this ~TiddlyWiki:// place its transclusion `{{$:/boa/title}}`.
+; $:/boa/subtitle
+: it is revealed immediately below the sidebar logo. To do this, go to the section //ControlPanel / Info / Basics// where in the field //Subtitle:// place its transclusion `{{$:/boa/subtitle}}`. Typically, it contains links to top-level wikis and links for user feedback to wiki authors.
+
+The template wiki will improve over time and will contain the necessary tools to control and display wiki content. All these additional tools can be easily explored directly in the template wiki.

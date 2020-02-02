@@ -1,0 +1,11 @@
+created: 20171216194646584
+modified: 20200202184417727
+revision: 0
+tags: $:/tags/ViewToolbar
+title: $:/boa/swapbutton
+type: text/vnd.tiddlywiki
+
+<$button class=<<tv-config-toolbar-class>>>
+<$action-navigate $to={{!!swap}}/>
+<span title={{!!crossref}}>{{$:/boa/img/swap.svg}}</span>
+</$button>

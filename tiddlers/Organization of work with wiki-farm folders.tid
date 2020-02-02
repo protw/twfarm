@@ -1,0 +1,24 @@
+caption: Work with folders
+created: 20200201192246745
+modified: 20200201212924597
+order: 010
+parent-e: Authors' work at TW farm
+swap: Організація роботи з фолдерами вікі-ферми
+title: Organization of work with wiki-farm folders
+
+!! Organization of work with wiki-farm folders
+
+To provide simultaneous access for members (Authors) to content, a folder containing all the wikis is synchronized with //Google Drive// ​​using a backup program //Google Backup and Sync//. Usually, an access to a standalone wiki folder located at //Google Drive// ​​is provided by the Publisher. The Author will then receive an automatic email informing him/her of accessing the appropriate folder at //Google Drive//.
+
+For further work, an Author must install the backup software //Google Backup and Sync// on his/her work computer. Downloading, installing and configuring //Google Backup and Sync// is very easy to find online, including [[online Google documentation|https://support.google.com/drive/answer/2374987]].
+
+<< alert-info "After installing //Google Backup and Sync// find in its settings and select the checkbox `Open Backup and Sync at system startup`. After that you can not be distracted by the presence of the running synchronizer every time during startup. However, do not forget that the proper operation of the synchronizer is a prerequisite for the operation of the entire method, so checking its functioning from time to time is needed.">>
+ 
+<< alert-info "Also, in the case of slow internet or low-power computer, turning on the synchronizer when starting the operating system or changing the LAN through which you connect to the Internet can take quite a long time. In such cases, you decide, when and where the synchronizer //Google Backup and Sync// to enable.">>
+
+!! Wiki folders on Author's local computer
+
+After accessing one or more wikis from the wiki-farm on //Google Drive//,  at least the following file resources will appear in each wiki folder of Author's computer:
+
+* file `tiddlywiki.info` (wiki configuration file) and
+* subfolder `\tiddlers` (wiki content - tiddlers).

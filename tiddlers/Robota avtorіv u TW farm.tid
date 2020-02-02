@@ -1,8 +1,9 @@
 created: 20190731195725380
-modified: 20200201213016659
+modified: 20200202184713006
 order: 020
-parent: TW farm
-tags: [[TW farm]]
+parent: TW ферма
+swap: Authors' work at TW farm
+tags: [[TW ферма]]
 title: Робота Авторів у TW farm
 
 <$list filter="[parent[Робота Авторів у TW farm]sort[order]]">

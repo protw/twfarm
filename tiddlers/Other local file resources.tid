@@ -1,0 +1,34 @@
+caption: Other resources
+class: multicol2
+created: 20200201171951968
+modified: 20200202190539453
+order: 020
+parent-e: Placing a wiki-farm on a computer
+swap: Інші локальні файлові ресурси
+title: Other local file resources
+
+The section `conf` of wiki-farm's configuration file `tw_build_conf.json` includes the following infrastructure specifications:
+
+; `tid_dir`
+: ''\\tiddlers'', a subfolder of each standalone wiki to store tiddlers in;
+; `tw_info`
+: ''tiddlywiki.info'', a configuration file for each standalone wiki;
+; `html_file`
+: ''index.html'', a name of a standalone wiki file that is built during the update; it is placed in the subfolder defined by the `conf.build_dir` element;
+; `img_dir`
+: ''\\images'', a subfolder to store external images of each standalone wiki in the `_canonical_uri` mode; it is placed in the subfolder defined by the `conf.build_dir` element;
+; `build_dir`
+: ''\\docs'', a subfolder for collecting ready-to-publish resources: the file `index.html` and the external image subfolder `images\` generated from the wiki folder `tiddlers\`; it is used by //Github Pages// directly for publication onto the Internet; subfolders of the very same name are present in folders of each published wiki, except `wiki_farm.main_wiki`;
+; `logo_dir`
+: ''\\wiki_logo_list'', a subfolder located in the subfolder ''tiddlers\'' of the main wiki (wiki farm) to collect logos of standalone wikis with additional related information, for example: ''\twfarm\tiddlers\wiki_logo_list'';
+; `logo_js`
+: $:/boa/logo, a fixed name for each wiki that contains additional information about that wiki in its fields and is used to collect information about each wiki in the main wiki directory;
+; `wiki_domain`
+: https://protw.github.io/, web-address of the main wiki publication directory;
+; `github_main`
+: https://github.com/protw/, the main web-address of the wiki-farm at //github.com//, where the source texts and resources of each standalone wiki are stored for publication;
+; `sep_git_dir`
+: ''D:\\boa_protw\\git'', a local repository folder where //git// performs the `commit` operation before the` push` operation onto an external repository defined by the `conf.github_main` element; a separate subfolder with a short name is defined for each wiki; it must be located outside the sync zone of //Google Drive//;
+: << alert-warning "history of changes is steadily increasing over time and may become unwanted in size, so then it can be deleted;">>
+; `tmp_dir`
+: ''D:\\boa_protw\\_tmp'', a standalone folder for external rebuilding a standalone wiki in the external image mode `_canonical_uri`; it must be located outside the sync zone of //Google Drive//.

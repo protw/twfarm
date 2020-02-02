@@ -1,7 +1,8 @@
 created: 20200201191153428
 list-before: $:/core/ui/SideBar/Open
-modified: 20200201195629416
+modified: 20200202184837113
+swap: Content
 tags: $:/tags/SideBar
 title: Зміст
 
-<<tocP-selective-expandable "TW farm" "sort[order]">>
+<<tocP-selective-expandable "TW ферма" "sort[order]">>

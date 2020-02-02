@@ -1,0 +1,11 @@
+created: 20190731195725380
+modified: 20200202180153777
+order: 020
+parent-e: TW farm
+swap: Робота Авторів у TW farm
+tags: [[TW farm]]
+title: Authors' work at TW farm
+
+<$list filter="[parent-e[Authors' work at TW farm]sort[order]]">
+<<details sum:"""<$macrocall $name="transform" case="uppercase" src={{!!title}}/>""" src:{{!!text}} status:open>>
+</$list>

@@ -1,0 +1,9 @@
+caption: Comprehend resources
+created: 20200201171243230
+modified: 20200201171415934
+order: 005
+parent-e: Placing a wiki-farm on a computer
+swap: Розуміння файлових ресурсів
+title: Understanding the file resources used
+
+On a local machine, all wikis are created, launched, and developed in __multi-file mode__ under management of the server //~BobEXE// (which is a compiled version of //tiddlywiki// based on //node.js//, see [[here|Authors' work at TW farm]]), so it's important for a case f necessity to understand the structure of your file resources and their purpose.

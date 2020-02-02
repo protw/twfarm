@@ -1,0 +1,25 @@
+caption: Cервер BobEXE
+created: 20200201192817540
+modified: 20200202181909486
+order: 015
+parent-e: Authors' work at TW farm
+swap: Встановлення сервера BobEXE
+title: Installing the BobEXE server
+
+!! Server ~BobEXE installation
+
+//~BobEXE// is a //Tiddlywiki// version using the //Bob// plugin, built as a single executable, so there is no need for Authors to separately install //Node.js// and //Tiddlywiki//.
+
+The open source //~BobEXE// code is located in the [[repository on Github|https://github.com/OokTech/TW5-BobEXE]]. Links to compiled binaries ready to run and use can be found [[there as well|https://github.com/OokTech/TW5-BobEXE/releases]]. For my work computer, I chose the latest version for 64-bit Windows - `BobWin.exe`. You choose the version according to your circumstances.
+
+Next, you create a subfolder, say in `D:\TW_FARM`, called a type of `\_SERVER_BOB` on your work computer. You download a binary file (in my case `BobWin.exe`) into the created subfolder and run it.
+
+After a short run, the program will create several custom subfolders in this folder `\_SERVER_BOB` that you do not need to access to without a special need.
+
+Next, `BobWin.exe` will launch your default browser and open a page with the address http://127.0.0.1:8080/, from which the wiki-farm management will take place.
+
+If this does not happen, try double-clicking `BobWin.exe` again.
+
+Now everything is fine - the server is already running and ready to use.
+
+<<alert-info "''Tip for Windows users:'' To finally complete the installation and not search every time to locate the file to start the server, pin it to the taskbar (// Task Bar //) of //Windows// by right-click on the icon with the corresponding menu item - //Pin to taskbar//.">>

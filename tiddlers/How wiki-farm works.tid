@@ -1,0 +1,11 @@
+created: 20190731120246134
+modified: 20200202180333406
+order: 030
+parent-e: TW farm
+swap: Як працює вікі-ферма
+tags: [[TW farm]]
+title: How wiki-farm works
+
+<$list filter="[parent-e[How wiki-farm works]sort[order]]">
+<<details sum:"""<$macrocall $name="transform" case="uppercase" src={{!!title}}/>""" src:{{!!text}} status:open>>
+</$list>

@@ -1,0 +1,25 @@
+caption: Connecting wiki to BobEXE
+created: 20200201194103943
+modified: 20200201212933480
+order: 020
+parent-e: Authors' work at TW farm
+swap: Підключення вікі до серверу BobEXE
+title: Connecting a wiki to the BobEXE server
+
+!! Connecting the wiki to ~BobEXE server
+
+<div style="float: right;"> {{$:/core/images/options-button}}</div>
+
+* After `BobWin.exe` launches your default browser and opens the TW Farm management page at http://127.0.0.1:8080/, go to this page, locate in the sidebar at the top right and click the icon "coggle wheel" (this is a button to go to //Control Panel//).
+
+* From the top horizontal menu, find (right) and select the `Bob Settings` tab.
+* In the pane that opens, locate the first element of 'Available Wikis' in the horizontal menu below, and click on it.
+* In the panel that appears, find the four-position radio button under the heading `Create a wiki from`. Check the four items with the lowest one labeled `a node wiki`.
+* Enter two fields below:
+** `Give the wiki a name` - a short wiki name (one or two words, better in Latin) that corresponds to the wiki name you want to open, such as ''Howto''.
+** `Path to wiki folder` is the complete file path from the disk of your work computer to the folder where this wiki is located, such as ''D:\TW_FARM\howto''.
+* Click on the `Add Wiki` button.
+
+Voila! Vicky is ready to go. All your posts will be automatically saved to the local drive and synchronized with the command repository at //Google Drive//.
+
+That's exactly how the other wikis can be connected.

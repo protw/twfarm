@@ -1,0 +1,38 @@
+caption: Wiki-farm at Github
+created: 20190819173917263
+modified: 20200201174231319
+order: 037
+parent-e: Publisher's work at TW farm
+swap: Розміщення вікі ферми на Github
+title: Hosting a wiki farm on Github
+type: text/vnd.tiddlywiki
+
+The publishing system uses the //Github Pages// ([[github.io|https://github.io]]) service, which is tightly linked to the //Github// ([[github.com|https://github.com]]).
+
+Files for publishing sites type of //Project Page// are stored in the same repository on //github.com// as their projects and are published from one of the following locations (see [[documentation|https://help.github.com/en/articles/user-organization-and-project-pages]]):
+
+# ''master'' branch;
+# ''gh-pages'' branch;
+# a subfolder named ''docs'' located at the ''master'' branch.
+
+The second option uses a powerful, but rather complex, continuous build service (//continuous integration - CI//) - [[Travis CI|https://travis-ci.org]] to prepare the publication. Because of the complexity of this variant it is not used here for general purposes.
+
+The first option is to publish only one major organizational project (in our case, of course, the wiki directory) from the `wiki_farm.main_wiki` folder. The `index.html` file and the image folder `images\` are located directly in the main wiki folder `wiki_farm.main_wiki` on the local machine. This folder is synchronized with the `github.com/<org>/<org>.github.io` folder.
+
+The third option is used to publish the rest of all wikis. The `index.html` file and the image folder `images\` are located in the wiki folder `<wiki_name>\docs\` on the local machine. The wiki folder `<wiki_name>\` can be in any arbitrary location, provided by sync ability with //Google Drive//. This folder is synchronized with the `github.com/<org>/<wiki_name>` folder.
+
+The Publisher is expected to have a minimal understanding of //github.com//.
+
+That's all.
+
+!! Web addressing on the Internet
+
+Due to the generated file structure and settings on //github.com//, all published (on the Internet) wikis at their addresses form a similar two-tier hierarchical structure - one wiki at the top level (this is the main wiki directory), the rest wiki are at the second level:
+
+```
+   <org>.github.io/
+   <org>.github.io/<wiki_name1>
+   <org>.github.io/<wiki_name2>
+   ...
+   <org>.github.io/<wiki_nameN>
+```

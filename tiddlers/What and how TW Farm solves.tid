@@ -1,0 +1,41 @@
+created: 20190802064843067
+modified: 20200202192359790
+order: 005
+parent-e: TW farm
+swap: Що і як вирішує TW Farm
+tags: [[TW farm]]
+title: What and how TW Farm solves
+
+<<details sum:"INTRODUCTION" status:"open" src:"
+`TW farm` (//Tiddlywiki farm//) technique refers to a method of standardized and centralized creation and maintenance of several wikis (hence the origin of the term //wiki farm//). The method also simplifies, especially for average users, procedures of creating, maintaining, and publishing wikis on the Internet.">>
+
+<<details sum: "What and how TW Farm solves" status:"closed" src:"""
+//TW Farm// is the method of centralized multi-wiki support on the Internet.
+
+Conceptually, the technique is decomposed into the following phases:
+
+* Preparing a separate wiki by means of [[Tiddlywiki|https://tiddlywiki.com/]] by a group of Authors on their own local computers.
+* When creating content, Authors synchronize the wiki folder through cloud [[Google Drive|https://drive.google.com/]].
+* For each wiki, the team Publisher pre-creates a repository on [[Github|https://github.com/]], from which it is then published on the Internet using [[Github Pages|https://pages.github.com /]] service.
+
+<$ macrocall $name="alert-info" text="A great feature of the technique //TW Farm// is the function of automated collection of information about all the wikis included in the collection and presentation of the collected information in a convenient form in a separate central wiki, thus having created a collection directory -- wiki-farm. A complete functioning example of such a wiki is available at https://protw.github.io/."/>
+
+<$ macrocall $name=alert-warning text="To provide this feature, each wiki contains a standard $:/boa/logo tiddler containing information required to represent the wiki in an external directory."/>
+
+The core of the technique is JS-written main control script  `tw_builder.js`. The team Publisher runs this script on his/her computer. The script updates the revised wiki information in the repository //Github//, updates the wiki collection information, prepares and runs the process of publishing updates on the Internet.
+
+The code of this script, additional resources, and the actually a description of the technique (which you are currently reading) are located at https://github.com/protw/twfarm. A description of the technique in a convenient form is available at https://protw.github.io/twfarm.
+
+For a full-fledged work, the Author must be able to write texts in //Tiddlywiki//, as well as install only two things on his computer:
+
+* Local server //Tiddlywiki// [[OokTech/TW5-BobEXE|https://github.com/OokTech/TW5-BobEXE]];
+* //Google// application [[Backup and Sync|https://www.google.com/intl/en_ALL/drive/]].
+
+In order to run the script `tw_builder.js` in addition to the abovementioned the Publisher needs to install on your computer:
+
+* //JS// environment outside of browser [[node.js|https://nodejs.org/]] and package manager for //node.js// -- //npm//;
+* //JS//-package //tiddlywiki// to work under //node.js// (see [[here|https://protw.github.io/tw5/#%D0%A2%D0%92%20%D0%BD%D0%B0%20node.js%20%D1%96%20Windows]])
+* as well as version control software ([[VCS|https://en.wikipedia.org/wiki/Version_control]]) -- [[git|https://git-scm.com/].
+
+That's all there is enough to know about technique. For those who want to dive deeper into the technique, the material is given below [[Placing a wiki-farm on a computer]], [[How wiki-farm works]], and some instructions for [[Authors|Authors' work at TW farm]] and [[Publishers|Publisher's work at TW farm]], respectively.
+""">>

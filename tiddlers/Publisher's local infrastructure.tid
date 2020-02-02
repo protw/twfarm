@@ -1,0 +1,18 @@
+caption: Local infrastructure
+created: 20200201171753638
+modified: 20200201171852502
+order: 015
+parent-e: Placing a wiki-farm on a computer
+swap: Локальна інфраструктура Видавця
+title: Publisher's local infrastructure
+
+!! Publisher's local infrastructure
+
+The publishing infrastructure on a local machine is controlled by the `tw_build_conf.json` configuration file. The configuration file is divided into two sections:
+
+; `wiki_farm`
+: addressing standalone wiki resources (see [[How to add a new wiki to a TW farm]] for details);
+: <<alert-warning "The name of the main wiki where the wiki-farm directory is created is defined by a configuration element `wiki_farm.main_wiki.wiki_name`. The template wiki for creating new wikis has the short name `templ`. The wiki where the main control script and its documentation are stored, shortly called `twfarm`. ''Avoid using these names for new wikis!''">>
+
+; `conf`
+: other resources.

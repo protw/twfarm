@@ -1,0 +1,30 @@
+caption: Стартовий bat-файл
+created: 20190802183637831
+modified: 20200202183628771
+order: 055
+parent-e: Publisher's work at TW farm
+swap: Винести bat-файл до меню Старт
+title: Place the bat-file in the Start menu
+
+I work with //Windows 10//. Therefore, I describe this task for this operating system (OS). I think that for other OS solutions are easy to find on the Internet.
+
+A //bat//-file (or //batch//-file) or file with the extension 
+//.bat// is a kind of script file for the OS: //DOS//, //OS/2// and //Windows//. It contains a set of commands that are executed by the command interpreter and stored as a plain text file.
+
+I don't want to remeber every time where the batch file is located and then search for it. Especially if the procedure is regularly performed.
+
+So I found on the Internet and checked the method described in [[Article|https://blogs.technet.microsoft.com/kimberj/2015/10/06/windows-10-pin-shortcuts-to-start-menu/]].
+
+# Find in the File Explorer the required batch file. Make a shortcut from it and place it right next to the original. To do this, right-click on it, select ''Copy'' in the menu, drop the menu and immediately right-click on the empty spot of the same folder and select ''Insert shortcut'' in the menu. We get a new file in the same folder with the same name, at the end of which '' - Shortcut'' is added.
+
+# <<image-right "windows-10.svg" 24pt>> Right-click on //Start// (bottom left corner). Next, in the menu that appears, select 'Run'. There we type `%appdata%\Microsoft\Windows\Start Menu\`. Then click //OK//.
+
+# To the File Explorer window that opened, copy the previously created label. The presence of a shortcut in this folder means that it will appear in the list of all //Windows// applications. This list always appears after clicking the //Start// button.
+
+# Click the button //Start//. We find our shortcut in the list of all applications. Right-click on it and select ''Pin to Start menu''. Our shortcut icon will appear in the menu bar //Start//.
+
+# A couple of last touches left. Select the icon you want, and then right-click on the start menu folder where the shortcut is copied. Select 'Properties' from the menu. In the window that appears, find the ''Change Pictogram'' button and make the desired selection there.
+
+# And the last. In the menu bar //Start// select the size of the icon we want by right-clicking on it.
+
+That's all. It's a little tedious, but the result is well worth it because it will save you time and give you a sense of performance.

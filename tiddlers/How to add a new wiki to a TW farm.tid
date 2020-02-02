@@ -1,0 +1,23 @@
+caption: How to add new wiki
+created: 20190713105605773
+modified: 20200201180106323
+order: 050
+parent-e: Publisher's work at TW farm
+swap: Як додати нову вікі до TW ферми
+title: How to add a new wiki to a TW farm
+
+To create a new wiki, an Author or a Publisher copies the [[template wiki|Template wiki]] folder from  https://github.com/protw/templ to any convenient location on own local computer, provided that it is in a synchronized (//Google Drive//) zone and is available to the entire Authoring team, and rename the folder in one short word in lowercase Latin, corresponding the new wiki - `<wiki_name>`.
+
+Each Author then connects the new wiki on their local computer to //~BobEXE//, as described in [[Connecting a wiki to the BobEXE server|Authors' work at TW farm]].
+
+In the next step the Publisher creates on //github.com// a project named `<wiki_name>`.
+
+Finally, the Publisher adds the new wiki data to the `wiki_farm` section of the configuration file `tw_build_conf.json`. For example, for the new wiki `airzoom`, the entry would look like this:
+
+```
+{
+    "wiki_name": "airzoom",
+    "local_dir": "D:\\boa_protw\\wiki_bag\\airzoom",
+    "github": "https://github.com/protw/airzoom.git"
+}
+```

@@ -1,0 +1,11 @@
+caption: Publisher's job description
+created: 20200201173636318
+modified: 20200201175954030
+order: 035
+parent-e: Publisher's work at TW farm
+swap: Опис роботи Видавця вікі-ферми
+title: Job description of a wiki-farm Publisher
+
+The procedures and structures of the //TW Farm// technique are described here. First and foremost, this knowledge are required by a wiki-farm Publisher. Some of the material described in [[materials for Authors|Authors' work at TW farm]] will not be repeated here. Because of this, the Publisher should first become acquainted with the materials for the Authors, especially since the Publisher may also act as an Author.
+
+The Publisher is a system administrator of the wiki-farm. Therefore, he/she should first understand the structure of farm resource allocation [[on a computer|Placing a wiki-farm on a computer]] and [[on Github|Hosting a wiki farm on Github]]. And then for sure to go through the [[new wiki creation procedure|How to add a new wiki to a TW farm]]

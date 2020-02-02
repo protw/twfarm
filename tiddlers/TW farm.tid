@@ -1,9 +1,8 @@
 created: 20190730114350762
 icon: tw-farm-icon.svg
 modified: 20200201210448648
-parent: root
-revision: 0
-tags: 
+parent-e: root
+swap: TW ферма
 title: TW farm
 
-<<tabs "[parent[TW farm]!has[draft.of]sort[order]]" "Що і як вирішує TW Farm" class:"tc-vertical">>
+<<tabs "[parent-e[TW farm]!has[draft.of]sort[order]]" "What and how TW Farm solves" class:"tc-vertical">>

@@ -1,8 +1,9 @@
 created: 20190731120246134
-modified: 20200201213201380
+modified: 20200202185231995
 order: 030
-parent: TW farm
-tags: [[TW farm]]
+parent: TW ферма
+swap: How wiki-farm works
+tags: [[TW ферма]]
 title: Як працює вікі-ферма
 
 <$list filter="[parent[Як працює вікі-ферма]sort[order]]">

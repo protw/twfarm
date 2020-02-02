@@ -1,0 +1,18 @@
+created: 20190804131503752
+modified: 20200202180400714
+order: 040
+parent-e: TW farm
+swap: Що далі (TODO List)
+tags: [[TW farm]]
+title: What's Next (TODO List)
+
+The method is in its infancy. There are many things to do to make it really convenient and effective, including:
+
+* Further integration of the method with [[BobEXE server|https://github.com/OokTech/TW5-BobEXE]] is required. In particular, the script `tw_builder.js` could be made a plugin of //~BobEXE//. Among other things, `tw_build_conf.json` could be integrated with the configuration file of //~BobEXE//. Then there will be a sigle wiki list instead of two.
+* The wiki-farm directory is "aware" of all the wikis included in it. Therefore, it would be a natural development to organize a contextual search from the wiki directory through all wikis included in the directory. An inspiring example of this wiki interaction is the Tiddliwiki - //fetch// command (see [[documentation|https://tiddlywiki.com/static/FetchCommand.html]]). The //fetch// command, in conjunction with commands such as //rendertiddler// or //savetiddler//, allow to copy selected tiddlers or groups of tiddlers from one wiki to another.
+* Creating online wiki directories is possible as a result of the introduction of the wiki external presentation standard. This may be a standard tiddler containing the logo and the set of fields required to describe the wiki in the directory. Or it could be a more complex plugin type structure. It is important that this internal wiki object can be uniquely identified from the outside and then been fetched to the wiki directory.
+* To implement filtering of wikis in their directory while browsing them using the example of a svg-filter in a project [[Font Awesome 5 Free SVGs for TiddlyWiki|http://fa5-free-svg.tiddlyspot.com/]]. Also to add filtering and / or grouping of wikis by categories.
+
+<<image-right $:/boa/img/github-logo.svg 24pt>>
+
+If you have ideas, suggestions, wishes, please let me know at the [[feedback line|https://github.com/protw/twfarm/issues/new]].

@@ -1,0 +1,12 @@
+created: 20190712183739489
+modified: 20200202180317156
+order: 025
+parent-e: TW farm
+swap: Робота Видавця у TW farm
+tags: [[TW farm]]
+title: Publisher's work at TW farm
+type: text/vnd.tiddlywiki
+
+<$list filter="[parent-e[Publisher's work at TW farm]sort[order]]">
+<<details sum:"""<$macrocall $name="transform" case="uppercase" src={{!!title}}/>""" src:{{!!text}} status:open>>
+</$list>

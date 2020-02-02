@@ -1,0 +1,15 @@
+caption: Components
+created: 20200201185250533
+modified: 20200201185901464
+order: 025
+parent-e: How wiki-farm works
+swap: Ролі і компоненти середовища вікі-ферми
+title: Roles and components of the wiki-farm environment
+
+!! Roles and components of the wiki-farm environment
+
+It is important to understand the functional differences of [[participant roles|Roles of participants]] and be able to create a work environment for [[an Author|Authors' work at TW farm]] or [[a Publisher|Publisher's work at TW farm]].
+
+Therefore, to organize a process of online publication using //TW farm// technique it is necessary to get familiar at minimum with the necessary set of software that must be installed on a working computer or which need to be accessed via the Internet, depending on the role of the participant:
+
+<<image-center "Компоненти середовища TW farm.svg" 90% >>

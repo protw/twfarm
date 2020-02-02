@@ -1,8 +1,9 @@
 caption: Керуючий скрипт
 created: 20200201171530270
-modified: 20200201171646847
+modified: 20200202191419565
 order: 010
 parent: Розміщення вікі-ферми на комп'ютері
+swap: The main control script
 tags: 
 title: Основний керуючий скрипт
 

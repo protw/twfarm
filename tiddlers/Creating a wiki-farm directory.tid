@@ -1,0 +1,23 @@
+caption: Creating a directory
+created: 20200201184953160
+modified: 20200201185038985
+order: 015
+parent-e: How wiki-farm works
+swap: Створення каталогу вікі-ферми
+title: Creating a wiki-farm directory
+
+!! Creating a wiki-farm directory
+
+Each wiki in the wiki-farm collection contains a standardized tiddler $:/boa/logo that contains specific information about that wiki in separate fields: logo, title, short description, wiki web address, tags (wiki categories), order number for sorting.
+
+The Publisher's local machine hosts a JS script `tw_builder.js`. With a use of this script the Publisher updates the wiki collection and the wiki-farm directory. To do this, this script collects the standard tiddlers described above ($:/boa/logo) and translates them into one of the wikis selected as the farm directory. Also, every time the individual wiki from the collection is restructured, this script updates single-file instances of that wiki for publication on the Internet: `index.html`, as well as all the images of each wiki that are collected in the folder `images\`.
+
+To execute the script from the command line, a batch file `tw_builder.bat`  was created containing a single command line:
+
+```
+> node tw_builder.js
+```
+
+<<alert-warning "At the time of wiki upgrade and synchronization with //github// running `tw_builder.bat` to avoid 'misunderstandings' on the synchronizer //Google Backup and Sync// ''suspend'' it action, then remember to resume it again.">>
+
+<<alert-info "For convenience, [[insert a batch file into the Windows Start menu|Place the bat-file in the Start menu]].">>
