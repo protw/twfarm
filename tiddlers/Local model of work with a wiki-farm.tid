@@ -1,12 +1,10 @@
 caption: Local model
 created: 20200201184632085
-modified: 20200201184729740
+modified: 20200203062733079
 order: 005
 parent-e: How wiki-farm works
 swap: Локальна модель роботи з вікі-фермою
 title: Local model of work with a wiki-farm
-
-!! Local model of working with a wiki-farm
 
 The //TW farm// technique is designed to standardize and centralize the creation and maintenance of multiple wikis (hence the origin of the term //wiki farm//). As a result, the technique simplifies the procedure for creating, maintaining and publishing wikis on the Internet for average users.
 

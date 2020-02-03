@@ -1,12 +1,10 @@
 caption: Creating a directory
 created: 20200201184953160
-modified: 20200201185038985
+modified: 20200203063158895
 order: 015
 parent-e: How wiki-farm works
 swap: Створення каталогу вікі-ферми
 title: Creating a wiki-farm directory
-
-!! Creating a wiki-farm directory
 
 Each wiki in the wiki-farm collection contains a standardized tiddler $:/boa/logo that contains specific information about that wiki in separate fields: logo, title, short description, wiki web address, tags (wiki categories), order number for sorting.
 

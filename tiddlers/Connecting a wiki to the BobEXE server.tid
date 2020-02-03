@@ -1,17 +1,14 @@
 caption: Connecting wiki to BobEXE
 created: 20200201194103943
-modified: 20200201212933480
+modified: 20200203062931565
 order: 020
 parent-e: Authors' work at TW farm
 swap: Підключення вікі до серверу BobEXE
 title: Connecting a wiki to the BobEXE server
 
-!! Connecting the wiki to ~BobEXE server
-
 <div style="float: right;"> {{$:/core/images/options-button}}</div>
 
 * After `BobWin.exe` launches your default browser and opens the TW Farm management page at http://127.0.0.1:8080/, go to this page, locate in the sidebar at the top right and click the icon "coggle wheel" (this is a button to go to //Control Panel//).
-
 * From the top horizontal menu, find (right) and select the `Bob Settings` tab.
 * In the pane that opens, locate the first element of 'Available Wikis' in the horizontal menu below, and click on it.
 * In the panel that appears, find the four-position radio button under the heading `Create a wiki from`. Check the four items with the lowest one labeled `a node wiki`.

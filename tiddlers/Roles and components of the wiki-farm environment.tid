@@ -1,12 +1,10 @@
 caption: Components
 created: 20200201185250533
-modified: 20200201185901464
+modified: 20200203063103844
 order: 025
 parent-e: How wiki-farm works
 swap: Ролі і компоненти середовища вікі-ферми
 title: Roles and components of the wiki-farm environment
-
-!! Roles and components of the wiki-farm environment
 
 It is important to understand the functional differences of [[participant roles|Roles of participants]] and be able to create a work environment for [[an Author|Authors' work at TW farm]] or [[a Publisher|Publisher's work at TW farm]].
 

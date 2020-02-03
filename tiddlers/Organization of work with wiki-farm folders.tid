@@ -1,12 +1,10 @@
 caption: Work with folders
 created: 20200201192246745
-modified: 20200201212924597
+modified: 20200203062820237
 order: 010
 parent-e: Authors' work at TW farm
 swap: Організація роботи з фолдерами вікі-ферми
 title: Organization of work with wiki-farm folders
-
-!! Organization of work with wiki-farm folders
 
 To provide simultaneous access for members (Authors) to content, a folder containing all the wikis is synchronized with //Google Drive// ​​using a backup program //Google Backup and Sync//. Usually, an access to a standalone wiki folder located at //Google Drive// ​​is provided by the Publisher. The Author will then receive an automatic email informing him/her of accessing the appropriate folder at //Google Drive//.
 

@@ -1,12 +1,10 @@
 caption: Local infrastructure
 created: 20200201171753638
-modified: 20200201171852502
+modified: 20200203062656606
 order: 015
 parent-e: Placing a wiki-farm on a computer
 swap: Локальна інфраструктура Видавця
 title: Publisher's local infrastructure
-
-!! Publisher's local infrastructure
 
 The publishing infrastructure on a local machine is controlled by the `tw_build_conf.json` configuration file. The configuration file is divided into two sections:
 

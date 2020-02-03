@@ -1,12 +1,10 @@
 caption: Final actions
 created: 20200201194353736
-modified: 20200201212937481
+modified: 20200203062525549
 order: 025
 parent-e: Authors' work at TW farm
 swap: Завершальні дії
 title: Final actions
-
-!! Final actions
 
 After connecting each wiki to the server //~BobEXE//, its name with the active link will appear in the `Available Wikis` list below. In the same place you will see and check the box `List in sidebar`. As a result of the checkbox, a new `Wiki Listing` tab will appear on the right side menu.
 
