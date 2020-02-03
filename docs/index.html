@@ -10792,14 +10792,14 @@ The TW server //~BobEXE// is used for convenience, as well as for simultaneous m
 
 For team work on wiki content, the Publisher first synchronizes standalone wikis with //Google Drive// ​using //Google Drive Backup and Sync//, and then provides appropriate access to those wikis for other team members.</pre>
 </div>
-<div caption="Work with folders" created="20200201192246745" modified="20200203062820237" order="010" parent-e="Authors' work at TW farm" swap="Організація роботи з фолдерами вікі-ферми" title="Organization of work with wiki-farm folders" revision="0" bag="default">
+<div caption="Work with folders" created="20200201192246745" modified="20200203092711130" order="010" parent-e="Authors' work at TW farm" swap="Організація роботи з фолдерами вікі-ферми" title="Organization of work with wiki-farm folders" revision="0" bag="default">
 <pre>To provide simultaneous access for members (Authors) to content, a folder containing all the wikis is synchronized with //Google Drive// ​​using a backup program //Google Backup and Sync//. Usually, an access to a standalone wiki folder located at //Google Drive// ​​is provided by the Publisher. The Author will then receive an automatic email informing him/her of accessing the appropriate folder at //Google Drive//.
 
 For further work, an Author must install the backup software //Google Backup and Sync// on his/her work computer. Downloading, installing and configuring //Google Backup and Sync// is very easy to find online, including [[online Google documentation|https://support.google.com/drive/answer/2374987]].
 
-&lt;&lt; alert-info &quot;After installing //Google Backup and Sync// find in its settings and select the checkbox `Open Backup and Sync at system startup`. After that you can not be distracted by the presence of the running synchronizer every time during startup. However, do not forget that the proper operation of the synchronizer is a prerequisite for the operation of the entire method, so checking its functioning from time to time is needed.&quot;&gt;&gt;
+&lt;&lt;alert-info &quot;After installing //Google Backup and Sync// find in its settings and select the checkbox `Open Backup and Sync at system startup`. After that you can not be distracted by the presence of the running synchronizer every time during startup. However, do not forget that the proper operation of the synchronizer is a prerequisite for the operation of the entire method, so checking its functioning from time to time is needed.&quot;&gt;&gt;
  
-&lt;&lt; alert-info &quot;Also, in the case of slow internet or low-power computer, turning on the synchronizer when starting the operating system or changing the LAN through which you connect to the Internet can take quite a long time. In such cases, you decide, when and where the synchronizer //Google Backup and Sync// to enable.&quot;&gt;&gt;
+&lt;&lt;alert-info &quot;Also, in the case of slow internet or low-power computer, turning on the synchronizer when starting the operating system or changing the LAN through which you connect to the Internet can take quite a long time. In such cases, you decide, when and where the synchronizer //Google Backup and Sync// to enable.&quot;&gt;&gt;
 
 !! Wiki folders on Author's local computer
 
@@ -10951,7 +10951,7 @@ The template wiki will improve over time and will contain the necessary tools to
 <pre>On a local machine, all wikis are created, launched, and developed in __multi-file mode__ under management of the server //~BobEXE// (which is a compiled version of //tiddlywiki// based on //node.js//, see [[here|Authors' work at TW farm]]), so it's important for a case f necessity to understand the structure of your file resources and their purpose.
 </pre>
 </div>
-<div created="20190802064843067" modified="20200202192359790" order="005" parent-e="TW farm" swap="Що і як вирішує TW Farm" tags="[[TW farm]]" title="What and how TW Farm solves" revision="0" bag="default">
+<div created="20190802064843067" modified="20200203092837762" order="005" parent-e="TW farm" swap="Що і як вирішує TW Farm" tags="[[TW farm]]" title="What and how TW Farm solves" revision="0" bag="default">
 <pre>&lt;&lt;details sum:&quot;INTRODUCTION&quot; status:&quot;open&quot; src:&quot;
 `TW farm` (//Tiddlywiki farm//) technique refers to a method of standardized and centralized creation and maintenance of several wikis (hence the origin of the term //wiki farm//). The method also simplifies, especially for average users, procedures of creating, maintaining, and publishing wikis on the Internet.&quot;&gt;&gt;
 
@@ -10964,9 +10964,9 @@ Conceptually, the technique is decomposed into the following phases:
 * When creating content, Authors synchronize the wiki folder through cloud [[Google Drive|https://drive.google.com/]].
 * For each wiki, the team Publisher pre-creates a repository on [[Github|https://github.com/]], from which it is then published on the Internet using [[Github Pages|https://pages.github.com /]] service.
 
-&lt;$ macrocall $name=&quot;alert-info&quot; text=&quot;A great feature of the technique //TW Farm// is the function of automated collection of information about all the wikis included in the collection and presentation of the collected information in a convenient form in a separate central wiki, thus having created a collection directory -- wiki-farm. A complete functioning example of such a wiki is available at https://protw.github.io/.&quot;/&gt;
+&lt;$macrocall $name=&quot;alert-info&quot; text=&quot;A great feature of the technique //TW Farm// is the function of automated collection of information about all the wikis included in the collection and presentation of the collected information in a convenient form in a separate central wiki, thus having created a collection directory -- wiki-farm. A complete functioning example of such a wiki is available at https://protw.github.io/.&quot;/&gt;
 
-&lt;$ macrocall $name=alert-warning text=&quot;To provide this feature, each wiki contains a standard $:/boa/logo tiddler containing information required to represent the wiki in an external directory.&quot;/&gt;
+&lt;$macrocall $name=alert-warning text=&quot;To provide this feature, each wiki contains a standard $:/boa/logo tiddler containing information required to represent the wiki in an external directory.&quot;/&gt;
 
 The core of the technique is JS-written main control script  `tw_builder.js`. The team Publisher runs this script on his/her computer. The script updates the revised wiki information in the repository //Github//, updates the wiki collection information, prepares and runs the process of publishing updates on the Internet.
 

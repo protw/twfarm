@@ -1,6 +1,6 @@
 caption: Work with folders
 created: 20200201192246745
-modified: 20200203062820237
+modified: 20200203092711130
 order: 010
 parent-e: Authors' work at TW farm
 swap: Організація роботи з фолдерами вікі-ферми
@@ -10,9 +10,9 @@ To provide simultaneous access for members (Authors) to content, a folder contai
 
 For further work, an Author must install the backup software //Google Backup and Sync// on his/her work computer. Downloading, installing and configuring //Google Backup and Sync// is very easy to find online, including [[online Google documentation|https://support.google.com/drive/answer/2374987]].
 
-<< alert-info "After installing //Google Backup and Sync// find in its settings and select the checkbox `Open Backup and Sync at system startup`. After that you can not be distracted by the presence of the running synchronizer every time during startup. However, do not forget that the proper operation of the synchronizer is a prerequisite for the operation of the entire method, so checking its functioning from time to time is needed.">>
+<<alert-info "After installing //Google Backup and Sync// find in its settings and select the checkbox `Open Backup and Sync at system startup`. After that you can not be distracted by the presence of the running synchronizer every time during startup. However, do not forget that the proper operation of the synchronizer is a prerequisite for the operation of the entire method, so checking its functioning from time to time is needed.">>
  
-<< alert-info "Also, in the case of slow internet or low-power computer, turning on the synchronizer when starting the operating system or changing the LAN through which you connect to the Internet can take quite a long time. In such cases, you decide, when and where the synchronizer //Google Backup and Sync// to enable.">>
+<<alert-info "Also, in the case of slow internet or low-power computer, turning on the synchronizer when starting the operating system or changing the LAN through which you connect to the Internet can take quite a long time. In such cases, you decide, when and where the synchronizer //Google Backup and Sync// to enable.">>
 
 !! Wiki folders on Author's local computer
 
