@@ -250,6 +250,8 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth</li>
 
+<li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
+
 <li>Authors' work at TW farm</li>
 
 <li>Connecting a wiki to the BobEXE server</li>
@@ -10643,6 +10645,9 @@ $value={{$:/temp/newfieldvalue}}/&gt;
 <div created="20190716180328849" modified="20200201213322249" tags="" title="$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth" revision="0" bag="default">
 <pre>1086px</pre>
 </div>
+<div created="20200203120839619" modified="20200203120839619" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout" revision="0" bag="default">
+<pre>fluid-fixed</pre>
+</div>
 <div created="20190731195725380" modified="20200202180153777" order="020" parent-e="TW farm" swap="Робота Авторів у TW farm" tags="[[TW farm]]" title="Authors' work at TW farm" revision="0" bag="default">
 <pre>&lt;$list filter=&quot;[parent-e[Authors' work at TW farm]sort[order]]&quot;&gt;
 &lt;&lt;details sum:&quot;&quot;&quot;&lt;$macrocall $name=&quot;transform&quot; case=&quot;uppercase&quot; src={{!!title}}/&gt;&quot;&quot;&quot; src:{{!!text}} status:open&gt;&gt;
@@ -10986,8 +10991,8 @@ In order to run the script `tw_builder.js` in addition to the abovementioned the
 That's all there is enough to know about technique. For those who want to dive deeper into the technique, the material is given below [[Placing a wiki-farm on a computer]], [[How wiki-farm works]], and some instructions for [[Authors|Authors' work at TW farm]] and [[Publishers|Publisher's work at TW farm]], respectively.
 &quot;&quot;&quot;&gt;&gt;</pre>
 </div>
-<div created="20190804131503752" modified="20200202180400714" order="040" parent-e="TW farm" swap="Що далі (TODO List)" tags="[[TW farm]]" title="What's Next (TODO List)" revision="0" bag="default">
-<pre>The method is in its infancy. There are many things to do to make it really convenient and effective, including:
+<div created="20190804131503752" modified="20200203121241722" order="040" parent-e="TW farm" swap="Що далі (TODO List)" tags="[[TW farm]]" title="What's Next (TODO List)" revision="0" bag="default">
+<pre>The method is in its infancy. There are many things to do to make it really convenient and effective, including: 
 
 * Further integration of the method with [[BobEXE server|https://github.com/OokTech/TW5-BobEXE]] is required. In particular, the script `tw_builder.js` could be made a plugin of //~BobEXE//. Among other things, `tw_build_conf.json` could be integrated with the configuration file of //~BobEXE//. Then there will be a sigle wiki list instead of two.
 * The wiki-farm directory is &quot;aware&quot; of all the wikis included in it. Therefore, it would be a natural development to organize a contextual search from the wiki directory through all wikis included in the directory. An inspiring example of this wiki interaction is the Tiddliwiki - //fetch// command (see [[documentation|https://tiddlywiki.com/static/FetchCommand.html]]). The //fetch// command, in conjunction with commands such as //rendertiddler// or //savetiddler//, allow to copy selected tiddlers or groups of tiddlers from one wiki to another.

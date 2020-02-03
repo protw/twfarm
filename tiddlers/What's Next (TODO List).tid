@@ -1,12 +1,12 @@
 created: 20190804131503752
-modified: 20200202180400714
+modified: 20200203121241722
 order: 040
 parent-e: TW farm
 swap: Що далі (TODO List)
 tags: [[TW farm]]
 title: What's Next (TODO List)
 
-The method is in its infancy. There are many things to do to make it really convenient and effective, including:
+The method is in its infancy. There are many things to do to make it really convenient and effective, including: 
 
 * Further integration of the method with [[BobEXE server|https://github.com/OokTech/TW5-BobEXE]] is required. In particular, the script `tw_builder.js` could be made a plugin of //~BobEXE//. Among other things, `tw_build_conf.json` could be integrated with the configuration file of //~BobEXE//. Then there will be a sigle wiki list instead of two.
 * The wiki-farm directory is "aware" of all the wikis included in it. Therefore, it would be a natural development to organize a contextual search from the wiki directory through all wikis included in the directory. An inspiring example of this wiki interaction is the Tiddliwiki - //fetch// command (see [[documentation|https://tiddlywiki.com/static/FetchCommand.html]]). The //fetch// command, in conjunction with commands such as //rendertiddler// or //savetiddler//, allow to copy selected tiddlers or groups of tiddlers from one wiki to another.
