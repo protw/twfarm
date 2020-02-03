@@ -1,5 +1,5 @@
 created: 20190802064843067
-modified: 20200203092837762
+modified: 20200203093331117
 order: 005
 parent-e: TW farm
 swap: Що і як вирішує TW Farm
@@ -9,7 +9,7 @@ title: What and how TW Farm solves
 <<details sum:"INTRODUCTION" status:"open" src:"
 `TW farm` (//Tiddlywiki farm//) technique refers to a method of standardized and centralized creation and maintenance of several wikis (hence the origin of the term //wiki farm//). The method also simplifies, especially for average users, procedures of creating, maintaining, and publishing wikis on the Internet.">>
 
-<<details sum: "What and how TW Farm solves" status:"closed" src:"""
+<<details sum: "WHAT AND HOW TW FARM SOLVES" status:"closed" src:"""
 //TW Farm// is the method of centralized multi-wiki support on the Internet.
 
 Conceptually, the technique is decomposed into the following phases:
