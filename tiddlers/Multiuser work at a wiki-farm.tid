@@ -1,11 +1,11 @@
 caption: Many users
 created: 20200201184801922
-modified: 20200203062316855
-order: 010
+modified: 20200203073235026
+order: 015
 parent-e: How wiki-farm works
 swap: Багатокористувацька робота на вікі-фермі
 title: Multiuser work at a wiki-farm
 
-Один (або декілька) з авторів опікується публікацією вікі в інтернеті. Це Видавець. Він роздає доступ до окремих вікі з Google Drive окремим членам команди (авторам), а також передивляється і приймає оновлення змісту та розміщає ці оновлення у сховищі //Github// з допомогою системи контролю версій //Git//, що встановлена на його робочому комп'ютері на доданок до програмного забезпечення, встановленого у авторів.
+One (or more) of the Authors is responsible for publishing the wiki on the Internet. This is the Publisher. He/she distributes standalone wikis from Google Drive to individual team members (Authors), and reviews and accepts content updates and places those updates in the //Github// repository using the //Git// version control system installed on his/her desktop computer in addition to the software installed by the Authors.
 
-Для командної роботи над вмістом вікі, Видавець спочатку встановлює синхронізацію окремих вікі з //Гугл Диском// з допомогою //Google Drive Backup and Sync//, а потім надає відповідні доступи до цих вікі іншим членам команди. 
+For team work on wiki content, the Publisher first synchronizes standalone wikis with //Google Drive// ​using //Google Drive Backup and Sync//, and then provides appropriate access to those wikis for other team members.
