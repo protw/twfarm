@@ -33,6 +33,10 @@
 			"local_dir": "D:\\boa_protw\\wiki_bag\\eco",
 			"github": "https://github.com/protw/eco.git"
 		},
+		"exhazoom": {
+			"local_dir": "D:\\boa_nau\\PROJECTS\\190901 ExhaZOOM\\_PROTW-EXHAZOOM",
+			"github": "https://github.com/protw/exhazoom.git"
+		},
 		"oleghbond": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\oleghbond",
 			"github": "https://github.com/protw/oleghbond.git"
