@@ -106,7 +106,7 @@ function tw_html_builder(w_name) {
 	console.log(' - html wiki to rebuild');
 	let tmp_dir = fs.mkdtempSync(jd.conf.tmp_dir + '\\_');
 	if (fs.existsSync(html_images_dir) && fs.statSync(html_images_dir).isDirectory()) 
-		fs.rmdirSync(html_images_dir,{'recursive':true});
+		fs.rmdirSync(html_images_dir,{recursive:true});
 	if (fs.existsSync(html_index_file) && fs.statSync(html_index_file).isFile()) 
 		fs.unlinkSync(html_index_file);
 	child_process.execSync(`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`, {stdio: 'inherit'});
@@ -121,8 +121,8 @@ function tw_html_builder(w_name) {
 	//for (var html_tw_build_cmd of html_tw_build_cmds)
 	//	child_process.execSync(`tiddlywiki "${tmp_dir}" ` + html_tw_build_cmd, {stdio: 'inherit',timeout: 5000});
 	remove_pre_content_patch(html_index_file);
-	fs.rmdirSync(tmp_dir + jd.conf.tid_dir, {'recursive':true});
-	fs.rmdirSync(tmp_dir, {'recursive':true});
+	fs.rmdirSync(tmp_dir + jd.conf.tid_dir, {recursive:true});
+	fs.rmdirSync(tmp_dir, {recursive:true});
 
 	let today_label = Date();
 	let git_sync = [
