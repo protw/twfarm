@@ -83,7 +83,9 @@ function tw_exist (tw_dir) {
 }
 function is_git_commit_needed(tw_dir) {
   let exit_code = child_process.spawnSync('git',['-C',tw_dir,'diff','--exit-code']).status;
-  return exit_code;
+  let res = child_process.execSync(`git -C "${tw_dir}" status -u`);
+  let exit_code2 = res.toString().includes("untracked");
+  return exit_code || exit_code2;
 }
 function tw_html_builder(w_name) {
 	let wiki_name, html_dir;
