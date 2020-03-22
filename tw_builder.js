@@ -105,15 +105,8 @@ function tw_html_builder(w_name) {
 	}
 	console.log(' - html wiki to rebuild');
 	let tmp_dir = fs.mkdtempSync(jd.conf.tmp_dir + '\\_');
-/*	
-	if (fs.existsSync(html_images_dir) && fs.statSync(html_images_dir).isDirectory()) 
-		fs.rmdirSync(html_images_dir,{recursive:true});
-	if (fs.existsSync(html_index_file) && fs.statSync(html_index_file).isFile()) 
-		fs.unlinkSync(html_index_file);
-*/
     child_process.execSync(`rmdir /s/q "${html_dir}"`, {stdio: 'inherit',timeout: 0});
     child_process.execSync(`mkdir "${html_dir}"`, {stdio: 'inherit',timeout: 0});
-
     child_process.execSync(`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`, {stdio: 'inherit'});
 	let img_filter = `"[is[image]] -[prefix[$:/]]"`;
 	let html_tw_build_cmds = `tiddlywiki "${tmp_dir}" ` +
@@ -123,8 +116,6 @@ function tw_html_builder(w_name) {
 		`--setfield ${img_filter} text "" text/plain ` +
 		`--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline "${html_index_file}" text/plain`;
 	child_process.execSync(html_tw_build_cmds, {stdio: 'inherit',timeout: 0});
-	//for (var html_tw_build_cmd of html_tw_build_cmds)
-	//	child_process.execSync(`tiddlywiki "${tmp_dir}" ` + html_tw_build_cmd, {stdio: 'inherit',timeout: 5000});
 	remove_pre_content_patch(html_index_file);
 	fs.rmdirSync(tmp_dir + jd.conf.tid_dir, {recursive:true});
 	fs.rmdirSync(tmp_dir, {recursive:true});
