@@ -105,11 +105,16 @@ function tw_html_builder(w_name) {
 	}
 	console.log(' - html wiki to rebuild');
 	let tmp_dir = fs.mkdtempSync(jd.conf.tmp_dir + '\\_');
+/*	
 	if (fs.existsSync(html_images_dir) && fs.statSync(html_images_dir).isDirectory()) 
 		fs.rmdirSync(html_images_dir,{recursive:true});
 	if (fs.existsSync(html_index_file) && fs.statSync(html_index_file).isFile()) 
 		fs.unlinkSync(html_index_file);
-	child_process.execSync(`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`, {stdio: 'inherit'});
+*/
+    child_process.execSync(`rmdir /s/q "${html_dir}"`, {stdio: 'inherit',timeout: 0});
+    child_process.execSync(`mkdir "${html_dir}"`, {stdio: 'inherit',timeout: 0});
+
+    child_process.execSync(`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`, {stdio: 'inherit'});
 	let img_filter = `"[is[image]] -[prefix[$:/]]"`;
 	let html_tw_build_cmds = `tiddlywiki "${tmp_dir}" ` +
     	`--savetiddlers ${img_filter} "${html_images_dir}" ` +
