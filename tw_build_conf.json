@@ -25,6 +25,18 @@
 			"local_dir": "D:\\boa_protw\\wiki_bag\\treemap",
 			"github": "https://github.com/protw/treemap.git"
 		},
+		"exhazoom": {
+			"local_dir": "D:\\boa_nau\\PROJECTS\\190901 ExhaZOOM\\_PROTW-EXHAZOOM",
+			"github": "https://github.com/protw/exhazoom.git"
+		},
+		"covid": {
+			"local_dir": "D:\\boa_pub2\\200328 covid-19\\_PROTW-COVID",
+			"github": "https://github.com/protw/covid.git"
+		},
+		"oleghbond": {
+			"local_dir": "D:\\boa_protw\\wiki_bag\\oleghbond",
+			"github": "https://github.com/protw/oleghbond.git"
+		},
 		"autonum": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\autonum",
 			"github": "https://github.com/protw/autonum.git"
@@ -32,14 +44,6 @@
 		"eco": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\eco",
 			"github": "https://github.com/protw/eco.git"
-		},
-		"exhazoom": {
-			"local_dir": "D:\\boa_nau\\PROJECTS\\190901 ExhaZOOM\\_PROTW-EXHAZOOM",
-			"github": "https://github.com/protw/exhazoom.git"
-		},
-		"oleghbond": {
-			"local_dir": "D:\\boa_protw\\wiki_bag\\oleghbond",
-			"github": "https://github.com/protw/oleghbond.git"
 		},
 		"rder": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\rder",
