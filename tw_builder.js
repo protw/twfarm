@@ -107,8 +107,8 @@ function tw_html_builder(w_name) {
 	}
 	console.log(' - html wiki to rebuild');
 	let tmp_dir = fs.mkdtempSync(jd.conf.tmp_dir + '\\_');
-    child_process.execSync(`rmdir /s/q "${tmp_dir}"`, {stdio: 'inherit',timeout: 0});
-    child_process.execSync(`mkdir "${tmp_dir}"`, {stdio: 'inherit',timeout: 0});
+    //child_process.execSync(`rmdir /s/q "${tmp_dir}"`, {stdio: 'inherit',timeout: 0});
+    //child_process.execSync(`mkdir "${tmp_dir}"`, {stdio: 'inherit',timeout: 0});
     child_process.execSync(`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`, {stdio: 'inherit'});
 	let img_filter = `"[is[image]] -[prefix[$:/]]"`;
 	let html_tw_build_cmds = `tiddlywiki "${tmp_dir}" ` +
