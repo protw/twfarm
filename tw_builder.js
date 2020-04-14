@@ -68,7 +68,7 @@ function wiki_farm_conf () {
 			fs.mkdirSync(sep_git_dir);
 		let sep_git_file = local_dir + '\\.git';
 		if (!fs.existsSync(sep_git_file) || !fs.statSync(sep_git_file).isFile())
-			child_process.execSync(`git -C ${local_dir} init --separate-git-dir ${sep_git_dir}`, {stdio: 'inherit'});
+			child_process.execSync(`git -C "${local_dir}" init --separate-git-dir "${sep_git_dir}"`, {stdio: 'inherit'});
 		let git_ignore_file = local_dir + '\\.gitignore';
 		if (!fs.existsSync(git_ignore_file) || !fs.statSync(git_ignore_file).isFile()) {
 			const s = 'desktop.ini';
