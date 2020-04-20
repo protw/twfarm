@@ -82,7 +82,7 @@ function tw_exist (tw_dir) {
 		fs.statSync(tw_dir + jd.conf.tid_dir).isDirectory();
 }
 function is_git_commit_needed(tw_dir) {
-  let exit_code = child_process.spawnSync('git',['-C',tw_dir,'diff','--exit-code']).status;
+  let exit_code = child_process.spawnSync('git',['-C',tw_dir,'diff','--exit-code','--quiet']).status;
   let res = child_process.execSync(`git -C "${tw_dir}" status -u`);
   let exit_code2 = res.toString().includes("untracked");
   return exit_code || exit_code2;
