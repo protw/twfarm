@@ -29,6 +29,10 @@
 			"local_dir": "D:\\boa_nau\\PROTW\\exhazoom",
 			"github": "https://github.com/protw/exhazoom.git"
 		},
+		"mrf": {
+			"local_dir": "D:\\boa_nau\\PROTW\\mrf",
+			"github": "https://github.com/protw/mrf.git"
+		},
 		"prosteer": {
 			"local_dir": "D:\\boa_nau\\PROTW\\prosteer",
 			"github": "https://github.com/protw/prosteer.git"
