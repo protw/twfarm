@@ -14,24 +14,28 @@
 			"github": "https://github.com/protw/templ.git"
 		},
 		"airzoom": {
-			"local_dir": "D:\\boa_nau\\PROJECTS\\180216 AirZOOM\\_PROTW\\airzoom",
+			"local_dir": "D:\\boa_nau\\PROTW\\airzoom",
 			"github": "https://github.com/protw/airzoom.git"
 		},
+		"covid": {
+			"local_dir": "D:\\boa_nau\\PROTW\\covid",
+			"github": "https://github.com/protw/covid.git"
+		},
+		"eco": {
+			"local_dir": "D:\\boa_nau\\PROTW\\eco",
+			"github": "https://github.com/protw/eco.git"
+		},
+		"exhazoom": {
+			"local_dir": "D:\\boa_nau\\PROTW\\exhazoom",
+			"github": "https://github.com/protw/exhazoom.git"
+		},
 		"prosteer": {
-			"local_dir": "D:\\boa_protw\\wiki_bag\\prosteer",
+			"local_dir": "D:\\boa_nau\\PROTW\\prosteer",
 			"github": "https://github.com/protw/prosteer.git"
 		},
 		"treemap": {
-			"local_dir": "D:\\boa_protw\\wiki_bag\\treemap",
+			"local_dir": "D:\\boa_nau\\PROTW\\treemap",
 			"github": "https://github.com/protw/treemap.git"
-		},
-		"exhazoom": {
-			"local_dir": "D:\\boa_nau\\PROJECTS\\190901 ExhaZOOM\\_PROTW-EXHAZOOM",
-			"github": "https://github.com/protw/exhazoom.git"
-		},
-		"covid": {
-			"local_dir": "D:\\boa_pub2\\200328 covid-19\\_PROTW-COVID",
-			"github": "https://github.com/protw/covid.git"
 		},
 		"oleghbond": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\oleghbond",
@@ -40,10 +44,6 @@
 		"autonum": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\autonum",
 			"github": "https://github.com/protw/autonum.git"
-		},
-		"eco": {
-			"local_dir": "D:\\boa_protw\\wiki_bag\\eco",
-			"github": "https://github.com/protw/eco.git"
 		},
 		"rder": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\rder",
