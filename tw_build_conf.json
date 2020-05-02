@@ -3,71 +3,88 @@
 		"main_wiki": {
 			"wiki_name": "protw.github.io",
 			"local_dir": "D:\\boa_protw\\wiki_main",
-			"github": "https://github.com/protw/protw.github.io.git"
+			"github": "https://github.com/protw/protw.github.io.git",
+			"to_publish": true
 		},
 		"twfarm": {
 			"local_dir": "D:\\boa_protw\\twfarm",
-			"github": "https://github.com/protw/twfarm.git"
+			"github": "https://github.com/protw/twfarm.git",
+			"to_publish": true
 		},
 		"templ": {
 			"local_dir": "D:\\boa_protw\\wiki_template",
-			"github": "https://github.com/protw/templ.git"
+			"github": "https://github.com/protw/templ.git",
+			"to_publish": true
 		},
 		"airzoom": {
 			"local_dir": "D:\\boa_nau\\PROTW\\airzoom",
-			"github": "https://github.com/protw/airzoom.git"
+			"github": "https://github.com/protw/airzoom.git",
+			"to_publish": true
 		},
 		"covid": {
 			"local_dir": "D:\\boa_nau\\PROTW\\covid",
-			"github": "https://github.com/protw/covid.git"
+			"github": "https://github.com/protw/covid.git",
+			"to_publish": true
 		},
 		"eco": {
 			"local_dir": "D:\\boa_nau\\PROTW\\eco",
-			"github": "https://github.com/protw/eco.git"
+			"github": "https://github.com/protw/eco.git",
+			"to_publish": true
 		},
 		"exhazoom": {
 			"local_dir": "D:\\boa_nau\\PROTW\\exhazoom",
-			"github": "https://github.com/protw/exhazoom.git"
+			"github": "https://github.com/protw/exhazoom.git",
+			"to_publish": true
 		},
 		"mrf": {
 			"local_dir": "D:\\boa_nau\\PROTW\\mrf",
-			"github": "https://github.com/protw/mrf.git"
+			"github": "https://github.com/protw/mrf.git",
+			"to_publish": false
 		},
 		"prosteer": {
 			"local_dir": "D:\\boa_nau\\PROTW\\prosteer",
-			"github": "https://github.com/protw/prosteer.git"
+			"github": "https://github.com/protw/prosteer.git",
+			"to_publish": true
 		},
 		"treemap": {
 			"local_dir": "D:\\boa_nau\\PROTW\\treemap",
-			"github": "https://github.com/protw/treemap.git"
+			"github": "https://github.com/protw/treemap.git",
+			"to_publish": true
 		},
 		"oleghbond": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\oleghbond",
-			"github": "https://github.com/protw/oleghbond.git"
+			"github": "https://github.com/protw/oleghbond.git",
+			"to_publish": true
 		},
 		"autonum": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\autonum",
-			"github": "https://github.com/protw/autonum.git"
+			"github": "https://github.com/protw/autonum.git",
+			"to_publish": true
 		},
 		"rder": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\rder",
-			"github": "https://github.com/protw/rder.git"
+			"github": "https://github.com/protw/rder.git",
+			"to_publish": true
 		},
 		"rdpdet": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\rdpdet",
-			"github": "https://github.com/protw/rdpdet.git"
+			"github": "https://github.com/protw/rdpdet.git",
+			"to_publish": true
 		},
 		"tw5": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\tw5",
-			"github": "https://github.com/protw/tw5.git"
+			"github": "https://github.com/protw/tw5.git",
+			"to_publish": true
 		},
 		"tw5ghs": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\tw5ghs",
-			"github": "https://github.com/protw/tw5ghs.git"
+			"github": "https://github.com/protw/tw5ghs.git",
+			"to_publish": true
 		},
 		"ukr": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\ukr",
-			"github": "https://github.com/protw/ukr.git"
+			"github": "https://github.com/protw/ukr.git",
+			"to_publish": true
 		}
 	},
 	"conf": {

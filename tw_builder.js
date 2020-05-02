@@ -18,7 +18,11 @@ for (wiki_name in jd.wiki_farm) {
 	if (wiki_name == 'main_wiki') continue;
 	process.stdout.write(`== ${i++}) Wiki ${wiki_name.toUpperCase()}`);
 	update_logo_to_main_wiki(wiki_name);
-	tw_html_builder(wiki_name); // building a particular wiki from the farm
+	if (jd.wiki_farm[wiki_name].to_publish)
+		tw_html_builder(wiki_name); // building a particular wiki from the farm
+	else
+		console.log(' - is not being publishing');
+
 }
 // building main wiki
 wiki_name = 'main_wiki';
