@@ -29,7 +29,7 @@
 		"eco": {
 			"local_dir": "D:\\boa_nau\\PROTW\\eco",
 			"github": "https://github.com/protw/eco.git",
-			"to_publish": true
+			"to_publish": false
 		},
 		"exhazoom": {
 			"local_dir": "D:\\boa_nau\\PROTW\\exhazoom",
@@ -39,7 +39,7 @@
 		"mrf": {
 			"local_dir": "D:\\boa_nau\\PROTW\\mrf",
 			"github": "https://github.com/protw/mrf.git",
-			"to_publish": false
+			"to_publish": true
 		},
 		"prosteer": {
 			"local_dir": "D:\\boa_nau\\PROTW\\prosteer",
@@ -64,12 +64,12 @@
 		"rder": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\rder",
 			"github": "https://github.com/protw/rder.git",
-			"to_publish": true
+			"to_publish": false
 		},
 		"rdpdet": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\rdpdet",
 			"github": "https://github.com/protw/rdpdet.git",
-			"to_publish": true
+			"to_publish": false
 		},
 		"tw5": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\tw5",
@@ -79,12 +79,12 @@
 		"tw5ghs": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\tw5ghs",
 			"github": "https://github.com/protw/tw5ghs.git",
-			"to_publish": true
+			"to_publish": false
 		},
 		"ukr": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\ukr",
 			"github": "https://github.com/protw/ukr.git",
-			"to_publish": true
+			"to_publish": false
 		}
 	},
 	"conf": {
