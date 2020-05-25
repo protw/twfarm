@@ -34,7 +34,7 @@
 		"exhazoom": {
 			"local_dir": "D:\\boa_nau\\PROTW\\exhazoom",
 			"github": "https://github.com/protw/exhazoom.git",
-			"to_publish": true
+			"to_publish": false
 		},
 		"mrf": {
 			"local_dir": "D:\\boa_nau\\PROTW\\mrf",
