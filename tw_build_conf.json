@@ -29,7 +29,7 @@
 		"eco": {
 			"local_dir": "D:\\boa_nau\\PROTW\\eco",
 			"github": "https://github.com/protw/eco.git",
-			"to_publish": false
+			"to_publish": true
 		},
 		"exhazoom": {
 			"local_dir": "D:\\boa_nau\\PROTW\\exhazoom",
