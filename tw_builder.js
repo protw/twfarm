@@ -111,17 +111,22 @@ function tw_html_builder(w_name) {
 	}
 	console.log(' - html wiki to rebuild');
 	let tmp_dir = fs.mkdtempSync(jd.conf.tmp_dir + '\\_');
-    //child_process.execSync(`rmdir /s/q "${tmp_dir}"`, {stdio: 'inherit',timeout: 0});
-    //child_process.execSync(`mkdir "${tmp_dir}"`, {stdio: 'inherit',timeout: 0});
-    child_process.execSync(`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`, {stdio: 'inherit'});
 	let img_filter = `"[is[image]] -[prefix[$:/]]"`;
-	let html_tw_build_cmds = `tiddlywiki "${tmp_dir}" ` +
+
+	let html_tw_build_cmds = [
+		`forfiles /P "${html_dir}" /M * /S /C "cmd /c if @isdir==FALSE del @file"`,
+		`forfiles /P "${html_dir}" /M * /C "cmd /c if @isdir==TRUE rmdir /S /Q @file"`,
+		`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`,
+		`tiddlywiki "${tmp_dir}" ` +
     	`--savetiddlers ${img_filter} "${html_images_dir}" ` +
 		`--setfield ${img_filter} _canonical_uri ` +
 		`$:/core/templates/canonical-uri-external-image text/plain ` +
 		`--setfield ${img_filter} text "" text/plain ` +
-		`--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline "${html_index_file}" text/plain`;
-	child_process.execSync(html_tw_build_cmds, {stdio: 'inherit',timeout: 0});
+		`--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline "${html_index_file}" text/plain`
+	];
+	for (var html_tw_build_cmd of html_tw_build_cmds)
+		child_process.execSync(html_tw_build_cmd, {stdio: 'inherit',timeout: 0});
+
 	remove_pre_content_patch(html_index_file);
 	fs.rmdirSync(tmp_dir + jd.conf.tid_dir, {recursive:true});
 	fs.rmdirSync(tmp_dir, {recursive:true});

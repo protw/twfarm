@@ -1,4 +1,17 @@
-{ 
+{
+	"conf": {
+		"tid_dir":     "\\tiddlers",
+		"tw_info":     "tiddlywiki.info",
+		"html_file":   "index.html",
+		"img_dir":     "\\images",
+		"build_dir":   "\\docs",
+		"logo_dir":    "\\wiki_logo_list",
+		"logo_js":     "$:/boa/logo",
+		"wiki_domain": "https://protw.github.io/",
+		"github_main": "https://github.com/protw/",
+		"sep_git_dir": "D:\\boa_protw\\git",
+		"tmp_dir":     "D:\\boa_protw\\_tmp"
+	}, 
 	"wiki_farm": {
 		"main_wiki": {
 			"wiki_name": "protw.github.io",
@@ -86,18 +99,5 @@
 			"github": "https://github.com/protw/ukr.git",
 			"to_publish": false
 		}
-	},
-	"conf": {
-		"tid_dir":     "\\tiddlers",
-		"tw_info":     "tiddlywiki.info",
-		"html_file":   "index.html",
-		"img_dir":     "\\images",
-		"build_dir":   "\\docs",
-		"logo_dir":    "\\wiki_logo_list",
-		"logo_js":     "$:/boa/logo",
-		"wiki_domain": "https://protw.github.io/",
-		"github_main": "https://github.com/protw/",
-		"sep_git_dir": "D:\\boa_protw\\git",
-		"tmp_dir":     "D:\\boa_protw\\_tmp"
 	}
 }
