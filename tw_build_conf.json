@@ -79,7 +79,7 @@
 		"tw5ghs": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\tw5ghs",
 			"github": "https://github.com/protw/tw5ghs.git",
-			"to_publish": false
+			"to_publish": true
 		},
 		"ukr": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\ukr",
