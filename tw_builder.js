@@ -110,13 +110,20 @@ function tw_html_builder(w_name) {
 		return;
 	}
 	console.log(' - html wiki to rebuild');
+	//// create temporary directory for canonical externalization of images
 	let tmp_dir = fs.mkdtempSync(jd.conf.tmp_dir + '\\_');
+	//// set tiddlywiki filter for all the images except system files
 	let img_filter = `"[is[image]] -[prefix[$:/]]"`;
 
 	let html_tw_build_cmds = [
+		//// delete all files recursively inside directory ${html_dir}
 		`forfiles /P "${html_dir}" /M * /S /C "cmd /c if @isdir==FALSE del @file"`,
-		`forfiles /P "${html_dir}" /M * /C "cmd /c if @isdir==TRUE rmdir /S /Q @file"`,
+		//// delete all directories recursively inside directory ${html_dir}
+		//`forfiles /P "${html_dir}" /M * /C "cmd /c if @isdir==TRUE rmdir /S /Q @file"`,
+		//// copy all wiki files recursively from ${tw_dir} to ${tmp_dir} for canonical externalization
 		`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`,
+		//// canonical externalization all selected images ${img_filter} of wiki in directory ${tmp_dir}
+		//// and generating the result in ${html_index_file} and ${html_images_dir}
 		`tiddlywiki "${tmp_dir}" ` +
     	`--savetiddlers ${img_filter} "${html_images_dir}" ` +
 		`--setfield ${img_filter} _canonical_uri ` +
@@ -127,8 +134,11 @@ function tw_html_builder(w_name) {
 	for (var html_tw_build_cmd of html_tw_build_cmds)
 		child_process.execSync(html_tw_build_cmd, {stdio: 'inherit',timeout: 0});
 
+	//// patching html_index_file
 	remove_pre_content_patch(html_index_file);
+	//// delete all files in directory tmp_dir + jd.conf.tid_dir and directory itself 
 	fs.rmdirSync(tmp_dir + jd.conf.tid_dir, {recursive:true});
+	//// delete all files in directory tmp_dir and directory itself 
 	fs.rmdirSync(tmp_dir, {recursive:true});
 
 	let today_label = Date();
