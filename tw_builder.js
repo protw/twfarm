@@ -155,8 +155,13 @@ function tw_html_builder(w_name) {
 	];
 	////// THE LAST COMMAND IS EXECUTED WITH CARE SO FAR
 	console.log('Github repo of %s is syncronizing...', wiki_name.toUpperCase())
-	for (var s_git of git_sync)
-		child_process.execSync(s_git, {stdio: 'inherit',timeout: 0});
+	for (var s_git of git_sync){
+		try {
+			child_process.execSync(s_git, {stdio: 'inherit',timeout: 0});
+		} catch (ex) {
+			netsh_output = ex.stdout;
+		}
+	}
 }
 function remove_pre_content_patch(file) {
 	// This is a patch for removing the content between <pre> and </pre> 
