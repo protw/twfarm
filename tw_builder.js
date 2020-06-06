@@ -117,7 +117,7 @@ function tw_html_builder(w_name) {
 
 	let html_tw_build_cmds = [
 		//// delete all files recursively inside directory ${html_images_dir}
-		`forfiles /P "${html_images_dir}" /M * /S /C "cmd /c if @isdir==FALSE del @file"`,
+		`del /Q "${html_images_dir}\\*.*"`,
 		//// delete file ${html_index_file}
 		`del /Q "${html_index_file}"`,
 		//// copy all wiki files recursively from ${tw_dir} to ${tmp_dir} for canonical externalization
@@ -132,13 +132,8 @@ function tw_html_builder(w_name) {
 		`--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline "${html_index_file}" text/plain`
 	];
 	let nestsh_output;
-	for (var html_tw_build_cmd of html_tw_build_cmds) {
-		try {
-			child_process.execSync(html_tw_build_cmd, {stdio: 'inherit',timeout: 0});
-		} catch (ex) {
-			netsh_output = ex.stdout;
-		}
-	}
+	for (var html_tw_build_cmd of html_tw_build_cmds)
+		child_process.execSync(html_tw_build_cmd, {stdio: 'inherit',timeout: 0});
 
 	//// patching html_index_file
 	remove_pre_content_patch(html_index_file);
@@ -155,13 +150,8 @@ function tw_html_builder(w_name) {
 	];
 	////// THE LAST COMMAND IS EXECUTED WITH CARE SO FAR
 	console.log('Github repo of %s is syncronizing...', wiki_name.toUpperCase())
-	for (var s_git of git_sync){
-		try {
-			child_process.execSync(s_git, {stdio: 'inherit',timeout: 0});
-		} catch (ex) {
-			netsh_output = ex.stdout;
-		}
-	}
+	for (var s_git of git_sync)
+		child_process.execSync(s_git, {stdio: 'inherit',timeout: 0});
 }
 function remove_pre_content_patch(file) {
 	// This is a patch for removing the content between <pre> and </pre> 
