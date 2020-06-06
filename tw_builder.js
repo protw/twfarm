@@ -116,10 +116,10 @@ function tw_html_builder(w_name) {
 	let img_filter = `"[is[image]] -[prefix[$:/]]"`;
 
 	let html_tw_build_cmds = [
-		//// delete all files recursively inside directory ${html_dir}
-		`forfiles /P "${html_dir}" /M * /S /C "cmd /c if @isdir==FALSE del @file"`,
-		//// delete all directories recursively inside directory ${html_dir}
-		//`forfiles /P "${html_dir}" /M * /C "cmd /c if @isdir==TRUE rmdir /S /Q @file"`,
+		//// delete all files recursively inside directory ${html_images_dir}
+		`forfiles /P "${html_images_dir}" /M * /S /C "cmd /c if @isdir==FALSE del @file"`,
+		//// delete file ${html_index_file}
+		`del /Q "${html_index_file}"`,
 		//// copy all wiki files recursively from ${tw_dir} to ${tmp_dir} for canonical externalization
 		`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`,
 		//// canonical externalization all selected images ${img_filter} of wiki in directory ${tmp_dir}
