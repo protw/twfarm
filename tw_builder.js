@@ -131,7 +131,6 @@ function tw_html_builder(w_name) {
 		`--setfield ${img_filter} text "" text/plain ` +
 		`--rendertiddler $:/plugins/tiddlywiki/tiddlyweb/save/offline "${html_index_file}" text/plain`
 	];
-	let nestsh_output;
 	for (var html_tw_build_cmd of html_tw_build_cmds)
 		child_process.execSync(html_tw_build_cmd, {stdio: 'inherit',timeout: 0});
 
