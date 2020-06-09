@@ -123,8 +123,9 @@ function tw_html_builder(w_name) {
 		//`del /Q "${html_images_dir}"`,
 		//`del /Q "${html_index_file}"`,
 
-		fs.rmdirSync(html_images_dir, {recursive:true});
-		child_process.execSync(`del /Q "${html_index_file}"`, {stdio: 'inherit',timeout: 0});
+		fs.rmdirSync(html_images_dir, {recursive:true,timeout: 0});
+		//child_process.execSync(`del /Q "${html_index_file}"`, {stdio: 'inherit',timeout: 0});
+		fs.unlinkSync(html_index_file);
 
 
 	let html_tw_build_cmds = [
