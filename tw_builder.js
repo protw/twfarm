@@ -115,20 +115,15 @@ function tw_html_builder(w_name) {
 	//// set tiddlywiki filter for all the images except system files
 	let img_filter = `"[is[image]] -[prefix[$:/]]"`;
 
-		/* delete all files recursively inside directory ${html_images_dir}
-		 * delete directory ${html_images_dir}
-		 * delete file ${html_index_file}
-		**/
-		//`del /Q "${html_images_dir}\\*.*"`,
-		//`del /Q "${html_images_dir}"`,
-		//`del /Q "${html_index_file}"`,
-
-		fs.rmdirSync(html_images_dir, {recursive:true,timeout: 0});
-		//child_process.execSync(`del /Q "${html_index_file}"`, {stdio: 'inherit',timeout: 0});
-		fs.unlinkSync(html_index_file);
-
 
 	let html_tw_build_cmds = [
+		//// delete all files inside directory ${html_images_dir} and then the directory
+		//// delete directory ${html_images_dir}
+		`del /Q "${html_images_dir}\\*.*"`,
+		`attrib -r ${html_images_dir}`,
+		`rmdir /Q "${html_images_dir}"`,
+		//// delete file ${html_index_file}
+		`del /Q "${html_index_file}"`,
 		//// copy all wiki files recursively from ${tw_dir} to ${tmp_dir} for canonical externalization
 		`xcopy /s/i/q "${tw_dir}\\*.*" "${tmp_dir}" /exclude:tw_exclude.list`,
 		//// canonical externalization all selected images ${img_filter} of wiki in directory ${tmp_dir}
