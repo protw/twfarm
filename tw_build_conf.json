@@ -97,7 +97,7 @@
 		"ukr": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\ukr",
 			"github": "https://github.com/protw/ukr.git",
-			"to_publish": false
+			"to_publish": true
 		}
 	}
 }
