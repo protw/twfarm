@@ -34,6 +34,11 @@
 			"github": "https://github.com/protw/airzoom.git",
 			"to_publish": true
 		},
+		"autonum": {
+			"local_dir": "D:\\boa_protw\\wiki_bag\\autonum",
+			"github": "https://github.com/protw/autonum.git",
+			"to_publish": false
+		},
 		"covid": {
 			"local_dir": "D:\\boa_nau\\PROTW\\covid",
 			"github": "https://github.com/protw/covid.git",
@@ -54,6 +59,11 @@
 			"github": "https://github.com/protw/mrf.git",
 			"to_publish": true
 		},
+		"nauprostir": {
+			"local_dir": "D:\\boa_nau\\PROTW\\nauprostir",
+			"github": "https://github.com/protw/nauprostir.git",
+			"to_publish": true
+		},
 		"prosteer": {
 			"local_dir": "D:\\boa_nau\\PROTW\\prosteer",
 			"github": "https://github.com/protw/prosteer.git",
@@ -67,11 +77,6 @@
 		"oleghbond": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\oleghbond",
 			"github": "https://github.com/protw/oleghbond.git",
-			"to_publish": true
-		},
-		"autonum": {
-			"local_dir": "D:\\boa_protw\\wiki_bag\\autonum",
-			"github": "https://github.com/protw/autonum.git",
 			"to_publish": true
 		},
 		"rder": {
