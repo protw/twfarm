@@ -37,7 +37,7 @@
 		"autonum": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\autonum",
 			"github": "https://github.com/protw/autonum.git",
-			"to_publish": false
+			"to_publish": true
 		},
 		"covid": {
 			"local_dir": "D:\\boa_nau\\PROTW\\covid",
