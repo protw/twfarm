@@ -103,6 +103,11 @@
 			"local_dir": "D:\\boa_protw\\wiki_bag\\ukr",
 			"github": "https://github.com/protw/ukr.git",
 			"to_publish": true
+		},
+		"virtou": {
+			"local_dir": "D:\\boa_nau\\PROTW\\virtou",
+			"github": "https://github.com/protw/virtou.git",
+			"to_publish": true
 		}
 	}
 }
