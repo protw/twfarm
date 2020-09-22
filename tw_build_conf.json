@@ -64,6 +64,11 @@
 			"github": "https://github.com/protw/nauprostir.git",
 			"to_publish": true
 		},
+		"osoblyva": {
+			"local_dir": "D:\\boa_nau\\PROTW\\osoblyva",
+			"github": "https://github.com/protw/osoblyva.git",
+			"to_publish": true
+		},
 		"prosteer": {
 			"local_dir": "D:\\boa_nau\\PROTW\\prosteer",
 			"github": "https://github.com/protw/prosteer.git",
