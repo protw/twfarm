@@ -1,3 +1,11 @@
+> **IMPORTANT NOTE!!** 2021-02-24, after *node.js* was upgraded from version 12.16.3 to the most recent stable version 14.16.0 the run time error appeared in line #140 of code `tw_builder.js` during execution of the longest string `html_tw_build_cmd`:
+>
+> ```javascript
+> child_process.execSync(html_tw_build_cmd, {stdio: 'inherit',timeout: 0});
+> ```
+>
+> For this reason *node.js* was downgraded to the last workable version 12.16.3. After that the code works well as it was before.
+
 ## *Project TW Farm* based on *TW5 Farm* technology
 
 *TW5 Farm* is a method of centralized multi-wiki support on the Internet.
