@@ -34,11 +34,6 @@
 			"github": "https://github.com/protw/airzoom.git",
 			"to_publish": true
 		},
-		"aqdapp": {
-			"local_dir": "D:\\boa_nau\\PROTW\\aqdapp",
-			"github": "https://github.com/protw/aqdapp.git",
-			"to_publish": false
-		},
 		"autonum": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\autonum",
 			"github": "https://github.com/protw/autonum.git",
@@ -79,11 +74,6 @@
 			"github": "https://github.com/protw/prosteer.git",
 			"to_publish": true
 		},
-		"simpr": {
-			"local_dir": "D:\\boa_nau\\PROTW\\simpr",
-			"github": "https://github.com/protw/simpr.git",
-			"to_publish": false
-		},
 		"treemap": {
 			"local_dir": "D:\\boa_nau\\PROTW\\treemap",
 			"github": "https://github.com/protw/treemap.git",
@@ -123,6 +113,18 @@
 			"local_dir": "D:\\boa_nau\\PROTW\\virtou",
 			"github": "https://github.com/protw/virtou.git",
 			"to_publish": true
+		}
+	},
+	"suspended": {
+		"aqdapp": {
+			"local_dir": "D:\\boa_nau\\PROTW\\aqdapp",
+			"github": "https://github.com/protw/aqdapp.git",
+			"to_publish": false
+		},
+		"simpr": {
+			"local_dir": "D:\\boa_nau\\PROTW\\simpr",
+			"github": "https://github.com/protw/simpr.git",
+			"to_publish": false
 		}
 	}
 }
