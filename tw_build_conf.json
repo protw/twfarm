@@ -30,7 +30,7 @@
 			"to_publish": true
 		},
 		"airzoom": {
-			"local_dir": "D:\\boa_nau\\PROTW\\airzoom",
+			"local_dir": "D:\\boa_uniteam\\PROTW\\airzoom",
 			"github": "https://github.com/protw/airzoom.git",
 			"to_publish": true
 		},
@@ -40,42 +40,42 @@
 			"to_publish": true
 		},
 		"covid": {
-			"local_dir": "D:\\boa_nau\\PROTW\\covid",
+			"local_dir": "D:\\boa_uniteam\\PROTW\\covid",
 			"github": "https://github.com/protw/covid.git",
 			"to_publish": true
 		},
 		"eco": {
-			"local_dir": "D:\\boa_nau\\PROTW\\eco",
+			"local_dir": "D:\\boa_uniteam\\PROTW\\eco",
 			"github": "https://github.com/protw/eco.git",
 			"to_publish": true
 		},
 		"exhazoom": {
-			"local_dir": "D:\\boa_nau\\PROTW\\exhazoom",
+			"local_dir": "D:\\boa_uniteam\\PROTW\\exhazoom",
 			"github": "https://github.com/protw/exhazoom.git",
 			"to_publish": true
 		},
 		"mrf": {
-			"local_dir": "D:\\boa_nau\\PROTW\\mrf",
+			"local_dir": "D:\\boa_uniteam\\PROTW\\mrf",
 			"github": "https://github.com/protw/mrf.git",
 			"to_publish": true
 		},
 		"nauprostir": {
-			"local_dir": "D:\\boa_nau\\PROTW\\nauprostir",
+			"local_dir": "D:\\boa_uniteam\\PROTW\\nauprostir",
 			"github": "https://github.com/protw/nauprostir.git",
 			"to_publish": true
 		},
 		"osoblyva": {
-			"local_dir": "D:\\boa_nau\\PROTW\\osoblyva",
+			"local_dir": "D:\\boa_uniteam\\PROTW\\osoblyva",
 			"github": "https://github.com/protw/osoblyva.git",
 			"to_publish": true
 		},
 		"prosteer": {
-			"local_dir": "D:\\boa_nau\\PROTW\\prosteer",
+			"local_dir": "D:\\boa_uniteam\\PROTW\\prosteer",
 			"github": "https://github.com/protw/prosteer.git",
 			"to_publish": true
 		},
 		"treemap": {
-			"local_dir": "D:\\boa_nau\\PROTW\\treemap",
+			"local_dir": "D:\\boa_uniteam\\PROTW\\treemap",
 			"github": "https://github.com/protw/treemap.git",
 			"to_publish": true
 		},
@@ -110,19 +110,19 @@
 			"to_publish": true
 		},
 		"virtou": {
-			"local_dir": "D:\\boa_nau\\PROTW\\virtou",
+			"local_dir": "D:\\boa_uniteam\\PROTW\\virtou",
 			"github": "https://github.com/protw/virtou.git",
 			"to_publish": true
 		}
 	},
 	"suspended": {
 		"aqdapp": {
-			"local_dir": "D:\\boa_nau\\PROTW\\aqdapp",
+			"local_dir": "D:\\boa_uniteam\\PROTW\\aqdapp",
 			"github": "https://github.com/protw/aqdapp.git",
 			"to_publish": false
 		},
 		"simpr": {
-			"local_dir": "D:\\boa_nau\\PROTW\\simpr",
+			"local_dir": "D:\\boa_uniteam\\PROTW\\simpr",
 			"github": "https://github.com/protw/simpr.git",
 			"to_publish": false
 		}
