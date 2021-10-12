@@ -37,7 +37,7 @@
 		"aqdapp": {
 			"local_dir": "D:\\boa_nau\\PROTW\\aqdapp",
 			"github": "https://github.com/protw/aqdapp.git",
-			"to_publish": true
+			"to_publish": false
 		},
 		"autonum": {
 			"local_dir": "D:\\boa_protw\\wiki_bag\\autonum",
@@ -82,7 +82,7 @@
 		"simpr": {
 			"local_dir": "D:\\boa_nau\\PROTW\\simpr",
 			"github": "https://github.com/protw/simpr.git",
-			"to_publish": true
+			"to_publish": false
 		},
 		"treemap": {
 			"local_dir": "D:\\boa_nau\\PROTW\\treemap",
