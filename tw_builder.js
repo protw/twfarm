@@ -142,8 +142,8 @@ function tw_html_builder(w_name) {
 	//// patching html_index_file
 	remove_pre_content_patch(html_index_file);
 	//// delete all files in directory tmp_dir + jd.conf.tid_dir and directory itself 
-	(tmp_dir + jd.conf.tid_dir, {recursive:true});
-	fs.rmdirSync//// delete all files in directory tmp_dir and directory itself 
+	fs.rmdirSync(tmp_dir + jd.conf.tid_dir, {recursive:true});
+	//// delete all files in directory tmp_dir and directory itself 
 	fs.rmdirSync(tmp_dir, {recursive:true});
 
 	let today_label = Date();
