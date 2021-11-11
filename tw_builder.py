@@ -201,8 +201,8 @@ def update_logo_to_main_wiki(wiki_name):
             with open(meta_file, 'w', encoding='utf-8') as f:
                 f.write(new_s_tid)
         else:
-            pass
             shutil.copyfile(logo_file, mw_logo_dir + wiki_name + f_ext)
+    return
 
 def latest_filtered_file(file_dir, file_mask):
     # Get list of all files only in the given directory
