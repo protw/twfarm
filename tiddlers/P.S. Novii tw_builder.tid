@@ -1,0 +1,17 @@
+created: 20211111065018990
+modified: 20211111074140775
+order: 050
+parent: TW ферма
+revision: 0
+swap: P.S. New tw_builder
+tags: [[TW ферма]]
+title: P.S. Новий tw_builder
+
+Нарешті дійшли руки переробити //tw_builder//. Справа в тім, що досвід експлуатації [[tw_builder.js|https://github.com/protw/twfarm/blob/master/tw_builder.js]] під //Node.js// показав нестабільність його роботи з локальною файловою системою. При тому причини цієї нестабільності так і не вдалося встановити. Тому виникла думка переписати скрипт `tw_builder.js` на //Python//.
+
+Перший варіант на //Python v. 3.9.6// - [[tw_builder.py|https://github.com/protw/twfarm/blob/master/tw_builder.py]] (v. 3.0) забрав разом з відладкою декілька годин роботи впродовж 2 днів. Код розташований поруч з попередньою //js//-версією. Також у пакетному файлі [[tw_builder.bat|https://github.com/protw/twfarm/blob/master/tw_builder.bat]] //js//-код замінений на //py//-код:
+
+```
+REM node tw_builder.js
+python tw_builder.py
+```

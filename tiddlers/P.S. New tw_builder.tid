@@ -1,0 +1,19 @@
+created: 20211111064816986
+modified: 20211111073458202
+order: 050
+parent-e: TW farm
+revision: 0
+swap: P.S. Новий tw_builder
+tags: [[TW farm]]
+title: P.S. New tw_builder
+
+Finally I got my hands to redo //tw_builder//. The fact is that the experience of operating [[tw_builder.js|https://github.com/protw/twfarm/blob/master/tw_builder.js]] under //Node.js// showed the instability of its work with the local file system. The reasons for this instability have not been established. Therefore there was an idea to rewrite a script `tw_builder.js` on //Python//.
+
+Rewriting the first version of the code on //Python v. 3.9.6// - [[tw_builder.py|https://github.com/protw/twfarm/blob/master/tw_builder.py]] (v. 3.0) took a few hours of work including debugging along 2 days. The code is located next to the previous //js//-version. Also //js//-code in the batch file [[tw_builder.bat|https://github.com/protw/twfarm/blob/master/tw_builder.bat]] is replaced by //py//-code:
+
+```
+REM node tw_builder.js
+python tw_builder.py
+```
+
+So far, the first impressions are positive.
