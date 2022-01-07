@@ -262,7 +262,7 @@ i = 1
 for wiki_name in jd['wiki_farm']:
     if wiki_name == 'main_wiki':
         continue
-    print(f'== {i}) Wiki {wiki_name.upper()}', end='')
+    print(f'== {i}) Wiki {wiki_name.upper()}', end=' ')
     i += 1
     update_logo_to_main_wiki(wiki_name)
     if not jd['wiki_farm'][wiki_name]['to_publish']:
